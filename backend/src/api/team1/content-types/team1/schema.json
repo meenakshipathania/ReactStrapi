@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team1s",
+  "info": {
+    "singularName": "team1",
+    "pluralName": "team1s",
+    "displayName": "team1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teammember": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "position": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wants",
+  "info": {
+    "singularName": "want",
+    "pluralName": "wants",
+    "displayName": "want",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "youwant": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "small_line": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    }
+  }
+}
