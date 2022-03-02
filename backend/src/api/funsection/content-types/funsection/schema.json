@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "wants",
+  "collectionName": "funsections",
   "info": {
-    "singularName": "want",
-    "pluralName": "wants",
-    "displayName": "want",
+    "singularName": "funsection",
+    "pluralName": "funsections",
+    "displayName": "funsection",
     "description": ""
   },
   "options": {
@@ -12,10 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "youwant": {
-      "type": "text",
-      "required": true,
-      "unique": true
+    "tagline": {
+      "type": "string"
     },
     "tag1": {
       "type": "string"
@@ -24,9 +22,6 @@
       "type": "string"
     },
     "tag3": {
-      "type": "string"
-    },
-    "tag4": {
       "type": "string"
     }
   }

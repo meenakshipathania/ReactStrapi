@@ -53,6 +53,16 @@ function HeroHomeThree() {
                                         ? head.map((x) => <a>{x.attributes.threesecfirst}</a>)
                                         : 'hgfhgf'}
                                 </p>
+                                <p>
+                                    {head
+                                        ? head.map((x) => <a>{x.attributes.threesecsec}</a>)
+                                        : 'hgfhgf'}
+                                </p>
+                                <p>
+                                    {head
+                                        ? head.map((x) => <a>{x.attributes.threesecthree}</a>)
+                                        : 'hgfhgf'}
+                                </p>
                                 <div className="hero-btns">
                                     <a className="main-btn" href="#">
                                         Get a Quote

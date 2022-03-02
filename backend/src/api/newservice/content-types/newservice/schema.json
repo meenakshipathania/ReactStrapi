@@ -4,7 +4,8 @@
   "info": {
     "singularName": "newservice",
     "pluralName": "newservices",
-    "displayName": "Newservice"
+    "displayName": "Newservice",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,20 +16,25 @@
       "type": "text",
       "required": true
     },
-    "tagline": {
-      "type": "text",
-      "required": true
-    },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
+    },
+    "tag1": {
+      "type": "string"
+    },
+    "tag2": {
+      "type": "string"
+    },
+    "tag3": {
+      "type": "string"
     }
   }
 }

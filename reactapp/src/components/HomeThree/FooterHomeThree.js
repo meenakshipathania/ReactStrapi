@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo-4.png';
+// import logo from '../../assets/images/logo-4.png';
 
+const apiUrl = 'http://localhost:1337/api/logos?populate=*';
+const ApiUrl = 'http://localhost:1337/api/footers';
 function FooterHomeThree({ className }) {
+    const [logo, Setlogo] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(apiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setlogo(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
+
+    function imageurl(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
+    const [header, Setheader] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(ApiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setheader(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
     return (
         <>
             <section className={`appie-footer-area appie-footer-3-area ${className}`}>
@@ -11,13 +50,23 @@ function FooterHomeThree({ className }) {
                         <div className="col-lg-4 col-md-6">
                             <div className="footer-about-widget footer-about-widget-3">
                                 <div className="logo">
-                                    <a href="#">
-                                        <img src={logo} alt="" />
-                                    </a>
+                                    {logo
+                                        ? logo.map((x) => (
+                                              <a href="/">
+                                                  <img
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
+                                        : 'hgfhgf'}
                                 </div>
                                 <p>
-                                    Appie Restaurant is one of the most famous restaurant of India.
-                                    It..
+                                    {logo ? logo.map((x) => <p>{x.attributes.des}</p>) : 'hgfhgf'}
                                 </p>
                                 <a href="#">
                                     Read More <i className="fal fa-arrow-right" />
@@ -50,7 +99,11 @@ function FooterHomeThree({ className }) {
                         </div>
                         <div className="col-lg-2 col-md-6">
                             <div className="footer-navigation footer-navigation-3">
-                                <h4 className="title">Company</h4>
+                                <h4 className="title">
+                                    {header
+                                        ? header.map((x) => <h4>{x.attributes.head1}</h4>)
+                                        : 'hgfhgf'}
+                                </h4>
                                 <ul>
                                     <li>
                                         <Link to="/about-us">About Us</Link>
@@ -72,7 +125,11 @@ function FooterHomeThree({ className }) {
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-navigation footer-navigation-3">
-                                <h4 className="title">Support</h4>
+                                <h4 className="title">
+                                    {header
+                                        ? header.map((x) => <h4>{x.attributes.head2}</h4>)
+                                        : 'hgfhgf'}
+                                </h4>
                                 <ul>
                                     <li>
                                         <Link to="/about-us">Community</Link>
@@ -94,7 +151,11 @@ function FooterHomeThree({ className }) {
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget-info">
-                                <h4 className="title">Get In Touch</h4>
+                                <h4 className="title">
+                                    {header
+                                        ? header.map((x) => <h4>{x.attributes.head3}</h4>)
+                                        : 'hgfhgf'}
+                                </h4>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -143,7 +204,7 @@ function FooterHomeThree({ className }) {
                                     </ul>
                                 </div>
                                 <div className="copyright-text">
-                                    <p>Copyright © 2021 Appie. All rights reserved.</p>
+                                    <p>© 2018 ocodewire. All right reserved.</p>
                                 </div>
                             </div>
                         </div>

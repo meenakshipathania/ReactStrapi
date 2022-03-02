@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
+const apiUrl = 'http://localhost:1337/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {
         e.preventDefault();
         setVideoValue(!showVideo);
     };
+    const [gettext, Settext] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(apiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Settext(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
     return (
         <>
             {showVideo && (
@@ -29,12 +46,13 @@ function FunFactHomeThree() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="appie-fun-fact-content">
-                                            <h3 className="title">
-                                                Get started with Appie Restaurant.
-                                            </h3>
+                                            <h2 className="title">Get Started with OcodeApp</h2>
                                             <p>
-                                                We provide you a good and healty food, made in Clean
-                                                and hygine kitchen.
+                                                {gettext
+                                                    ? gettext.map((x) => (
+                                                          <p>{x.attributes.tagline}</p>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </p>
                                             <div className="row">
                                                 <div className="col-sm-4">
@@ -46,7 +64,13 @@ function FunFactHomeThree() {
                                                             />
                                                             k
                                                         </h4>
-                                                        <span>Food Items</span>
+                                                        <span>
+                                                            {gettext
+                                                                ? gettext.map((x) => (
+                                                                      <p>{x.attributes.tag1}</p>
+                                                                  ))
+                                                                : 'hgfhgf'}
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div className="col-sm-4">
@@ -58,7 +82,13 @@ function FunFactHomeThree() {
                                                             />
                                                             +
                                                         </h4>
-                                                        <span>Users Review</span>
+                                                        <span>
+                                                            {gettext
+                                                                ? gettext.map((x) => (
+                                                                      <p>{x.attributes.tag2}</p>
+                                                                  ))
+                                                                : 'hgfhgf'}
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div className="col-sm-4">
@@ -70,7 +100,13 @@ function FunFactHomeThree() {
                                                             />
                                                             M
                                                         </h4>
-                                                        <span>Active customers</span>
+                                                        <span>
+                                                            {gettext
+                                                                ? gettext.map((x) => (
+                                                                      <p>{x.attributes.tag3}</p>
+                                                                  ))
+                                                                : 'hgfhgf'}
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>

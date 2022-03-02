@@ -29,14 +29,23 @@
       "unique": true
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "threesecsec": {
+      "type": "text",
+      "required": true
+    },
+    "threesecthree": {
+      "type": "string",
+      "required": true
     }
   }
 }

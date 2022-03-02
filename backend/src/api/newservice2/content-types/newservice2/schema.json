@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newservice2s",
+  "info": {
+    "singularName": "newservice2",
+    "pluralName": "newservice2s",
+    "displayName": "Newservice2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

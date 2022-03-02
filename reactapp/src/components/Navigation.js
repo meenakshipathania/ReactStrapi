@@ -4,8 +4,7 @@ import axios from 'axios';
 
 const apiUrl = 'http://localhost:1337/api/navbars';
 const NewApipiUrl = 'http://localhost:1337/api/homes';
-const NewApi = 'http://localhost:1337/api/pages';
-const NewUrl = 'http://localhost:1337/api/news';
+
 function Navigation() {
     const [navitems, Setnavitems] = useState([]);
     useEffect(() => {
@@ -30,36 +29,6 @@ function Navigation() {
                 .get(NewApipiUrl, { cancelToken: request.token })
                 .then((res) => {
                     Sethome(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    const [page, Setpage] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewApi, { cancelToken: request.token })
-                .then((res) => {
-                    Setpage(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    const [news, Setnews] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setnews(res.data.data);
                 })
                 .catch((error) => {
                     console.log(error);
@@ -126,38 +95,12 @@ function Navigation() {
                 <li>
                     <a href="#">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
-                        <i className="fal fa-angle-down" />
                     </a>
-                    <ul className="sub-menu">
-                        <li>
-                            <Link to="/about-us">
-                                {page ? page.map((x) => <a>{x.attributes.head1}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/error">
-                                {page ? page.map((x) => <a>{x.attributes.head2}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="#">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
-                        <i className="fal fa-angle-down" />
                     </a>
-                    <ul className="sub-menu">
-                        <li>
-                            <Link to="/news">
-                                {news ? news.map((x) => <a>{x.attributes.head1}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/news/single-news">
-                                {news ? news.map((x) => <a>{x.attributes.head2}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <Link to="/contact">

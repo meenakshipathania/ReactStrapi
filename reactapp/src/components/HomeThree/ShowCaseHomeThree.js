@@ -73,8 +73,8 @@ function ShowCaseHomeThree() {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="appie-section-title text-center">
-                                        <h3 className="appie-title">Creative Food Showcase</h3>
-                                        <p>The Appie provides good taste and texture of food.</p>
+                                        <h3 className="appie-title">Creative App Showcase</h3>
+                                        <p>The app provides design and digital marketing.</p>
                                     </div>
                                 </div>
                             </div>

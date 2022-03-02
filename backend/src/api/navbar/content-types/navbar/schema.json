@@ -31,11 +31,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "name4": {
-      "type": "string",
-      "required": true,
-      "unique": true
     }
   }
 }
