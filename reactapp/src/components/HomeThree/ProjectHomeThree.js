@@ -37,11 +37,11 @@ function ProjectHomeThree({ className }) {
                                 data-wow-duration="2000ms"
                                 data-wow-delay="400ms"
                             >
-                                <h1 className="title">
-                                    {data
-                                        ? data.map((x) => <h1>{x.attributes.heading}</h1>)
-                                        : 'hgfhgf'}
-                                </h1>
+                                {data
+                                    ? data.map((x) => (
+                                          <h1 className="title"> {x.attributes.heading}</h1>
+                                      ))
+                                    : 'hgfhgf'}
                                 <a className="main-btn" href="#">
                                     {data ? data.map((x) => <a>{x.attributes.text}</a>) : 'hgfhgf'}
                                 </a>

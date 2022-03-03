@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
+const apiUrl = 'http://localhost:1337/api/orders';
 function ProjectHomeOne() {
+    const [data, Setdata] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(apiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setdata(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
     return (
         <>
             <section className="appie-project-area pb-100">
@@ -15,8 +32,13 @@ function ProjectHomeOne() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="appie-project-content">
-                                            <h3 className="title">Place your Order with appie.</h3>
-                                            <p>We will email you only about this New Dishes.</p>
+                                            {data
+                                                ? data.map((x) => (
+                                                      <h1 className="title">
+                                                          {x.attributes.heading}
+                                                      </h1>
+                                                  ))
+                                                : 'hgfhgf'}
                                             <form action="#">
                                                 <div className="input-box mt-30">
                                                     <input type="text" placeholder="Your email" />

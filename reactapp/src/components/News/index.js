@@ -1,11 +1,12 @@
 import React from 'react';
 import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
-import FooterHomeOne from '../HomeOne/FooterHomeOne';
+import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
-import Blogs from './Blogs';
-import BlogSideBar from './BlogSideBar';
+// import Blogs from './Blogs';
+// import BlogSideBar from './BlogSideBar';
 import HeaderNews from './HeaderNews';
+import Product from './Product';
 import HeroNews from './HeroNews';
 
 function News() {
@@ -21,7 +22,7 @@ function News() {
                     { link: '/news', title: 'Blogs' },
                 ]}
             />
-            <section className="blogpage-section">
+            {/* <section className="blogpage-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-7">
@@ -32,8 +33,9 @@ function News() {
                         </div>
                     </div>
                 </div>
-            </section>
-            <FooterHomeOne />
+            </section> */}
+            <Product />
+            <FooterHomeThree />
             <BackToTop />
         </>
     );

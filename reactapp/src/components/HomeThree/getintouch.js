@@ -6,7 +6,7 @@ function GetTouch() {
         <>
             <div className="roww">
                 <div className="col-md-8 offset-2">
-                    <div className="contact-form">
+                    <div className="contact-form touch">
                         <h4>GET IN TOUCH</h4>
                         <form action="#" method="post" className="row">
                             <div className="col-md-6">

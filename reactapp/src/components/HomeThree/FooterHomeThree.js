@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const apiUrl = 'http://localhost:1337/api/logos?populate=*';
 const ApiUrl = 'http://localhost:1337/api/footers';
+const NewUrl = 'http://localhost:1337/api/infos';
 function FooterHomeThree({ className }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
@@ -35,6 +36,21 @@ function FooterHomeThree({ className }) {
                 .get(ApiUrl, { cancelToken: request.token })
                 .then((res) => {
                     Setheader(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
+    const [footer, Setfooter] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(NewUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setfooter(res.data.data);
                 })
                 .catch((error) => {
                     console.log(error);
@@ -159,18 +175,30 @@ function FooterHomeThree({ className }) {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-envelope" /> support@appie.com
+                                            <i className="fal fa-envelope" />
+                                            {footer
+                                                ? footer.map((x) => <a>{x.attributes.email}</a>)
+                                                : 'hgfhgf'}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-phone" /> +(642) 342 762 44
+                                            <i className="fal fa-phone" />
+                                            {footer
+                                                ? footer.map((x) => <a>{x.attributes.phone1}</a>)
+                                                : 'hgfhgf'}
+                                            <br></br>
+                                            {footer
+                                                ? footer.map((x) => <a>{x.attributes.phone2}</a>)
+                                                : 'hgfhgf'}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-map-marker-alt" /> 442 Belle Terre
-                                            St Floor 7, San Francisco, AV 4206
+                                            <i className="fal fa-map-marker-alt" />
+                                            {footer
+                                                ? footer.map((x) => <a>{x.attributes.location}</a>)
+                                                : 'hgfhgf'}
                                         </a>
                                     </li>
                                 </ul>

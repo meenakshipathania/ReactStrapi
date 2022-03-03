@@ -93,7 +93,7 @@ function Navigation() {
                     </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/news">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
                     </a>
                 </li>

@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
+const apiUrl = 'http://localhost:1337/api/infos';
 function Forms() {
+    const [logo, Setlogo] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(apiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setlogo(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
     return (
         <>
             <section className="contact-section">
@@ -14,26 +31,31 @@ function Forms() {
                                     <h5>Headquaters</h5>
                                     <p>
                                         <i className="fal fa-home"></i>
-                                        744 New York Ave, Brooklyn, Kings,
-                                        <br /> New York 10224
+                                        {logo
+                                            ? logo.map((x) => <a>{x.attributes.location}</a>)
+                                            : 'hgfhgf'}
                                     </p>
                                 </div>
                                 <div className="single-info">
                                     <h5>Phone</h5>
                                     <p>
                                         <i className="fal fa-phone"></i>
-                                        (+642) 245 356 432
+                                        {logo
+                                            ? logo.map((x) => <a>{x.attributes.phone1}</a>)
+                                            : 'hgfhgf'}
                                         <br />
-                                        (+420) 336 476 328
+                                        {logo
+                                            ? logo.map((x) => <a>{x.attributes.phone2}</a>)
+                                            : 'hgfhgf'}
                                     </p>
                                 </div>
                                 <div className="single-info">
                                     <h5>Support</h5>
                                     <p>
                                         <i className="fal fa-envelope"></i>
-                                        bisy@support.com
-                                        <br />
-                                        help@education.com
+                                        {logo
+                                            ? logo.map((x) => <a>{x.attributes.email}</a>)
+                                            : 'hgfhgf'}
                                     </p>
                                 </div>
                                 <div className="ab-social">
@@ -55,14 +77,17 @@ function Forms() {
                         </div>
                         <div className="col-md-8">
                             <div className="contact-form">
-                                <h4>Let’s Connect</h4>
-                                <p>Integer at lorem eget diam facilisis lacinia ac id massa.</p>
+                                <h3>Let’s Connect</h3>
+                                <p>
+                                    Do you have any query? Enter your detail below. We will be
+                                    contact with you.
+                                </p>
                                 <form action="#" method="post" className="row">
                                     <div className="col-md-6">
-                                        <input type="text" name="f-name" placeholder="First Name" />
+                                        <input type="text" name="f-name" placeholder="Name" />
                                     </div>
                                     <div className="col-md-6">
-                                        <input type="text" name="l-name" placeholder="Last Name" />
+                                        <input type="text" name="l-name" placeholder="Email" />
                                     </div>
                                     <div className="col-md-6">
                                         <input
@@ -72,20 +97,13 @@ function Forms() {
                                         />
                                     </div>
                                     <div className="col-md-6">
-                                        <input
-                                            type="number"
-                                            name="phone"
-                                            placeholder="Phone Number"
-                                        />
+                                        <input type="number" name="phone" placeholder="Telephone" />
                                     </div>
                                     <div className="col-md-12">
-                                        <input type="text" name="suject" placeholder="Subject" />
+                                        <input type="text" name="suject" placeholder="Country" />
                                     </div>
                                     <div className="col-md-12">
-                                        <textarea
-                                            name="message"
-                                            placeholder="How can we help?"
-                                        ></textarea>
+                                        <textarea name="message" placeholder="Message"></textarea>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="condition-check">
