@@ -8372,5 +8372,54 @@ button span{
 .listt li{
   padding-left: 9.5%;
 }
-
+@media only screen and (max-width: 1200px){
+  .listt li{
+    padding-left: 7%;
+  }
+}
+@media only screen and (max-width: 1020px){
+  .listt li{
+    padding-left: 5%;
+  }
+}
+@media only screen and (max-width: 920px){
+  .coloumn{
+    margin: 0 8%;
+  }
+  .iconheading{
+    margin: 0px 7%;
+  }
+  .listt li{
+    padding-left: 3%;
+  }
+}
+@media only screen and (max-width: 840px){
+  .coloumn{
+    flex-wrap: wrap;
+  }
+  .First{
+    width: 100%;
+    margin-top: 2%;
+  }
+  .second{
+    width: 100%;
+    margin-top: 2%;
+  }
+  .third{
+    width: 100%;
+    margin-top: 2%;
+  }
+  .listt li{
+    display: inline-block;
+    width: 50%;
+    margin-top: 2%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .businesslist li{
+    display: inline-block;
+    width: 50%;
+    margin-top: 2%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

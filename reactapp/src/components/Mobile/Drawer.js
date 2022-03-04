@@ -1,8 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+// import logo from '../../assets/images/logo.png';
 
+const apiUrl = 'http://localhost:1337/api/logos?populate=*';
 function Drawer({ drawer, action }) {
+    const [logo, Setlogo] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        setTimeout(() => {
+            axios
+                .get(apiUrl, { cancelToken: request.token })
+                .then((res) => {
+                    Setlogo(res.data.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }, 2000);
+        return () => request.cancel();
+    });
+    function imageurl(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     const [itemSize, setSize] = useState('0px');
     const [item, setItem] = useState('home');
     const handler = (e, value) => {
@@ -30,7 +52,20 @@ function Drawer({ drawer, action }) {
                                     </a>
                                 </div>
                                 <div className="offcanvas-brand text-center mb-40">
-                                    <img src={logo} alt="" />
+                                    {logo
+                                        ? logo.map((x) => (
+                                              <a href="/">
+                                                  <img
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
+                                        : 'hgfhgf'}
                                 </div>
                                 <div id="menu" className="text-left ">
                                     <ul className="offcanvas_main_menu">
@@ -80,54 +115,21 @@ function Drawer({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link to="/service">Service</Link>
+                                            <Link to="/service">Portfolio</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'pages')}
                                             id="pages"
                                             className="menu-item-has-children active"
                                         >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">Pages</a>
-                                            <ul
-                                                className="sub-menu"
-                                                style={{
-                                                    height: item === 'pages' ? itemSize : '0px',
-                                                }}
-                                            >
-                                                <li>
-                                                    <Link to="/about-us">About Us</Link>
-                                                </li>
-
-                                                <li>
-                                                    <Link to="/error">Error</Link>
-                                                </li>
-                                            </ul>
+                                            <Link to="/news">Products</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'news')}
                                             id="news"
                                             className="menu-item-has-children active"
                                         >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">News</a>
-                                            <ul
-                                                className="sub-menu"
-                                                style={{
-                                                    height: item === 'news' ? itemSize : '0px',
-                                                }}
-                                            >
-                                                <li>
-                                                    <Link to="/news">news page</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="/news/single-news">Single News</Link>
-                                                </li>
-                                            </ul>
+                                            <Link to="/about-us">About Us</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'contact')}
