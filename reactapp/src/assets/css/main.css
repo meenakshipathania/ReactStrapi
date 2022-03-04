@@ -8422,4 +8422,12 @@ button span{
     margin-top: 2%;
   }
 }
+@media only screen and (max-width: 768px){
+  .roww{
+    margin: 0px;
+  }
+  .offset-2 {
+     margin-left:0%; 
+}
+}
 /*# sourceMappingURL=style.css.map */
