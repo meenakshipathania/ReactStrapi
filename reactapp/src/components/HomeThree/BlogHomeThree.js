@@ -21,7 +21,7 @@ function BlogHomeThree() {
     });
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.images.data[0].attributes.url;
+        const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -52,7 +52,7 @@ function BlogHomeThree() {
                                           </div>
                                           <div className="content">
                                               <h5 className="title">
-                                                  <a href="/news/single-news">{x.attributes.tag}</a>
+                                                  <a href="#">{x.attributes.tag}</a>
                                               </h5>
                                               <div className="meta-item">
                                                   <ul>
@@ -73,7 +73,7 @@ function BlogHomeThree() {
                             : 'hgfhgf'}
                         <div className="col-lg-12">
                             <div className="blog-btn text-center mt-60">
-                                <Link className="main-btn" to="/news">
+                                <Link className="main-btn" to="#">
                                     View All Posts <i className="fal fa-arrow-right" />
                                 </Link>
                             </div>

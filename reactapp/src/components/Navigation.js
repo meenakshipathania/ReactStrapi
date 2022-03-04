@@ -98,6 +98,11 @@ function Navigation() {
                     </a>
                 </li>
                 <li>
+                    <a href="/about-us">
+                        {navitems ? navitems.map((x) => <a>{x.attributes.name4}</a>) : 'hgfhgf'}
+                    </a>
+                </li>
+                <li>
                     <a href="/contact">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
                     </a>

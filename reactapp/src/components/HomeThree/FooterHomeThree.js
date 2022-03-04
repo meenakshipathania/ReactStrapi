@@ -125,13 +125,10 @@ function FooterHomeThree({ className }) {
                                         <Link to="/about-us">About Us</Link>
                                     </li>
                                     <li>
-                                        <Link to="/Service">Service</Link>
+                                        <Link to="/Service">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Case Studies</a>
-                                    </li>
-                                    <li>
-                                        <Link to="/news">Blog</Link>
+                                        <Link to="/news">Product</Link>
                                     </li>
                                     <li>
                                         <Link to="/contact">Contact</Link>
@@ -150,9 +147,9 @@ function FooterHomeThree({ className }) {
                                     <li>
                                         <Link to="/about-us">Community</Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href="#">Resources</a>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <a href="#">Faqs</a>
                                     </li>

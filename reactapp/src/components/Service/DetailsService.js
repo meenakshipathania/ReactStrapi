@@ -139,10 +139,7 @@ function DetailsService() {
                                             <i className="fal fa-user-friends"></i>20-30 Employees
                                         </li>
                                         <li>
-                                            <i className="fal fa-bookmark"></i>Appie Template
-                                        </li>
-                                        <li>
-                                            <i className="fal fa-globe"></i>quomodosoft.com/appie
+                                            <i className="fal fa-globe"></i>ocodeapps.com
                                         </li>
                                     </ul>
                                 </div>

@@ -16,10 +16,10 @@ function News() {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderNews action={drawerAction.toggle} />
             <HeroNews
-                title="Blogs"
+                title="PRODUCTS"
                 breadcrumb={[
-                    { link: '/', title: 'home' },
-                    { link: '/news', title: 'Blogs' },
+                    { link: '/home-three', title: 'home' },
+                    { link: '/service', title: 'Portfolio' },
                 ]}
             />
             {/* <section className="blogpage-section">

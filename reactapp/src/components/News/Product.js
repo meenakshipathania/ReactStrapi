@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const apiUrl = 'http://localhost:1337/api/products';
-const NewApi = 'http://localhost:1337/api/businessapps?populate=*';
-const ApiUrl = 'http://localhost:1337/api/otherapps?populate=*';
+const NewApi = 'http://localhost:1337/api/productimages?populate=*';
 function Product() {
     const [heading, Setheading] = useState([]);
     useEffect(() => {
@@ -41,30 +40,19 @@ function Product() {
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
-
-    const [other, Setother] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(ApiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setother(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    function imageurl111(atttribute) {
-        const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image1.data[0].attributes.url;
-        return baseurl + dataurl;
-    }
-    function imageurl222(atttribute) {
+    function imageurl2(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image2.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
+    function imageurl3(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image3.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
+    function imageurl4(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image4.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -121,7 +109,7 @@ function Product() {
                     Themes
                 </h3>
                 <hr></hr>
-                <ul className="businesslist">
+                <ul className="businesslist listt">
                     <li>
                         <a href="#">
                             {business
@@ -140,36 +128,50 @@ function Product() {
                     </li>
                     <li>
                         <a href="#">
-                            {other
-                                ? other.map((x) => (
+                            {business
+                                ? business.map((x) => (
                                       <img
                                           className="business"
-                                          src={x.attributes ? imageurl111(x.attributes) : 'hgghtyu'}
+                                          src={x.attributes ? imageurl2(x.attributes) : 'hgghtyu'}
                                           alt=""
                                       />
                                   ))
                                 : 'hgfhgf'}
-                            {other ? other.map((x) => <h6>{x.attributes.text1}</h6>) : 'hgghtyu'}
+                            {business
+                                ? business.map((x) => <h6>{x.attributes.text2}</h6>)
+                                : 'hgghtyu'}
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            {other
-                                ? other.map((x) => (
+                            {business
+                                ? business.map((x) => (
                                       <img
                                           className="business"
-                                          src={x.attributes ? imageurl222(x.attributes) : 'hgghtyu'}
+                                          src={x.attributes ? imageurl3(x.attributes) : 'hgghtyu'}
                                           alt=""
                                       />
                                   ))
                                 : 'hgfhgf'}
-                            {other ? other.map((x) => <h6>{x.attributes.text2}</h6>) : 'hgghtyu'}
+                            {business
+                                ? business.map((x) => <h6>{x.attributes.text3}</h6>)
+                                : 'hgghtyu'}
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img className="business" src="#" alt="" />
-                            <h6>SERVICE REQUEST</h6>
+                            {business
+                                ? business.map((x) => (
+                                      <img
+                                          className="business"
+                                          src={x.attributes ? imageurl4(x.attributes) : 'hgghtyu'}
+                                          alt=""
+                                      />
+                                  ))
+                                : 'hgfhgf'}
+                            {business
+                                ? business.map((x) => <h6>{x.attributes.text4}</h6>)
+                                : 'hgghtyu'}
                         </a>
                     </li>
                 </ul>
