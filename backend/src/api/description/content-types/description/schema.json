@@ -4,7 +4,7 @@
   "info": {
     "singularName": "description",
     "pluralName": "descriptions",
-    "displayName": "description",
+    "displayName": "Description",
     "description": ""
   },
   "options": {
@@ -12,21 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "desc": {
-      "type": "text",
-      "required": true,
-      "unique": true
-    },
-    "detail": {
-      "type": "richtext"
-    },
     "threefirst": {
-      "type": "text"
+      "type": "string"
     },
     "threesecfirst": {
-      "type": "text",
-      "required": true,
-      "unique": true
+      "type": "string"
     },
     "image": {
       "type": "media",
@@ -40,12 +30,25 @@
       ]
     },
     "threesecsec": {
-      "type": "text",
-      "required": true
+      "type": "string"
     },
     "threesecthree": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "youwant": {
+      "type": "string"
+    },
+    "tag1": {
+      "type": "string"
+    },
+    "tag2": {
+      "type": "string"
+    },
+    "tag3": {
+      "type": "string"
+    },
+    "tag4": {
+      "type": "string"
     }
   }
 }

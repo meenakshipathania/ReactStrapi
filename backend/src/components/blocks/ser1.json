@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_ser1s",
+  "info": {
+    "displayName": "ser1",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "tag1": {
+      "type": "string"
+    },
+    "tag2": {
+      "type": "string"
+    },
+    "tag3": {
+      "type": "string"
+    },
+    "tag4": {
+      "type": "string"
+    }
+  }
+}

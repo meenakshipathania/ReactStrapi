@@ -4,8 +4,7 @@
   "info": {
     "singularName": "logo",
     "pluralName": "logos",
-    "displayName": "logo",
-    "description": ""
+    "displayName": "logo"
   },
   "options": {
     "draftAndPublish": true
@@ -13,27 +12,37 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
     "login": {
-      "type": "string",
-      "required": true,
-      "unique": true
+      "type": "string"
     },
     "getstart": {
-      "type": "string",
-      "required": true,
-      "unique": true
+      "type": "string"
     },
     "des": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "name1": {
+      "type": "string"
+    },
+    "name2": {
+      "type": "string"
+    },
+    "name3": {
+      "type": "string"
+    },
+    "name4": {
       "type": "string"
     }
   }

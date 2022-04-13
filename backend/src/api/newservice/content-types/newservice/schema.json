@@ -13,13 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "heading": {
-      "type": "text",
-      "required": true
+      "type": "string"
     },
     "image": {
       "type": "media",
       "multiple": true,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
@@ -35,6 +34,16 @@
     },
     "tag3": {
       "type": "string"
+    },
+    "ser1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.ser1"
+    },
+    "ser2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.ser2"
     }
   }
 }

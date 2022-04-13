@@ -2,49 +2,45 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/navbars';
-const NewApipiUrl = 'http://localhost:1337/api/homes';
-
 function Navigation() {
     const [navitems, Setnavitems] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setnavitems(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setnavitems(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
-    const [home, Sethome] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewApipiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Sethome(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
+    }, []);
+
+    // const [home, Sethome] = useState([]);
+    // useEffect(() => {
+    //     const request = axios.CancelToken.source();
+    //     setTimeout(() => {
+    //         axios
+    //             .get(NewApipiUrl, { cancelToken: request.token })
+    //             .then((res) => {
+    //                 Sethome(res.data.data);
+    //             })
+    //             .catch((error) => {
+    //                 console.log(error);
+    //             });
+    //     }, 2000);
+    //     return () => request.cancel();
+    // });
     return (
         <>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
-                        <i className="fal fa-angle-down" />
+                        {/* <i className="fal fa-angle-down" /> */}
                     </a>
-                    <ul className="sub-menu">
+                    {/* <ul className="sub-menu">
                         <li>
                             <Link to="/">
                                 {home ? home.map((x) => <a>{x.attributes.head1}</a>) : 'hgfhgf'}
@@ -85,7 +81,7 @@ function Navigation() {
                                 {home ? home.map((x) => <a>{x.attributes.head8}</a>) : 'hgfhgf'}
                             </Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
                     <Link to="/service">

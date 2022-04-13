@@ -3,24 +3,21 @@ import axios from 'axios';
 // import heroThumb from '../../assets/images/hero-thumb-4.png';
 import PopupVideo from '../PopupVideo';
 
-const apiUrl = 'http://localhost:1337/api/descriptions?populate=*';
 function HeroHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const [head, Sethead] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Sethead(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/descriptions?populate=*')
+            .then((res) => {
+                Sethead(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image.data[0].attributes.url;

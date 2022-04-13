@@ -3,23 +3,20 @@ import axios from 'axios';
 import StickyMenu from '../../lib/StickyMenu';
 import Navigation from '../Navigation';
 
-const apiUrl = 'http://localhost:1337/api/logos?populate=*';
 function HeaderHomeThree({ action }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setlogo(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setlogo(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
@@ -60,12 +57,12 @@ function HeaderHomeThree({ action }) {
                             </div>
                             <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
-                                    <a className="login-btn" href="#">
+                                    {/* <a className="login-btn" href="#">
                                         <i className="fal fa-user" />
                                         {logo
                                             ? logo.map((x) => <a>{x.attributes.login}</a>)
                                             : 'hgfhgf'}
-                                    </a>
+                                    </a> */}
                                     <a className="main-btn ml-30" href="#">
                                         {logo
                                             ? logo.map((x) => <a>{x.attributes.getstart}</a>)

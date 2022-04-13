@@ -4,7 +4,7 @@ import BackToTop from '../BackToTop';
 import Drawer from '../Mobile/Drawer';
 import AboutHomeThree from './AboutHomeThree';
 import BlogHomeThree from './BlogHomeThree';
-import GetTouch from './getintouch';
+// import GetTouch from './getintouch';
 import DownloadHomeThree from './DownloadHomeThree';
 import FooterHomeThree from './FooterHomeThree';
 import FunFactHomeThree from './FunFactHomeThree';
@@ -25,7 +25,7 @@ function HomeThree() {
             <FunFactHomeThree />
             <AboutHomeThree />
             <ShowCaseHomeThree />
-            <GetTouch />
+            {/* <GetTouch /> */}
             <DownloadHomeThree />
             <BlogHomeThree />
             <ProjectHomeThree />

@@ -5,45 +5,20 @@ import iconTwo from '../../assets/images/icon/2.png';
 import iconThree from '../../assets/images/icon/3.png';
 import iconFour from '../../assets/images/icon/4.png';
 
-const apiUrl = 'http://localhost:1337/api/wants';
-// const newApiUrl = 'http://localhost:1337/api/welcomeapis?populate=*';
 function ServicesHomeThree() {
     const [gettext, Settext] = useState([]);
-    // const [getdata, Setdata] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Settext(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/descriptions')
+            .then((res) => {
+                Settext(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
-    // useEffect(() => {
-    //     const request = axios.CancelToken.source();
-    //     setTimeout(() => {
-    //         axios
-    //             .get(newApiUrl, { cancelToken: request.token })
-    //             .then((resp) => {
-    //                 Setdata(resp.data.data);
-    //             })
-    //             .catch((error) => {
-    //                 console.log(error);
-    //             });
-    //     }, 2000);
-    //     return () => request.cancel();
-    // });
-
-    // function imageurl(atttribute) {
-    //     const baseurl = 'http://localhost:1337';
-    //     const dataurl = atttribute.image.data[0].attributes.url;
-    //     return baseurl + dataurl;
-    // }
+    }, []);
     return (
         <>
             <section className="appie-service-area appie-service-3-area pt-195 pb-100" id="service">

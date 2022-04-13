@@ -8,11 +8,11 @@ import ScrollToTop from './components/Helper/ScrollToTop';
 import HomeEight from './components/HomeEight';
 import HomeFive from './components/HomeFive';
 import HomeFour from './components/HomeFour';
-import HomeOne from './components/HomeOne';
+// import HomeOne from './components/HomeOne';
 import HomeSeven from './components/HomeSeven';
 import HomeSix from './components/HomeSix';
 import HomeThree from './components/HomeThree';
-import Hometwo from './components/HomeTwo';
+// import Hometwo from './components/HomeTwo';
 import News from './components/News';
 import SingleNews from './components/News/SingleNews';
 import Service from './components/Service';
@@ -38,9 +38,9 @@ function Routes() {
                 <Router>
                     <ScrollToTop>
                         <Switch>
-                            <Route exact path="/" component={HomeOne} />
-                            <Route exact path="/home-two" component={Hometwo} />
-                            <Route exact path="/home-three" component={HomeThree} />
+                            <Route exact path="/" component={HomeThree} />
+                            {/* <Route exact path="/home-two" component={Hometwo} />
+                            <Route exact path="/home-three" component={HomeThree} /> */}
                             <Route exact path="/home-four" component={HomeFour} />
                             <Route exact path="/home-five" component={HomeFive} />
                             <Route exact path="/home-six" component={HomeSix} />

@@ -1,15 +1,10 @@
 {
-  "kind": "collectionType",
-  "collectionName": "newservice2s",
+  "collectionName": "components_blocks_ser2s",
   "info": {
-    "singularName": "newservice2",
-    "pluralName": "newservice2s",
-    "displayName": "Newservice2"
+    "displayName": "ser2",
+    "icon": "anchor"
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
     "heading": {
       "type": "string"
