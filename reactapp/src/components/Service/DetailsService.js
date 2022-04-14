@@ -2,47 +2,28 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
-const apiUrl = 'http://localhost:1337/api/portheaders?populate=*';
-const NewApi = 'http://localhost:1337/api/businessapps?populate=*';
-const NewUrl = 'http://localhost:1337/api/socialapps?populate=*';
-const ApiUrl = 'http://localhost:1337/api/otherapps?populate=*';
+// const NewUrl = 'http://localhost:1337/api/socialapps?populate=*';
+// const ApiUrl = 'http://localhost:1337/api/otherapps?populate=*';
 function DetailsService() {
     const [data, Setdata] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setdata(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/apps?populate=*')
+            .then((res) => {
+                Setdata(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
+
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image2.data[0].attributes.url;
+        const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
-
-    const [business, Setbusiness] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewApi, { cancelToken: request.token })
-                .then((res) => {
-                    Setbusiness(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
     function imageurl1(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image1.data[0].attributes.url;
@@ -63,61 +44,29 @@ function DetailsService() {
         const dataurl = atttribute.image4.data[0].attributes.url;
         return baseurl + dataurl;
     }
-
-    const [social, Setsocial] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setsocial(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    function imageurl11(atttribute) {
+    function imageurl5(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image1.data[0].attributes.url;
+        const dataurl = atttribute.image5.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    function imageurl22(atttribute) {
+    function imageurl6(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image2.data[0].attributes.url;
+        const dataurl = atttribute.image6.data[0].attributes.url;
         return baseurl + dataurl;
     }
-
-    const [other, Setother] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(ApiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setother(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    function imageurl111(atttribute) {
+    function imageurl7(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image1.data[0].attributes.url;
+        const dataurl = atttribute.image7.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    function imageurl222(atttribute) {
+    function imageurl8(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image2.data[0].attributes.url;
+        const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    function imageurl333(atttribute) {
+    function imageurl9(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image3.data[0].attributes.url;
+        const dataurl = atttribute.image9.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -184,8 +133,8 @@ function DetailsService() {
                                     <ul className="businesslist">
                                         <li>
                                             <a href="#">
-                                                {business
-                                                    ? business.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
@@ -197,17 +146,15 @@ function DetailsService() {
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {business
-                                                    ? business.map((x) => (
-                                                          <h6>{x.attributes.text1}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text1}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {business
-                                                    ? business.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
@@ -219,17 +166,15 @@ function DetailsService() {
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {business
-                                                    ? business.map((x) => (
-                                                          <h6>{x.attributes.text2}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text2}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {business
-                                                    ? business.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
@@ -241,17 +186,15 @@ function DetailsService() {
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {business
-                                                    ? business.map((x) => (
-                                                          <h6>{x.attributes.text3}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text3}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {business
-                                                    ? business.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
@@ -263,10 +206,8 @@ function DetailsService() {
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {business
-                                                    ? business.map((x) => (
-                                                          <h6>{x.attributes.text4}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text4}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -284,45 +225,41 @@ function DetailsService() {
                                     <ul className="businesslist">
                                         <li>
                                             <a href="#">
-                                                {social
-                                                    ? social.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
                                                                   x.attributes
-                                                                      ? imageurl11(x.attributes)
+                                                                      ? imageurl5(x.attributes)
                                                                       : 'hgghtyu'
                                                               }
                                                               alt=""
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {social
-                                                    ? social.map((x) => (
-                                                          <h6>{x.attributes.text1}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text5}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {social
-                                                    ? social.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
                                                                   x.attributes
-                                                                      ? imageurl22(x.attributes)
+                                                                      ? imageurl6(x.attributes)
                                                                       : 'hgghtyu'
                                                               }
                                                               alt=""
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {social
-                                                    ? social.map((x) => (
-                                                          <h6>{x.attributes.text2}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text6}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -340,67 +277,61 @@ function DetailsService() {
                                     <ul className="businesslist">
                                         <li>
                                             <a href="#">
-                                                {other
-                                                    ? other.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
                                                                   x.attributes
-                                                                      ? imageurl111(x.attributes)
+                                                                      ? imageurl7(x.attributes)
                                                                       : 'hgghtyu'
                                                               }
                                                               alt=""
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {other
-                                                    ? other.map((x) => (
-                                                          <h6>{x.attributes.text1}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text7}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {other
-                                                    ? other.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
                                                                   x.attributes
-                                                                      ? imageurl222(x.attributes)
+                                                                      ? imageurl8(x.attributes)
                                                                       : 'hgghtyu'
                                                               }
                                                               alt=""
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {other
-                                                    ? other.map((x) => (
-                                                          <h6>{x.attributes.text2}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text8}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                {other
-                                                    ? other.map((x) => (
+                                                {data
+                                                    ? data.map((x) => (
                                                           <img
                                                               className="business"
                                                               src={
                                                                   x.attributes
-                                                                      ? imageurl333(x.attributes)
+                                                                      ? imageurl9(x.attributes)
                                                                       : 'hgghtyu'
                                                               }
                                                               alt=""
                                                           />
                                                       ))
                                                     : 'hgfhgf'}
-                                                {other
-                                                    ? other.map((x) => (
-                                                          <h6>{x.attributes.text3}</h6>
-                                                      ))
+                                                {data
+                                                    ? data.map((x) => <h6>{x.attributes.text9}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>

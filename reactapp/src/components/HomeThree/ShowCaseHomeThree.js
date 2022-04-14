@@ -14,27 +14,23 @@ import 'slick-carousel/slick/slick.css';
 // import showCaseFour from '../../assets/images/showcase-4.png';
 // import showCaseFive from '../../assets/images/showcase-5.png';
 
-const apiUrl = 'http://localhost:1337/api/sliders?populate=*';
 function ShowCaseHomeThree() {
     const [img, Setimg] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setimg(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/sliders?populate=*')
+            .then((res) => {
+                Setimg(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
-
-    function imageurl(atttribute) {
+    }, []);
+    function imageurl(data) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image.data[0].attributes.url;
+        const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     const sliderRef = useRef();

@@ -42,6 +42,9 @@ body {
 img {
   max-width: 100%;
 }
+.mar{
+  margin-left: 110px;
+}
 
 a:focus,
 input:focus,
@@ -8428,6 +8431,17 @@ button span{
   }
   .offset-2 {
      margin-left:0%; 
+}
+}
+@media only screen and (max-width: 1200px) {
+  .mar{
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .mar {
+      margin-top: 32px;
+      margin-left: 110px;
 }
 }
 /*# sourceMappingURL=style.css.map */

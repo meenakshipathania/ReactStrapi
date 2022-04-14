@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/infos';
+const apiUrl = 'http://localhost:1337/api/logos';
 function Forms() {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {

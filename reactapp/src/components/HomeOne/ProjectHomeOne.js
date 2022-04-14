@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/orders';
 function ProjectHomeOne() {
     const [data, Setdata] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setdata(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setdata(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
+    function imageurl(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image1.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <section className="appie-project-area pb-100">
@@ -47,10 +49,27 @@ function ProjectHomeOne() {
                                             </form>
                                         </div>
                                     </div>
+                                    <div className="col-lg-6">
+                                        {/* <div className="appie-project-thumb"> */}
+                                        {data
+                                            ? data.map((x) => (
+                                                  <img
+                                                      className="mar"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              ))
+                                            : 'hgfhgf'}
+                                        {/* </div> */}
+                                    </div>
                                 </div>
-                                <div className="appie-project-thumb">
-                                    <img src="assets/images/project-thumb.png" alt="" />
-                                </div>
+                                {/* <div className="appie-project-thumb">
+                                    <img src="assets/images/order.png" alt="" />
+                                </div> */}
                             </div>
                         </div>
                     </div>

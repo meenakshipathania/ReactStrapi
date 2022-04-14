@@ -1,67 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/products';
-const NewApi = 'http://localhost:1337/api/productimages?populate=*';
 function Product() {
     const [heading, Setheading] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setheading(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/apps?populate=*')
+            .then((res) => {
+                Setheading(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
-
-    const [business, Setbusiness] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewApi, { cancelToken: request.token })
-                .then((res) => {
-                    Setbusiness(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
+    }, []);
+    function imageurl7(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image7.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
+    function imageurl8(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image8.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     function imageurl1(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    function imageurl2(atttribute) {
+    function imageurl10(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image2.data[0].attributes.url;
-        return baseurl + dataurl;
-    }
-    function imageurl3(atttribute) {
-        const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image3.data[0].attributes.url;
-        return baseurl + dataurl;
-    }
-    function imageurl4(atttribute) {
-        const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image4.data[0].attributes.url;
+        const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
         <>
             <div className="product-heading">
-                {heading ? heading.map((x) => <a>{x.attributes.heading}</a>) : 'hgfhgf'}
+                {heading ? heading.map((x) => <a>{x.attributes.head}</a>) : 'hgfhgf'}
             </div>
             <div className="product-tag">
-                {heading ? heading.map((x) => <a>{x.attributes.tagline}</a>) : 'hgfhgf'}
+                {heading ? heading.map((x) => <a>{x.attributes.tagg}</a>) : 'hgfhgf'}
             </div>
             <div className="product-form">
                 <form
@@ -112,8 +92,40 @@ function Product() {
                 <ul className="businesslist listt">
                     <li>
                         <a href="#">
-                            {business
-                                ? business.map((x) => (
+                            {heading
+                                ? heading.map((x) => (
+                                      <img
+                                          className="business"
+                                          src={x.attributes ? imageurl7(x.attributes) : 'hgghtyu'}
+                                          alt=""
+                                      />
+                                  ))
+                                : 'hgfhgf'}
+                            {heading
+                                ? heading.map((x) => <h6>{x.attributes.text7}</h6>)
+                                : 'hgghtyu'}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {heading
+                                ? heading.map((x) => (
+                                      <img
+                                          className="business"
+                                          src={x.attributes ? imageurl8(x.attributes) : 'hgghtyu'}
+                                          alt=""
+                                      />
+                                  ))
+                                : 'hgfhgf'}
+                            {heading
+                                ? heading.map((x) => <h6>{x.attributes.text8}</h6>)
+                                : 'hgghtyu'}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {heading
+                                ? heading.map((x) => (
                                       <img
                                           className="business"
                                           src={x.attributes ? imageurl1(x.attributes) : 'hgghtyu'}
@@ -121,56 +133,24 @@ function Product() {
                                       />
                                   ))
                                 : 'hgfhgf'}
-                            {business
-                                ? business.map((x) => <h6>{x.attributes.text1}</h6>)
+                            {heading
+                                ? heading.map((x) => <h6>{x.attributes.text1}</h6>)
                                 : 'hgghtyu'}
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            {business
-                                ? business.map((x) => (
+                            {heading
+                                ? heading.map((x) => (
                                       <img
                                           className="business"
-                                          src={x.attributes ? imageurl2(x.attributes) : 'hgghtyu'}
+                                          src={x.attributes ? imageurl10(x.attributes) : 'hgghtyu'}
                                           alt=""
                                       />
                                   ))
                                 : 'hgfhgf'}
-                            {business
-                                ? business.map((x) => <h6>{x.attributes.text2}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            {business
-                                ? business.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl3(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {business
-                                ? business.map((x) => <h6>{x.attributes.text3}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            {business
-                                ? business.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl4(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {business
-                                ? business.map((x) => <h6>{x.attributes.text4}</h6>)
+                            {heading
+                                ? heading.map((x) => <h6>{x.attributes.text10}</h6>)
                                 : 'hgghtyu'}
                         </a>
                     </li>

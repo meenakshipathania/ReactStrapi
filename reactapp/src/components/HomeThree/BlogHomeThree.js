@@ -2,23 +2,21 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const apiUrl = 'http://localhost:1337/api/blogposts?populate=*';
 function BlogHomeThree() {
     const [data, Setdata] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setdata(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/blogposts?populate=*')
+            .then((res) => {
+                Setdata(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
+
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image.data[0].attributes.url;

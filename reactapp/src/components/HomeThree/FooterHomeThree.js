@@ -3,61 +3,26 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import logo from '../../assets/images/logo-4.png';
 
-const apiUrl = 'http://localhost:1337/api/logos?populate=*';
-const ApiUrl = 'http://localhost:1337/api/footers';
-const NewUrl = 'http://localhost:1337/api/infos';
 function FooterHomeThree({ className }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setlogo(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setlogo(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    const [header, Setheader] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(ApiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setheader(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
-    const [footer, Setfooter] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(NewUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setfooter(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
     return (
         <>
             <section className={`appie-footer-area appie-footer-3-area ${className}`}>
@@ -116,8 +81,8 @@ function FooterHomeThree({ className }) {
                         <div className="col-lg-2 col-md-6">
                             <div className="footer-navigation footer-navigation-3">
                                 <h4 className="title">
-                                    {header
-                                        ? header.map((x) => <h4>{x.attributes.head1}</h4>)
+                                    {logo
+                                        ? logo.map((x) => <h4>{x.attributes.head1}</h4>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>
@@ -139,8 +104,8 @@ function FooterHomeThree({ className }) {
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-navigation footer-navigation-3">
                                 <h4 className="title">
-                                    {header
-                                        ? header.map((x) => <h4>{x.attributes.head2}</h4>)
+                                    {logo
+                                        ? logo.map((x) => <h4>{x.attributes.head2}</h4>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>
@@ -165,36 +130,36 @@ function FooterHomeThree({ className }) {
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-widget-info">
                                 <h4 className="title">
-                                    {header
-                                        ? header.map((x) => <h4>{x.attributes.head3}</h4>)
+                                    {logo
+                                        ? logo.map((x) => <h4>{x.attributes.head3}</h4>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>
                                     <li>
                                         <a href="#">
                                             <i className="fal fa-envelope" />
-                                            {footer
-                                                ? footer.map((x) => <a>{x.attributes.email}</a>)
+                                            {logo
+                                                ? logo.map((x) => <a>{x.attributes.email}</a>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i className="fal fa-phone" />
-                                            {footer
-                                                ? footer.map((x) => <a>{x.attributes.phone1}</a>)
+                                            {logo
+                                                ? logo.map((x) => <a>{x.attributes.phone1}</a>)
                                                 : 'hgfhgf'}
                                             <br></br>
-                                            {footer
-                                                ? footer.map((x) => <a>{x.attributes.phone2}</a>)
+                                            {logo
+                                                ? logo.map((x) => <a>{x.attributes.phone2}</a>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i className="fal fa-map-marker-alt" />
-                                            {footer
-                                                ? footer.map((x) => <a>{x.attributes.location}</a>)
+                                            {logo
+                                                ? logo.map((x) => <a>{x.attributes.location}</a>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>

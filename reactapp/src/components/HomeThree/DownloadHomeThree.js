@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/downloads?populate=*';
 function DownloadHomeThree({ className }) {
-    const [data, Setdata] = useState([]);
+    const [text2, Settext2] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setdata(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/downloads?populate=*')
+            .then((res) => {
+                Settext2(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
-    function imageurl(atttribute) {
+    }, []);
+    function imageurl(data) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.images.data[0].attributes.url;
+        const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -36,8 +33,8 @@ function DownloadHomeThree({ className }) {
                         </div>
                     </div>
                     <div className="row">
-                        {data
-                            ? data.map((x) => (
+                        {text2
+                            ? text2.map((x) => (
                                   <div className="col-lg-6">
                                       <div
                                           className="appie-download-3-box mt-30 mr-20 wow animated fadeInLeft"
