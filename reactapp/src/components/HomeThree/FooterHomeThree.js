@@ -30,7 +30,7 @@ function FooterHomeThree({ className }) {
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div className="footer-about-widget footer-about-widget-3">
-                                <div className="logo">
+                                <div className="siz">
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">

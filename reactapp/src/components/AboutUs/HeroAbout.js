@@ -7,10 +7,10 @@ function HeroAbout() {
             <div className="appie-about-top-title-area">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-7">
+                        <div className="col-lg-6 offset-8">
                             <div className="appie-about-top-title">
-                                <h2 className="title">The leading people Management platform</h2>
-                                <p>We offer you a varity of taste and food options.</p>
+                                <h2 className="title">ABOUT US</h2>
+                                {/* <p>We offer you a varity of taste and food options.</p> */}
                             </div>
                         </div>
                     </div>
@@ -21,9 +21,9 @@ function HeroAbout() {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="appie-about-page-content">
-                                <a href="#">
+                                {/* <a href="#">
                                     View all Members <i className="fal fa-arrow-right"></i>
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

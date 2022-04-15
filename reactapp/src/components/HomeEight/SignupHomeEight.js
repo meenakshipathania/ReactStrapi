@@ -1,16 +1,32 @@
-import React from 'react';
+import React,{ useState, useEffect} from 'react';
+import axios from 'axios';
 import signupThumb from '../../assets/images/signup-thumb.png';
 
 function SponserHomeEight({ className }) {
+    const [data, Setdata] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://localhost:1337/api/abouts')
+            .then((res) => {
+                Setdata(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
     return (
         <>
             <div className={`appie-signup-area ${className || ''}`}>
                 <div className="container">
                     <div className="row">
+                         {data
+                            ? data.map((x) => (
                         <div className="col-lg-12">
                             <div className="appie-signup-box">
-                                <span>No credit card required</span>
-                                <h3 className="title">Get Started.</h3>
+                                <span>{x.attributes.sign1}</span>
+                                <h3 className="title">{x.attributes.sign2}</h3>
                                 <form action="#">
                                     <div className="input-box">
                                         <input type="text" placeholder="Enter your name" />
@@ -19,7 +35,7 @@ function SponserHomeEight({ className }) {
                                         <input type="email" placeholder="Enter your email" />
                                     </div>
                                     <div className="input-box">
-                                        <button type="submit">Sign Up</button>
+                                        <button type="submit">{x.attributes.sign3}</button>
                                     </div>
                                     <div className="appie_checkbox_common checkbox_style2">
                                         <div>
@@ -29,8 +45,8 @@ function SponserHomeEight({ className }) {
                                                 id="checkbox4"
                                             />
                                             <label htmlFor="checkbox4">
-                                                <span></span>By signing up you agree to our
-                                                <a href="#">Terms & Conditions.</a>
+                                                <span></span>{x.attributes.sign4}
+                                                <a href="#">{x.attributes.sign5}</a>
                                             </label>
                                         </div>
                                     </div>
@@ -40,6 +56,8 @@ function SponserHomeEight({ className }) {
                                 </div>
                             </div>
                         </div>
+                          ))
+                          : 'hgfhgf'}
                     </div>
                 </div>
             </div>

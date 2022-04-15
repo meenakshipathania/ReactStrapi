@@ -16,22 +16,6 @@ function Navigation() {
             });
         return () => request.cancel();
     }, []);
-
-    // const [home, Sethome] = useState([]);
-    // useEffect(() => {
-    //     const request = axios.CancelToken.source();
-    //     setTimeout(() => {
-    //         axios
-    //             .get(NewApipiUrl, { cancelToken: request.token })
-    //             .then((res) => {
-    //                 Sethome(res.data.data);
-    //             })
-    //             .catch((error) => {
-    //                 console.log(error);
-    //             });
-    //     }, 2000);
-    //     return () => request.cancel();
-    // });
     return (
         <>
             <ul>

@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/team1s?populate=*';
 function TeamAbout() {
     const [team, SetTeam] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    SetTeam(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/teams?populate=*')
+            .then((res) => {
+                SetTeam(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.teammember.data[0].attributes.url;
+        const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -31,8 +28,8 @@ function TeamAbout() {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">Meet our Team Members</h3>
-                                <p>Different layouts and styles for team sections.</p>
+                                <h3 className="appie-title">Meet our Special Team Members</h3>
+                                {/* <p>Different layouts and styles for team sections.</p> */}
                             </div>
                         </div>
                     </div>
@@ -81,13 +78,13 @@ function TeamAbout() {
                               ))
                             : 'hgfhgf'}
 
-                        <div className="col-lg-12">
+                        {/* <div className="col-lg-12">
                             <div className="team-btn text-center mt-50">
                                 <a className="main-btn" href="#">
                                     View all Members <i className="fal fa-arrow-right"></i>
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
