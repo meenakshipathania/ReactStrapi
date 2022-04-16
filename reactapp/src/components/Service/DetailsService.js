@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
-// const NewUrl = 'http://localhost:1337/api/socialapps?populate=*';
-// const ApiUrl = 'http://localhost:1337/api/otherapps?populate=*';
 function DetailsService() {
     const [data, Setdata] = useState([]);
     useEffect(() => {

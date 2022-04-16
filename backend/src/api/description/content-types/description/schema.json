@@ -4,7 +4,7 @@
   "info": {
     "singularName": "description",
     "pluralName": "descriptions",
-    "displayName": "Description",
+    "displayName": "home",
     "description": ""
   },
   "options": {
@@ -53,9 +53,6 @@
     "heading": {
       "type": "string"
     },
-    "tag": {
-      "type": "string"
-    },
     "image1": {
       "type": "media",
       "multiple": true,
@@ -66,6 +63,58 @@
         "videos",
         "audios"
       ]
+    },
+    "text1": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "string"
+    },
+    "text3": {
+      "type": "string"
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "image11": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text11": {
+      "type": "string"
+    },
+    "text12": {
+      "type": "string"
+    },
+    "text13": {
+      "type": "string"
+    },
+    "text14": {
+      "type": "string"
+    },
+    "heading3": {
+      "type": "string"
+    },
+    "image12": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tagline": {
+      "type": "text"
     }
   }
 }

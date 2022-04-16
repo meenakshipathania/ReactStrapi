@@ -29,7 +29,8 @@ function ProjectHomeOne() {
                             <div
                                 className="appie-project-box wow animated slideInUp"
                                 data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
+                                data-wow-delay="0ms"// const NewUrl = 'http://localhost:1337/api/socialapps?populate=*';
+                                // const ApiUrl = 'http://localhost:1337/api/otherapps?populate=*';
                             >
                                 <div className="row">
                                     <div className="col-lg-6">

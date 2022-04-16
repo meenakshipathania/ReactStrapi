@@ -4,7 +4,7 @@
   "info": {
     "singularName": "app",
     "pluralName": "apps",
-    "displayName": "app",
+    "displayName": "portfolio",
     "description": ""
   },
   "options": {
@@ -150,14 +150,15 @@
       "type": "string"
     },
     "image10": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "text10": {
       "type": "string"
@@ -167,6 +168,22 @@
     },
     "tagg": {
       "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "imagehead": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

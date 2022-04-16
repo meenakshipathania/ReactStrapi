@@ -3,11 +3,11 @@ import axios from 'axios';
 // import thumb from '../../assets/images/fun-fact-thumb.png';
 
 function HeroService() {
-    const [data, Setdata] = useState([]);
+    const [data1, Setdata] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/descriptions?populate=*')
+            .get('http://localhost:1337/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function HeroService() {
     }, []);
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image1.data[0].attributes.url;
+        const dataurl = atttribute.imagehead.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -29,16 +29,16 @@ function HeroService() {
                         <div className="col-lg-12">
                             <div className="appie-page-title-item">
                                 <span>
-                                    {data
-                                        ? data.map((x) => <span>{x.attributes.heading}</span>)
+                                    {data1
+                                        ? data1.map((x) => <span>{x.attributes.heading}</span>)
                                         : 'hgfhgf'}
                                 </span>
-                                {data
-                                    ? data.map((x) => <h1 className="title">{x.attributes.tag}</h1>)
+                                {data1
+                                    ? data1.map((x) => <h1 className="title">{x.attributes.tag}</h1>)
                                     : 'hgfhgf'}
                                 <div className="thumb">
-                                    {data
-                                        ? data.map((x) => (
+                                    {data1
+                                        ? data1.map((x) => (
                                               <img
                                                   src={
                                                       x.attributes

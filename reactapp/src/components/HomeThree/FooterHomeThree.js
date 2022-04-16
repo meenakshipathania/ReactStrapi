@@ -194,7 +194,7 @@ function FooterHomeThree({ className }) {
                                     </ul>
                                 </div>
                                 <div className="copyright-text">
-                                    <p>© 2018 ocodewire. All right reserved.</p>
+                                    <p>© 2018 ocodewire. All rights are reserved.</p>
                                 </div>
                             </div>
                         </div>

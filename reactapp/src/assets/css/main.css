@@ -889,6 +889,7 @@ p {
 }
 .appie-header-area.appie-header-3-area.appie-sticky.sticky {
   background: #0e1133;
+  padding-right: 20px;
 }
 .appie-header-area.appie-header-4-area.appie-sticky.sticky {
   background: linear-gradient(90deg, #6b1fcd 0%, #374ede 100%);

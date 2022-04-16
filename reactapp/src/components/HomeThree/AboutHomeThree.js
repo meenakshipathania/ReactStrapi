@@ -10,7 +10,7 @@ function AboutHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/newservices?populate=*')
+            .get('http://localhost:1337/api/descriptions?populate=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -21,17 +21,17 @@ function AboutHomeThree() {
     }, []);
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image.data[0].attributes.url;
+        const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image1.data[0].attributes.url;
+        const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl2(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image3.data[0].attributes.url;
+        const dataurl = atttribute.image12.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -78,7 +78,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag1}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text1}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -90,7 +90,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag2}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text2}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -102,7 +102,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag3}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text3}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -142,7 +142,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag11}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text11}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -154,7 +154,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag12}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text12}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -166,7 +166,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag13}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text13}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
@@ -178,7 +178,7 @@ function AboutHomeThree() {
                                         </div>
                                         <h5 className="title">
                                             {text2
-                                                ? text2.map((x) => <h5>{x.attributes.tag14}</h5>)
+                                                ? text2.map((x) => <h5>{x.attributes.text14}</h5>)
                                                 : 'hgfhgf'}
                                         </h5>
                                     </div>
