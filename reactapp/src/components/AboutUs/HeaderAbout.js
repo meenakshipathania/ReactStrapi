@@ -32,10 +32,10 @@ function HeaderAbout({ action }) {
     });
     return (
         <>
-            <header className="appie-header-area appie-sticky">
+            <header className="appie-header-area appie-header-page-area appie-sticky">
                 <div className="container">
-                    <div className="header-nav-box">
-                        <div className="row align-items-center">
+                    <div className="header-nav-box header-nav-box-3 header-nav-box-inner-page">
+                        <div className="row align-items-center headersticky">
                             <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
                                 <div className="appie-logo-box">
                                     {logo
@@ -61,12 +61,12 @@ function HeaderAbout({ action }) {
                             </div>
                             <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
-                                    <a className="login-btn" href="#">
+                                    {/* <a className="login-btn" href="#">
                                         <i className="fal fa-user"></i>
                                         {logo
                                             ? logo.map((x) => <a>{x.attributes.login}</a>)
                                             : 'hgfhgf'}
-                                    </a>
+                                    </a> */}
                                     <a className="main-btn ml-30" href="#">
                                         {logo
                                             ? logo.map((x) => <a>{x.attributes.getstart}</a>)

@@ -3,23 +3,20 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import logo from '../../assets/images/logo.png';
 
-const apiUrl = 'http://localhost:1337/api/logos?populate=*';
 function Drawer({ drawer, action }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setlogo(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setlogo(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
         const dataurl = atttribute.image.data[0].attributes.url;
@@ -51,7 +48,7 @@ function Drawer({ drawer, action }) {
                                         <i className="fa fa-times"></i>
                                     </a>
                                 </div>
-                                <div className="offcanvas-brand text-center mb-40">
+                                <div className="offcanvas-brand text-center mb-40 siz">
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
@@ -74,11 +71,12 @@ function Drawer({ drawer, action }) {
                                             id="home"
                                             className="menu-item-has-children active"
                                         >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">Home</a>
-                                            <ul
+                                            {/* <span className="menu-expand">
+                                                <i className="fa fa-angle-down"></i> 
+                                            </span> */}
+                                             <Link to="/">Home</Link>
+                                            {/* <a href="/">Home</a> */}
+                                            {/* <ul
                                                 className="sub-menu"
                                                 style={{
                                                     height: item === 'home' ? itemSize : '0px',
@@ -97,7 +95,10 @@ function Drawer({ drawer, action }) {
                                                     <Link to="/home-four">Home 4</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to="/home-five">Home 5</Link>
+                                                    <Link to.head{
+  position: fixed;
+  right: 30px;
+}="/home-five">Home 5</Link>
                                                 </li>
                                                 <li>
                                                     <Link to="/home-six">Home 6</Link>
@@ -108,7 +109,7 @@ function Drawer({ drawer, action }) {
                                                 <li>
                                                     <Link to="/home-eight">Home 8</Link>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'service')}

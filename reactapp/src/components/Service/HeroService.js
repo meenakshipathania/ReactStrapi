@@ -24,7 +24,7 @@ function HeroService() {
     return (
         <>
             <div className="appie-page-title-area appie-page-service-title-area">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-page-title-item">

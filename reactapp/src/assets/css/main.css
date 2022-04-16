@@ -480,7 +480,7 @@ p {
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 20px;
-  color: #0e1133;
+  color: white;
 }
 
 .preloader {
@@ -866,6 +866,9 @@ p {
   padding-bottom: 20px;
   animation: sticky 1.2s;
 }
+/* .con{
+  max-width: 100%;
+} */
 
 .appie-header-area {
   padding-top: 30px;
@@ -2256,6 +2259,7 @@ p {
 .appie-page-title-item {
   margin-top: 80px;
   position: relative;
+  margin-left: 110px;
 }
 .appie-page-title-item .thumb {
   position: absolute;
@@ -6384,23 +6388,23 @@ blockquote cite {
     width: 94vw;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
   .appie-about-page-content::before {
     width: 100%;
   }
-}
+} */
 @media (max-width: 767px) {
   .appie-about-page-content::before {
     display: none;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* @media only screen and (min-width: 576px) and (max-width: 767px) {
   .appie-about-page-content::before {
     width: 100%;
     height: 400px;
     display: block;
   }
-}
+} */
 
 .appie-how-it-work-content > .title {
   font-size: 44px;
@@ -6661,7 +6665,6 @@ blockquote cite {
   line-height: 90px;
   color: #ff3e66;
   border-radius: 50%;
-  font-size: 20px;
   position: relative;
 }
 .appie-video-player-item .thumb .video-popup a::before {
