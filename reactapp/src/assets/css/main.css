@@ -264,7 +264,7 @@ p {
   background: #ff3e66;
 }
 .back-to-top.back-to-top-3 a {
-  background: #ff6b58;
+  background: #d04432;
 }
 .back-to-top.back-to-top-6 a {
   background: #9b2cfa;
@@ -954,8 +954,8 @@ p {
   color: #fff;
 }
 .header-nav-box.header-nav-box-3 .appie-btn-box .main-btn {
-  background: #ff6b58;
-  border-color: #ff6b58;
+  background: #d04432;
+  border-color: #d04432;
 }
 .header-nav-box.header-nav-box-3 .appie-btn-box .main-btn:hover {
   background: transparent;
@@ -968,14 +968,14 @@ p {
 .header-nav-box.header-nav-box-3.header-nav-box-inner-page
   .appie-btn-box
   .main-btn {
-  border-color: #fff;
-  background: transparent;
+  border-color: #d04432;
+  background: #d04432;
 }
 .header-nav-box.header-nav-box-3.header-nav-box-inner-page
   .appie-btn-box
   .main-btn:hover {
-  background: #fff;
-  color: #2b70fa;
+  background: transparent;
+  color: #d04432;
 }
 .header-nav-box.header-nav-box-5 .appie-header-main-menu ul > li > a {
   color: #fff;

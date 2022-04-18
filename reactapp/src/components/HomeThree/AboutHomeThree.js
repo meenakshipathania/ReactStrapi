@@ -244,57 +244,6 @@ function AboutHomeThree() {
                                             : 'hgfhgf'}
                                     </p>
                                 </div>
-                                {/* <div className="row">
-                                    <div className="col-sm-6">
-                                        <div className="appie-traffic-service mb-30">
-                                            <div className="icon">
-                                                <i className="fas fa-bolt" />
-                                            </div>
-                                            <h5 className="title">
-                                                {newurl
-                                                    ? newurl.map((x) => (
-                                                          <h5>{x.attributes.tag1}</h5>
-                                                      ))
-                                                    : 'hgfhgf'}
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="appie-traffic-service item-2 mb-30">
-                                            <div className="icon">
-                                                <img src={icon1} alt="" />
-                                            </div>
-                                            <h5 className="title">
-                                                {newurl
-                                                    ? newurl.map((x) => (
-                                                          <h5>{x.attributes.tag2}</h5>
-                                                      ))
-                                                    : 'hgfhgf'}
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <div className="appie-traffic-service mb-30">
-                                            <div className="icon">
-                                                <img src={icon5} alt="" />
-                                            </div>
-                                            <h5 className="title">
-                                                {newurl
-                                                    ? newurl.map((x) => (
-                                                          <h5>{x.attributes.tag3}</h5>
-                                                      ))
-                                                    : 'hgfhgf'}
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="traffic-btn mt-50">
-                                            <a className="main-btn" href="#">
-                                                Learn More <i className="fal fa-arrow-right" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div> */}
                             </div>
                         </div>
                     </div>

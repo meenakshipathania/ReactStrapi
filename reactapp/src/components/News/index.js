@@ -18,8 +18,8 @@ function News() {
             <HeroNews
                 title="PRODUCTS"
                 breadcrumb={[
-                    { link: '/home-three', title: 'home' },
-                    { link: '/service', title: 'Portfolio' },
+                    { link: '/', title: 'Home' },
+                    { link: '/news', title: 'Products' },
                 ]}
             />
             {/* <section className="blogpage-section">

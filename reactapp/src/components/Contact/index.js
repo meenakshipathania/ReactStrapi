@@ -16,8 +16,8 @@ function Contact() {
             <HeroNews
                 title="CONTACT"
                 breadcrumb={[
-                    { link: '/home-three', title: 'home' },
-                    { link: '/service', title: 'Portfolio' },
+                    { link: '/', title: 'Home' },
+                    { link: '/contact', title: 'Contact' },
                 ]}
             />
             <Forms />
