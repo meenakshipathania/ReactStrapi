@@ -9,7 +9,7 @@ function HeroAbout() {
                     <div className="row">
                         <div className="col-lg-6 offset-8">
                             <div className="appie-about-top-title">
-                                <h2 className="title">ABOUT US</h2>
+                                {/* <h2 className="title">ABOUT US</h2> */}
                                 {/* <p>We offer you a varity of taste and food options.</p> */}
                             </div>
                         </div>
