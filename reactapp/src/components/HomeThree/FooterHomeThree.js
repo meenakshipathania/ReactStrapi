@@ -47,7 +47,7 @@ function FooterHomeThree({ className }) {
                                         : 'hgfhgf'}
                                 </div>
                                 <p>
-                                    {logo ? logo.map((x) => <p>{x.attributes.des}</p>) : 'hgfhgf'}
+                                    {logo ? logo.map((x) => <span>{x.attributes.des}</span>) : 'hgfhgf'}
                                 </p>
                                 <a href="#">
                                     Read More <i className="fal fa-arrow-right" />
@@ -82,7 +82,7 @@ function FooterHomeThree({ className }) {
                             <div className="footer-navigation footer-navigation-3">
                                 <h4 className="title">
                                     {logo
-                                        ? logo.map((x) => <h4>{x.attributes.head1}</h4>)
+                                        ? logo.map((x) => <span>{x.attributes.head1}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>
@@ -105,7 +105,7 @@ function FooterHomeThree({ className }) {
                             <div className="footer-navigation footer-navigation-3">
                                 <h4 className="title">
                                     {logo
-                                        ? logo.map((x) => <h4>{x.attributes.head2}</h4>)
+                                        ? logo.map((x) => <span>{x.attributes.head2}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>
@@ -131,7 +131,7 @@ function FooterHomeThree({ className }) {
                             <div className="footer-widget-info">
                                 <h4 className="title">
                                     {logo
-                                        ? logo.map((x) => <h4>{x.attributes.head3}</h4>)
+                                        ? logo.map((x) => <span>{x.attributes.head3}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 <ul>

@@ -3,23 +3,20 @@ import axios from 'axios';
 // import logo from '../../assets/images/logo-7.png';
 import Navigation from '../Navigation';
 
-const apiUrl = 'http://localhost:1337/api/logos?populate=*';
 function HeaderService({ action }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setlogo(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos?populate=*')
+            .then((res) => {
+                Setlogo(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';

@@ -23,7 +23,7 @@ function TeamAbout() {
     }
     return (
         <>
-            <section className="appie-team-area appie-team-about-area pb-90">
+            <section className="appie-team-area appie-team-about-area team pb-90">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

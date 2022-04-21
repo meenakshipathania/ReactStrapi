@@ -175,7 +175,8 @@ p {
 }
 
 .appie-section-title {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 .appie-section-title .appie-title {
@@ -256,7 +257,7 @@ p {
   width: 40px;
   text-align: center;
   line-height: 40px;
-  background: #2b70fa;
+  background: #cc1c3b;
   border-radius: 6px;
   color: #fff;
 }
@@ -959,7 +960,8 @@ p {
 }
 .header-nav-box.header-nav-box-3 .appie-btn-box .main-btn:hover {
   background: transparent;
-  color: #cc1c3b;
+    border: 1px solid white;
+    color: white;
 }
 .header-nav-box.header-nav-box-3 .toggle-btn {
   color: #fff;
@@ -1475,9 +1477,9 @@ p {
   margin-top: 35px;
 }
 .appie-hero-area.appie-hero-3-area .appie-hero-content .hero-btns .main-btn {
-  border-color: #ff6b58;
-  color: #ff6b58;
-  background: transparent;
+  border-color: #cc1c3b;
+  color: white;
+  background: #cc1c3b;
   margin-right: 14px;
 }
 .appie-hero-area.appie-hero-3-area
@@ -3109,14 +3111,17 @@ p {
 .traffic-btn a.main-btn {
   background: transparent;
   color: #0e1133;
-  border: 2px solid #e7eaef;
+  border: 2px solid #cc1c3b;
+  color: white;
+  background: #cc1c3b;;
 }
 .traffic-btn a.main-btn i {
   padding-left: 6px;
 }
 .traffic-btn a.main-btn:hover {
-  background: #2b70fa;
-  color: #fff;
+  background: transparent;
+  color: #cc1c3b;
+  border: 2px solid #cc1c3b;
 }
 
 /*===========================
@@ -3677,6 +3682,9 @@ p {
 .appie-team-about-area .team-btn a {
   border-color: #2b70fa;
   color: #2b70fa;
+}
+.team{
+  background-color: #eef1f6;
 }
 .appie-team-about-area .team-btn a:hover {
   color: #fff;
@@ -4336,14 +4344,14 @@ p {
 }
 
 .appie-blog-3-area .blog-btn a {
-  background: transparent;
-  color: #0e1133;
-  border: 2px solid #e7eaef;
+  background: #cc1c3b;
+  color: #fff;
+  border: 2px solid #cc1c3b;
 }
 .appie-blog-3-area .blog-btn a:hover {
-  background: #ff6b58;
-  border-color: #ff6b58;
-  color: #fff;
+  background: transparent;
+  border-color: #cc1c3b;
+  color: #cc1c3b;
 }
 .appie-blog-3-area.appie-blog-6-area .blog-btn a:hover {
   background: #9b2cfa;
@@ -4456,7 +4464,7 @@ p {
   color: #0e1133;
 }
 .appie-blog-item-3 .content .title a:hover {
-  color: #ff6b58;
+  color: #cc1c3b;
 }
 .appie-blog-item-3 .content ul {
   margin: 0;
@@ -5813,28 +5821,29 @@ blockquote cite {
 }
 .footer-copyright .apps-download-btn ul li a {
   background: #fff;
-  color: #0e1133;
+  color: #cc1c3b;
   line-height: 40px;
   padding: 0 23px;
   border-radius: 6px;
-  border: 2px solid #fff;
+  border: 2px solid #cc1c3b;
 }
 .footer-copyright .apps-download-btn ul li a i {
   padding-right: 6px;
 }
 .footer-copyright .apps-download-btn ul li a:hover {
-  background: transparent;
-  color: #0e1133;
-  border-color: #e7eaef;
+  background: #cc1c3b;
+  color: #fff;
+  border-color: #cc1c3b;
 }
 .footer-copyright .apps-download-btn ul li a.item-2 {
-  background: transparent;
-  color: #0e1133;
-  border-color: #e7eaef;
+  background: #cc1c3b;
+  color: #fff;
+  border-color: #cc1c3b;
 }
 .footer-copyright .apps-download-btn ul li a.item-2:hover {
   background: #fff;
-  color: #0e1133;
+  color: #cc1c3b;
+  border-color: #cc1c3b ;
 }
 
 .appie-error-area {
@@ -5965,7 +5974,7 @@ blockquote cite {
   }
 }
 .appie-signup-box form .input-box button {
-  background: #2b70fa;
+  background: #cc1c3b;
   line-height: 55px;
   border: 0;
   color: #fff;
@@ -6990,14 +6999,14 @@ blockquote cite {
   padding-right: 6px;
 }
 .appie-download-3-box .content a.main-btn.main-btn-2 {
-  background: #ff6b58;
-  border-color: #ff6b58;
+  background: #cc1c3b;
+  border-color: #cc1c3b;
   color: #fff;
 }
 .appie-download-3-box .content a.main-btn.main-btn-2:hover {
   background: #fff;
-  color: #0e1133;
-  border-color: #fff;
+  color: #cc1c3b;
+  border-color: #cc1c3b;
 }
 .appie-download-3-box.appie-download-6-box a.main-btn:hover {
   background: #9b2cfa;
@@ -7340,6 +7349,7 @@ blockquote cite {
 
 .contact-form input[type="text"],
 .contact-form input[type="number"],
+.contact-form input[type="tel"],
 .contact-form textarea,
 .contact-form input[type="email"] {
   width: 100%;
@@ -7405,7 +7415,7 @@ blockquote cite {
 .contact-form input[type="submit"] {
   height: 50px;
   border-radius: 3px;
-  background: #2b70fa;
+  background: #cc1c3b;
   color: #fff;
   text-align: center;
   border: none;
@@ -8237,7 +8247,7 @@ img.business{
     letter-spacing: 0px;
     text-transform: Uppercase;
     text-align: center;
-    color: #ff8013;
+    color: #cc1c3b;
     margin-top: 5%;
 }
 .product-tag{
@@ -8389,7 +8399,7 @@ button span{
   background-color: #e5d982;
 }
 .iconheading{
-  margin: 0 14%;
+  margin: 20px 14%;
 }
 .listt li{
   padding-left: 9.5%;
@@ -8461,6 +8471,18 @@ button span{
   .mar {
       margin-top: 32px;
       margin-left: 110px;
+}
+}
+@media only screen and (max-width: 768px){
+  .mar {
+      margin-top: 32px;
+      margin-left: 40px;
+}
+}
+@media only screen and (max-width: 470px){
+  .mar {
+      margin-top: 32px;
+      margin-left: 0px;
 }
 }
 /*# sourceMappingURL=style.css.map */

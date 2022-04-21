@@ -1,23 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:1337/api/logos';
 function Forms() {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Setlogo(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
+        axios
+            .get('http://localhost:1337/api/logos')
+            .then((res) => {
+                Setlogo(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         return () => request.cancel();
-    });
+    }, []);
+
+    const [firstname, setFirstName] = useState('');
+    const [lastname, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [country, setCountry] = useState('');
+    const [message, setMessage] = useState('');
+    
+
+    const form = useRef();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const contact = { firstname, lastname, email, phone, country, message };
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setCountry("");
+        setMessage("");
+
+        // important//////////////
+        // emailjs.sendForm('service_6o3palp', 'template_58uclcx', form.current, 'pYfziu1Gd30wQSISj')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
+        // e.target.reset()
+
+        fetch('http://localhost:1337/api/conatct-datas', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ data: contact })
+        }).then(() => {
+            console.log("new contact added")
+        })
+    }
+
+
     return (
         <>
             <section className="contact-section">
@@ -82,28 +118,28 @@ function Forms() {
                                     Do you have any query? Enter your detail below. We will be
                                     contact with you.
                                 </p>
-                                <form action="#" method="post" className="row">
+                                <form ref={form} onSubmit={handleSubmit} action="#" method="post" className="row">
                                     <div className="col-md-6">
-                                        <input type="text" name="f-name" placeholder="Name" />
+                                        <input type="text" name="firstname" placeholder="First Name" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
                                     </div>
                                     <div className="col-md-6">
-                                        <input type="text" name="l-name" placeholder="Email" />
+                                        <input type="text" name="lastname" placeholder="Last Name" value={lastname} onChange={(e) => setLastName(e.target.value)} />
                                     </div>
                                     <div className="col-md-6">
                                         <input
                                             type="email"
                                             name="email"
-                                            placeholder="Email Address"
+                                            placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </div>
                                     <div className="col-md-6">
-                                        <input type="number" name="phone" placeholder="Telephone" />
+                                        <input type="tel" pattern="[0-9]{10}" name="phone" placeholder="Telephone" value={phone} onChange={(e) => setPhone(e.target.value)} />
                                     </div>
                                     <div className="col-md-12">
-                                        <input type="text" name="suject" placeholder="Country" />
+                                        <input type="text" name="country" placeholder="Country" value={country} onChange={(e) => setCountry(e.target.value)} />
                                     </div>
                                     <div className="col-md-12">
-                                        <textarea name="message" placeholder="Message"></textarea>
+                                        <textarea name="message" placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="condition-check">
