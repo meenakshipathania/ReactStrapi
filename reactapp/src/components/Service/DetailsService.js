@@ -130,7 +130,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="#">
+                                            <a href="serviceRequest">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -150,7 +150,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="incity">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -170,7 +170,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="greenpal">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -190,7 +190,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="gentra">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -222,7 +222,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="#">
+                                            <a href="vlife">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -242,7 +242,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="fanzapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -274,7 +274,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="#">
+                                            <a href="huawei">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -294,7 +294,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="mehanapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -314,7 +314,7 @@ function DetailsService() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="collab">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img

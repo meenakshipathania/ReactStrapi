@@ -1689,7 +1689,7 @@ p {
   font-weight: 700;
   background: linear-gradient(90deg, #fb2d4e 25%, #4e88ff 75%);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .appie-hero-area.appie-hero-8-area .appie-hero-content-8 .appie-title {
@@ -2207,6 +2207,22 @@ p {
   display: inline-block;
   line-height: 13px;
 }
+.desc {
+  float: left;
+  width: 100%;
+}
+.desc h4 {
+  float: left;
+  font-size: 16px;
+  width: 32%;
+}
+.desc p{
+  float: right;
+  font-size: 15px;
+  line-height: 26px;
+  margin: 0px 0px 14px;
+  width: 68%;
+}
 
 .appie-page-title-area {
   height: 450px;
@@ -2217,9 +2233,13 @@ p {
   display: flex;
   align-items: center;
 }
+
 .appie-page-title-area.appie-page-service-title-area {
   height: 650px;
   background-image: url(../images/portfolio.jpg);
+}
+.appie-page-title-area.title-area {
+  background-image: url(../images/portfolio1.jpg); 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .appie-page-title-area.appie-page-service-title-area {

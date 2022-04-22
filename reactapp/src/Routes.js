@@ -16,6 +16,15 @@ import HomeThree from './components/HomeThree';
 import News from './components/News';
 import SingleNews from './components/News/SingleNews';
 import Service from './components/Service';
+import ServiceRequest from './components/ServiceRequest';
+import Incity from './components/incity';
+import Greenpal from './components/Greenpal';
+import Gentra from './components/Gentra';
+import Vlife from './components/Vlife';
+import Fanzapp from './components/Fanzapp';
+import Huawei from './components/Huawei';
+import Mehanapp from './components/Mehanapp';
+import Collab from './components/Collab';
 
 function Routes() {
     const [loading, setLoading] = useState(true);
@@ -49,6 +58,15 @@ function Routes() {
                             <Route exact path="/news" component={News} />
                             <Route exact path="/news/single-news" component={SingleNews} />
                             <Route exact path="/service" component={Service} />
+                            <Route exact path="/serviceRequest" component={ServiceRequest} />
+                            <Route exact path="/incity" component={Incity} />
+                            <Route exact path="/greenpal" component={Greenpal} />
+                            <Route exact path="/gentra" component={Gentra} />
+                            <Route exact path="/vlife" component={Vlife} />
+                            <Route exact path="/fanzapp" component={Fanzapp} />
+                            <Route exact path="/huawei" component={Huawei} />
+                            <Route exact path="/mehanapp" component={Mehanapp} />
+                            <Route exact path="/collab" component={Collab} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />
