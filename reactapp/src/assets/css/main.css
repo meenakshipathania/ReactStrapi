@@ -2241,6 +2241,78 @@ p {
 .appie-page-title-area.title-area {
   background-image: url(../images/portfolio1.jpg); 
 }
+.appie-page-title-area.components {
+  background-image: url(../images/product-banner.jpg); 
+}
+.limar{
+  margin-top: 60px;
+}
+.padd{
+  padding-top: 20px;
+}
+.extra-img{
+  float: left;
+  height: 64px;
+  width: 64px;
+  max-width: 100%;
+  border-radius: 9px
+}
+.extra-txt{
+  float: left;
+  margin: 0 0 0 15px;
+}
+.extra-txt h3 {
+  margin: 5px 0;
+}
+.extra-txt-ryt {
+  text-align: right;
+}
+.extra-txt-ryt h2 {
+  color: #ccc;
+  margin: 5px 0 0;
+}
+.extra-txt-ryt p {
+  font-size: 12px;
+}
+.ancho{
+  border-bottom: 1px solid #acb3bd;
+  padding-bottom: 20px;
+}
+.ancho a{
+  color: #acb3bd;
+}
+.review h2{
+  font-size: 20px;
+  color: #101010;
+  font-weight: 500;
+  margin: 16px 0 13px;
+}
+.spanpara{
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 30px;
+  line-height: 2px;
+}
+.stars span a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: ElegantIcons,sans-serif;
+  color: #00d3f3;
+  font-size: 13px;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity .15s ease-out;
+  transition: opacity .15s ease-out;
+}
+.stars span a.star-1:after {
+  content: "\e033";
+}
+.review p{
+    color: #acb3bd;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .appie-page-title-area.appie-page-service-title-area {
     height: 500px;

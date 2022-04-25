@@ -185,6 +185,58 @@
         "videos",
         "audios"
       ]
+    },
+    "component": {
+      "type": "string"
+    },
+    "demo": {
+      "type": "string"
+    },
+    "plugin": {
+      "type": "string"
+    },
+    "plugin3": {
+      "type": "string"
+    },
+    "plugin4": {
+      "type": "string"
+    },
+    "demopaid": {
+      "type": "string"
+    },
+    "script2": {
+      "type": "string"
+    },
+    "script3": {
+      "type": "string"
+    },
+    "script4": {
+      "type": "string"
+    },
+    "script": {
+      "type": "string"
+    },
+    "image11": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "theme": {
+      "type": "string"
+    },
+    "theme1": {
+      "type": "string"
+    },
+    "theme2": {
+      "type": "string"
+    },
+    "theme3": {
+      "type": "string"
     }
   }
 }

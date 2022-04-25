@@ -130,7 +130,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="serviceRequest">
+                                            <a href="/service/serviceRequest">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -145,12 +145,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text1}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text1}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="incity">
+                                            <a href="/service/incity">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -165,12 +165,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text2}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text2}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="greenpal">
+                                            <a href="/service/greenpal">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -185,12 +185,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text3}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text3}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="gentra">
+                                            <a href="/service/gentra">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -205,7 +205,7 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text4}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text4}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -222,7 +222,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="vlife">
+                                            <a href="/service/vlife">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -237,12 +237,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text5}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text5}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="fanzapp">
+                                            <a href="/service/fanzapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -257,7 +257,7 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text6}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text6}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -274,7 +274,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="huawei">
+                                            <a href="/service/huawei">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -289,12 +289,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text7}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text7}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="mehanapp">
+                                            <a href="/service/mehanapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -309,12 +309,12 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text8}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text8}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="collab">
+                                            <a href="/service/collab">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -329,7 +329,7 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6>{x.attributes.text9}</h6>)
+                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text9}</h6>)
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
