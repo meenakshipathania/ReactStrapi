@@ -46,7 +46,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/script/script-product-2">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -62,7 +62,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/script/script-product-3">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -78,7 +78,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/script/script-product-4">
                             {data
                                 ? data.map((x) => (
                                       <img

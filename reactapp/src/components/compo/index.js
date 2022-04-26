@@ -5,7 +5,7 @@ import BackToTop from '../BackToTop';
 import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
 import DetailsCompo from './DetailsCompo';
-import HeaderCompo from './HeaderCompo';
+import HeaderHomeThree from '../HomeThree/HeaderHomeThree';
 import HeroCompo from './HeroCompo';
 
 function Compo() {
@@ -16,7 +16,7 @@ function Compo() {
     return (
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
-            <HeaderCompo action={drawerAction.toggle} />
+            <HeaderHomeThree action={drawerAction.toggle} />
             <HeroCompo />
             <DetailsCompo />
             <FooterHomeThree />

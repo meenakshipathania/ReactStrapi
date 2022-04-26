@@ -19,7 +19,7 @@ function DetailsIncity() {
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image7.data[0].attributes.url;
+        const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -31,7 +31,7 @@ function DetailsIncity() {
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
-                                        <img
+                                        <img className='bora'
                                             src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
                                             alt=""
                                         />
@@ -40,9 +40,8 @@ function DetailsIncity() {
                             </div>
                             <div className="extra-txt">
                                 {data
-                                    ? data.map((x) => <h3>{x.attributes.text7}</h3>)
+                                    ? data.map((x) => <h3>{x.attributes.theme3}</h3>)
                                     : 'hgghtyu'}
-                                <p>Lorem Ipsum is simply dummy text </p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">

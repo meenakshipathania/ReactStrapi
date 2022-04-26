@@ -4,11 +4,11 @@ import StickyMenu from '../../lib/StickyMenu';
 import BackToTop from '../BackToTop';
 import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
-import DetailsProductHuawei from './DetailsProductHuawei';
+import DetailsCompoGreenpal from './DetailsCompoGreenpal';
 import HeaderHomeThree from '../HomeThree/HeaderHomeThree';
-import HeroCompo from '../CompoGreenpal/HeroCompoGreenpal';
+import HeroCompoGreenpal from './HeroCompoGreenpal';
 
-function ProductHuawei() {
+function CompoGreenpal() {
     useEffect(() => {
         StickyMenu();
     });
@@ -17,12 +17,12 @@ function ProductHuawei() {
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderHomeThree action={drawerAction.toggle} />
-            <HeroCompo />
-            <DetailsProductHuawei />
+            <HeroCompoGreenpal />
+            <DetailsCompoGreenpal />
             <FooterHomeThree />
             <BackToTop />
         </>
     );
 }
 
-export default ProductHuawei;
+export default CompoGreenpal;

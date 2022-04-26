@@ -50,7 +50,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                         <ul className="businesslist listt">
                     <li>
-                        <a href="#">
+                        <a href="/product/huawei">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -66,7 +66,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/mehan">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -82,7 +82,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/service-request">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -98,7 +98,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/theme-product">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -114,7 +114,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/theme-product-2">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -130,7 +130,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/theme-product-3">
                             {data
                                 ? data.map((x) => (
                                       <img

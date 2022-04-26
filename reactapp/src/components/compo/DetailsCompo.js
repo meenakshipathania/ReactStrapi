@@ -51,7 +51,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/compo/greenpal">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -67,7 +67,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/compo/plugin-product">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -83,7 +83,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/compo/plugin-product-3">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -99,7 +99,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/compo/plugin-product-4">
                             {data
                                 ? data.map((x) => (
                                       <img

@@ -19,7 +19,7 @@ function DetailsIncity() {
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image7.data[0].attributes.url;
+        const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -31,7 +31,7 @@ function DetailsIncity() {
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
-                                        <img
+                                        <img className='bora'
                                             src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
                                             alt=""
                                         />
@@ -40,7 +40,7 @@ function DetailsIncity() {
                             </div>
                             <div className="extra-txt">
                                 {data
-                                    ? data.map((x) => <h3>{x.attributes.text7}</h3>)
+                                    ? data.map((x) => <h3>{x.attributes.theme2}</h3>)
                                     : 'hgghtyu'}
                                 <p>Lorem Ipsum is simply dummy text </p>
                             </div>
@@ -72,7 +72,7 @@ function DetailsIncity() {
                                         <a class="star-5" href="#">5</a>
                                     </span>
                                 </p>
-                                <form className='ml-2 mr-2'>
+                                <form  className='ml-2 mr-2'>
                                     <div className='row'>
                                         <label className='lab' for='comment'>Your Review</label>
                                     </div>

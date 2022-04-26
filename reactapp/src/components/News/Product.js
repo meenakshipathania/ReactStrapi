@@ -110,7 +110,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product/mehan">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -126,7 +126,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/service-request">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -142,7 +142,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/product/theme-product">
                             {heading
                                 ? heading.map((x) => (
                                       <img

@@ -19,7 +19,7 @@ function DetailsIncity() {
 
     function imageurl(atttribute) {
         const baseurl = 'http://localhost:1337';
-        const dataurl = atttribute.image7.data[0].attributes.url;
+        const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -27,7 +27,7 @@ function DetailsIncity() {
             <section className="appie-service-details-area pt-100 pb-100">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-md-8 col-sm-9 col-xs-9 extra-left">
+                        <div className="col-lg-6">
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
@@ -40,19 +40,19 @@ function DetailsIncity() {
                             </div>
                             <div className="extra-txt">
                                 {data
-                                    ? data.map((x) => <h3>{x.attributes.text7}</h3>)
+                                    ? data.map((x) => <h3>{x.attributes.text8}</h3>)
                                     : 'hgghtyu'}
                                 <p>Lorem Ipsum is simply dummy text </p>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">
+                        <div className="col-lg-6">
                             <div className="extra-txt-ryt">
                                 <h2>$200.00</h2>
                                 <p>No ratings yet!</p>
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-100 ml-2 mr-2 ancho'>
+                    <div className='row mt-100 ancho'>
                         <a href="#">Reviews (0)</a>
                     </div>
                     <div className="row">
@@ -72,7 +72,7 @@ function DetailsIncity() {
                                         <a class="star-5" href="#">5</a>
                                     </span>
                                 </p>
-                                <form className='ml-2 mr-2'>
+                                <form>
                                     <div className='row'>
                                         <label className='lab' for='comment'>Your Review</label>
                                     </div>

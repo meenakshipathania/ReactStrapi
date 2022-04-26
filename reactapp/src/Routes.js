@@ -29,7 +29,18 @@ import Compo from './components/compo';
 import Script from './components/Scripts';
 import Theme from './components/Themes';
 import ProductHuawei from './components/ProductHuawei';
-
+import ProductMehan from './components/ProductMehan';
+import ProductService from './components/ProductService';
+import ProductTheme from './components/ProductTheme';
+import CompoGreenpal from './components/CompoGreenpal';
+import CompoPlugin from './components/CompoPlugin';
+import CompoPlugin3 from './components/CompoPlugin-3';
+import CompoPlugin4 from './components/CompoPlugin-4';
+import ScriptProduct2 from './components/ScriptProduct-2';
+import ScriptProduct3 from './components/ScriptProduct-3';
+import ScriptProduct4 from './components/ScriptProduct-4';
+import ProductTheme2 from './components/ProductTheme-2';
+import ProductTheme3 from './components/ProductTheme-3';
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -75,6 +86,18 @@ function Routes() {
                             <Route exact path="/script" component={Script} />
                             <Route exact path="/theme" component={Theme} />
                             <Route exact path="/product/huawei" component={ProductHuawei} />
+                            <Route exact path="/product/mehan" component={ProductMehan} />
+                            <Route exact path="/product/service-request" component={ProductService} />
+                            <Route exact path="/product/theme-product" component={ProductTheme} />
+                            <Route exact path="/product/theme-product-2" component={ProductTheme2} />
+                            <Route exact path="/product/theme-product-3" component={ProductTheme3} />
+                            <Route exact path="/compo/greenpal" component={CompoGreenpal} />
+                            <Route exact path="/compo/plugin-product" component={CompoPlugin} />
+                            <Route exact path="/compo/plugin-product-3" component={CompoPlugin3} />
+                            <Route exact path="/compo/plugin-product-4" component={CompoPlugin4} />
+                            <Route exact path="/script/script-product-2" component={ScriptProduct2} />
+                            <Route exact path="/script/script-product-3" component={ScriptProduct3} />
+                            <Route exact path="/script/script-product-4" component={ScriptProduct4} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />
