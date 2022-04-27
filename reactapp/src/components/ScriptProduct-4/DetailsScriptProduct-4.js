@@ -27,7 +27,7 @@ function DetailsIncity() {
             <section className="appie-service-details-area pt-100 pb-100">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-8 col-md-8 col-sm-9 col-xs-9 extra-left">
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
@@ -44,14 +44,14 @@ function DetailsIncity() {
                                     : 'hgghtyu'}
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">
                             <div className="extra-txt-ryt">
                                 <h2>$200.00</h2>
                                 <p>No ratings yet!</p>
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-100 ancho'>
+                    <div className='row mt-100 ml-2 mr-2 ancho'>
                         <a href="#">Description &nbsp; &nbsp; Reviews (0)</a>
                     </div>
                     <div className="row">

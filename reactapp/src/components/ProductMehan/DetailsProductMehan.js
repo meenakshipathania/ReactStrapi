@@ -22,12 +22,22 @@ function DetailsIncity() {
         const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    function handleSubmit(e) {
+        const allStars =   document.querySelectorAll('.stars button i') ;
+        allStars.forEach( (star) => {
+
+            star.className = "far fa-star";
+        })
+        for(let j=0; j < e.currentTarget.id ; j++) {
+            allStars[j].className = "fa fa-star";
+        }
+      }
     return (
         <>
             <section className="appie-service-details-area pt-100 pb-100">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-8 col-md-8 col-sm-9 col-xs-9 extra-left">
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
@@ -45,14 +55,14 @@ function DetailsIncity() {
                                 <p>Lorem Ipsum is simply dummy text </p>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">
                             <div className="extra-txt-ryt">
                                 <h2>$200.00</h2>
                                 <p>No ratings yet!</p>
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-100 ancho'>
+                    <div className='row mt-100 ml-2 mr-2 ancho'>
                         <a href="#">Reviews (0)</a>
                     </div>
                     <div className="row">
@@ -64,15 +74,13 @@ function DetailsIncity() {
                                 <p>Your email address will not be published. Required fields are marked *</p>
                                 <span><strong>Your rating</strong></span>
                                 <p className='stars'>
-                                    <span>
-                                        <a class="star-1" href="#"><i class="fa fa-star-o"></i></a>
-                                        <a class="star-2" href="#">2</a>
-                                        <a class="star-3" href="#">3</a>
-                                        <a class="star-4" href="#">4</a>
-                                        <a class="star-5" href="#">5</a>
-                                    </span>
+                                        <button onClick={handleSubmit} id="1" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="2" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="3" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="4"className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="5" className="butto" href="#"><i class="far fa-star"></i></button>
                                 </p>
-                                <form>
+                                <form className='ml-2 mr-2'>
                                     <div className='row'>
                                         <label className='lab' for='comment'>Your Review</label>
                                     </div>

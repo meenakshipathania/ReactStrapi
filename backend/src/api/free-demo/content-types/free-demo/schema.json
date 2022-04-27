@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "free_demos",
+  "info": {
+    "singularName": "free-demo",
+    "pluralName": "free-demos",
+    "displayName": "free-demo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -22,6 +22,26 @@ function DetailsIncity() {
         const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
+
+    const [data1, Setdata1] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://localhost:1337/api/free-demos?populate=*')
+            .then((res) => {
+                Setdata1(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
+
+    function imageurl1(atttribute) {
+        const baseurl = 'http://localhost:1337';
+        const dataurl = atttribute.image.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <section className="appie-service-details-area pt-100 pb-100">
@@ -40,17 +60,32 @@ function DetailsIncity() {
                             </div>
                             <div className="extra-txt">
                                 {data
-                                    ? data.map((x) => <h3>{x.attributes.plugin}</h3>)
+                                    ? data.map((x) => <h3>{x.attributes.demo}</h3>)
                                     : 'hgghtyu'}
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">
                             <div className="extra-txt-ryt">
-                                <h2>$200.00</h2>
+                                <h2>Free!</h2>
                                 <p>No ratings yet!</p>
                             </div>
                         </div>
                     </div>
+                    <div className='row mt-30'>
+                        {data1
+                            ? data1.slice(0, 4).map((x) => (
+                                <div className="col-md-3">
+
+                                    <img
+                                        src={x.attributes ? imageurl1(x.attributes) : 'hgghtyu'}
+                                        alt=""
+                                    />
+
+                                </div>
+                            ))
+                            : 'hgfhgf'}
+                    </div>
+
                     <div className='row mt-100 ml-2 mr-2 ancho'>
                         <a href="#">Description &nbsp; &nbsp; Reviews (0)</a>
                     </div>
@@ -59,7 +94,7 @@ function DetailsIncity() {
                             <div className='review'>
                                 <h2>DESCRIPTION</h2>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem of type and scrambled it to make a type specimen book.</p>
-                                     
+
                             </div>
                         </div>
                         <div className="col-lg-5">
@@ -71,13 +106,13 @@ function DetailsIncity() {
                                 </div>
                                 <h6>PRODUCT DETAILS</h6>
                                 <dl>
-                                    <dt>Version:</dt><dd></dd>
-                                    <dt>Size:</dt><dd></dd>
-                                    <dt>Ionic:</dt><dd></dd>
-                                    <dt>Platforms:</dt><dd></dd>
-                                    <dt>Released:</dt><dd></dd>
-                                    <dt>Updated:</dt><dd></dd>
-                                    <dt>Category:</dt><dd><span class="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
+                                    <dt className='wid'>Version:</dt><dd>1</dd>
+                                    <dt className='wid'>Size:</dt><dd>1mb</dd>
+                                    <dt className='wid'>Ionic:</dt><dd>1</dd>
+                                    <dt className='wid'>Platforms:</dt><dd>all</dd>
+                                    <dt className='wid'>Released:</dt><dd>October 24, 2017</dd>
+                                    <dt className='wid'>Updated:</dt><dd>October 24, 2017</dd>
+                                    <dt className='wid'>Category:</dt><dd><span class="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
                                 </dl>
                             </div>
                         </div>

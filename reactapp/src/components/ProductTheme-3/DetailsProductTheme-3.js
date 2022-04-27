@@ -22,6 +22,16 @@ function DetailsIncity() {
         const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    function handleSubmit(e) {
+        const allStars =   document.querySelectorAll('.stars button i') ;
+        allStars.forEach( (star) => {
+            star.className = "far fa-star";
+        })
+        for(let j=0; j < e.currentTarget.id ; j++) {
+            allStars[j].className = "fa fa-star";
+        }
+      }
+
     return (
         <>
             <section className="appie-service-details-area pt-100 pb-100">
@@ -63,13 +73,11 @@ function DetailsIncity() {
                                 <p>Your email address will not be published. Required fields are marked *</p>
                                 <span><strong>Your rating</strong></span>
                                 <p className='stars'>
-                                    <span>
-                                        <a class="star-1" href="#"><i class="fa fa-star-o"></i></a>
-                                        <a class="star-2" href="#">2</a>
-                                        <a class="star-3" href="#">3</a>
-                                        <a class="star-4" href="#">4</a>
-                                        <a class="star-5" href="#">5</a>
-                                    </span>
+                                        <button onClick={handleSubmit} id="1" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="2" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="3" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="4"className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="5" className="butto" href="#"><i class="far fa-star"></i></button>
                                 </p>
                                 <form className='ml-2 mr-2'>
                                     <div className='row'>

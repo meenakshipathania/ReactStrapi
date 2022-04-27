@@ -99,18 +99,6 @@ function ShowCaseHomeThree() {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="showcase-shape-1">
-                            <img src={shape14} alt="" />
-                        </div>
-                        <div className="showcase-shape-2">
-                            <img src={shape13} alt="" />
-                        </div>
-                        <div className="showcase-shape-3">
-                            <img src={shape12} alt="" />
-                        </div>
-                        <div className="showcase-shape-4">
-                            <img src={shape15} alt="" />
-                        </div> */}
                     </SRLWrapper>
                 </SimpleReactLightbox>
             </section>

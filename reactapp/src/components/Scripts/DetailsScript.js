@@ -30,7 +30,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                         <ul className="businesslist listt">
                     <li>
-                        <a href="#">
+                        <a href="/script/scriptdemopaid">
                             {data
                                 ? data.map((x) => (
                                       <img

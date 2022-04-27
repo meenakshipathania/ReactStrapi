@@ -35,7 +35,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                         <ul className="businesslist listt">
                     <li>
-                        <a href="#">
+                        <a href="/compo/compofreedemo">
                             {data
                                 ? data.map((x) => (
                                       <img
