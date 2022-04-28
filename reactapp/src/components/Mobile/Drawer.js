@@ -52,7 +52,7 @@ function Drawer({ drawer, action }) {
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img
+                                                  <img className='loimg'
                                                       src={
                                                           x.attributes
                                                               ? imageurl(x.attributes)

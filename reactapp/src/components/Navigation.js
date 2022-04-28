@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Navigation() {
@@ -7,7 +7,7 @@ function Navigation() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/logos?populate=*')
+            .get('http://165.227.11.15:1338/api/logos')
             .then((res) => {
                 Setnavitems(res.data.data);
             })
@@ -22,55 +22,13 @@ function Navigation() {
                 <li>
                     <a href="/">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
-                        {/* <i className="fal fa-angle-down" /> */}
+                        {/* <i classNameName="fal fa-angle-down" /> */}
                     </a>
-                    {/* <ul className="sub-menu">
-                        <li>
-                            <Link to="/">
-                                {home ? home.map((x) => <a>{x.attributes.head1}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-two">
-                                {home ? home.map((x) => <a>{x.attributes.head2}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-three">
-                                {home ? home.map((x) => <a>{x.attributes.head3}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-four">
-                                {home ? home.map((x) => <a>{x.attributes.head4}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-five">
-                                {home ? home.map((x) => <a>{x.attributes.head5}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-six">
-                                {home ? home.map((x) => <a>{x.attributes.head6}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-seven">
-                                {home ? home.map((x) => <a>{x.attributes.head7}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/home-eight">
-                                {home ? home.map((x) => <a>{x.attributes.head8}</a>) : 'hgfhgf'}
-                            </Link>
-                        </li>
-                    </ul> */}
                 </li>
                 <li>
-                    <Link to="/service">
+                    <a href="/service">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name1}</a>) : 'hgfhgf'}
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     <a href="/news">

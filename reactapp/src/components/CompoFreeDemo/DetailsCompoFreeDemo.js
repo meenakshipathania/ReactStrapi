@@ -99,8 +99,8 @@ function DetailsIncity() {
                         </div>
                         <div className="col-lg-5">
                             <div className='product-details'>
-                                <div class="btns">
-                                    <a href="#" target="_self" class="btn btn-success">
+                                <div className="btns">
+                                    <a href="#" target="_self" className="btn btn-success">
                                         Purchase Now
                                     </a>
                                 </div>
@@ -112,7 +112,7 @@ function DetailsIncity() {
                                     <dt className='wid'>Platforms:</dt><dd>all</dd>
                                     <dt className='wid'>Released:</dt><dd>October 24, 2017</dd>
                                     <dt className='wid'>Updated:</dt><dd>October 24, 2017</dd>
-                                    <dt className='wid'>Category:</dt><dd><span class="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
+                                    <dt className='wid'>Category:</dt><dd><span className="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
                                 </dl>
                             </div>
                         </div>

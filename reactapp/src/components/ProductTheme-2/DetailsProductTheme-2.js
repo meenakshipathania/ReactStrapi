@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
@@ -30,6 +30,37 @@ function DetailsIncity() {
         for(let j=0; j < e.currentTarget.id ; j++) {
             allStars[j].className = "fa fa-star";
         }
+      }
+      const [review, setReview] = useState('');
+      const [name, setName] = useState('');
+      const [email, setEmail] = useState('');
+      
+  
+      const form = useRef();
+      const handleSubmitForm = (e) => {
+          e.preventDefault();
+          const contact = { review, name, email };
+          setReview("");
+          setName("");
+          setEmail("");
+    
+  
+          // important//////////////
+          // emailjs.sendForm('service_6o3palp', 'template_58uclcx', form.current, 'pYfziu1Gd30wQSISj')
+          //     .then((result) => {
+          //         console.log(result.text);
+          //     }, (error) => {
+          //         console.log(error.text);
+          //     });
+          // e.target.reset()
+  
+          fetch('http://165.227.11.15:1338/api/reviews', {
+              method: 'POST',
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ data: contact })
+          }).then(() => {
+              console.log("new review added")
+          })
       }
 
     return (
@@ -74,30 +105,30 @@ function DetailsIncity() {
                                 <p>Your email address will not be published. Required fields are marked *</p>
                                 <span><strong>Your rating</strong></span>
                                 <p className='stars'>
-                                        <button onClick={handleSubmit} id="1" className="butto" href="#"><i class="far fa-star"></i></button>
-                                        <button onClick={handleSubmit} id="2" className="butto" href="#"><i class="far fa-star"></i></button>
-                                        <button onClick={handleSubmit} id="3" className="butto" href="#"><i class="far fa-star"></i></button>
-                                        <button onClick={handleSubmit} id="4"className="butto" href="#"><i class="far fa-star"></i></button>
-                                        <button onClick={handleSubmit} id="5" className="butto" href="#"><i class="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="1" className="butto" href="#"><i className="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="2" className="butto" href="#"><i className="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="3" className="butto" href="#"><i className="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="4"className="butto" href="#"><i className="far fa-star"></i></button>
+                                        <button onClick={handleSubmit} id="5" className="butto" href="#"><i className="far fa-star"></i></button>
                                 </p>
-                                <form  className='ml-2 mr-2'>
+                                <form  className='ml-2 mr-2' ref={form} onSubmit={handleSubmitForm}>
                                     <div className='row'>
                                         <label className='lab' for='comment'>Your Review</label>
                                     </div>
                                     <div className='row'>
-                                        <textarea cols='250' rows='10' name='comment' required></textarea>
+                                        <textarea cols='250' rows='10' name='comment' required value={review} onChange={(e) => setReview(e.target.value)}></textarea>
                                     </div>
                                     <div className='row'>
                                         <label className='lab' for='name'>Name</label>
                                     </div>
                                     <div className='row'>
-                                        <input className='form-control' type='text' name="name" required></input>
+                                        <input className='form-control' type='text' name="name" required value={name} onChange={(e) => setName(e.target.value)}></input>
                                     </div>
                                     <div className='row'>
                                         <label className='lab' for='email'>Email</label>
                                     </div>
                                     <div className='row'>
-                                        <input className='form-control' type='email' name="email" required></input>
+                                        <input className='form-control' type='email' name="email" required value={email} onChange={(e) => setEmail(e.target.value)}></input>
                                     </div>
                                     <div className='row'>
                                     <input className="main-btn1" type='button' value='SUBMIT'></input>
@@ -107,8 +138,8 @@ function DetailsIncity() {
                         </div>
                         <div className="col-lg-6">
                             <div className='product-details'>
-                                <div class="btns">
-                                    <a href="#" target="_self" class="btn btn-success">
+                                <div className="btns">
+                                    <a href="#" target="_self" className="btn btn-success">
                                         Purchase Now
                                     </a>
                                 </div>
@@ -120,7 +151,7 @@ function DetailsIncity() {
                                     <dt>Platforms:</dt><dd></dd>
                                     <dt>Released:</dt><dd></dd>
                                     <dt>Updated:</dt><dd></dd>
-                                    <dt>Category:</dt><dd><span class="posted_in"> <a href="#" rel="tag">Themes</a>.</span></dd>
+                                    <dt>Category:</dt><dd><span className="posted_in"> <a href="#" rel="tag">Themes</a>.</span></dd>
                                 </dl>
                             </div>
                         </div>

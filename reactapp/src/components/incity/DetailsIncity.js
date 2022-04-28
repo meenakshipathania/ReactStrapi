@@ -51,31 +51,31 @@ function DetailsIncity() {
                                 <div className="service-category-widget"> */}
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-laptop" aria-hidden="true"></i> PLATEFORM:
+                                            <i className="fa fa-laptop" aria-hidden="true"></i> PLATEFORM:
                                         </h4>
                                         <p>WordPress</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> STACK:
+                                            <i className="fa fa-pencil-square-o" aria-hidden="true"></i> STACK:
                                         </h4>
                                         <p>PHP, HTML, JavaScript, JQuery, CSS</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i> TIMELINE:
+                                            <i className="fa fa-clock-o" aria-hidden="true"></i> TIMELINE:
                                         </h4>
                                         <p>30 days to build</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-users" aria-hidden="true"></i> TEAM-MEMBER:
+                                            <i className="fa fa-users" aria-hidden="true"></i> TEAM-MEMBER:
                                         </h4>
                                         <p>Raman Bhasker</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-table" aria-hidden="true"></i> DESCRIPTION:
+                                            <i className="fa fa-table" aria-hidden="true"></i> DESCRIPTION:
                                         </h4>
                                         <p>A web application for hiring manual workers for different works in two cities. People can hire masons, plumber, carpenter, tutor, beautician and all kinds of services according to day today requirement.</p>
                                         <p><strong>Salient features:</strong></p>

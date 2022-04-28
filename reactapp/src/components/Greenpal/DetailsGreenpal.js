@@ -51,31 +51,31 @@ function DetailsIncity() {
                                 <div className="service-category-widget"> */}
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-laptop" aria-hidden="true"></i> PLATEFORM:
+                                            <i className="fa fa-laptop" aria-hidden="true"></i> PLATEFORM:
                                         </h4>
                                         <p>IOS, Android</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> STACK:
+                                            <i className="fa fa-pencil-square-o" aria-hidden="true"></i> STACK:
                                         </h4>
                                         <p>AngularJs, Ionic Framework, HTML5, Javascript, Cordova and MySQL on AWS</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i> TIMELINE:
+                                            <i className="fa fa-clock-o" aria-hidden="true"></i> TIMELINE:
                                         </h4>
                                         <p>30 days to build</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-users" aria-hidden="true"></i> TEAM-MEMBER:
+                                            <i className="fa fa-users" aria-hidden="true"></i> TEAM-MEMBER:
                                         </h4>
                                         <p>Raman Bhasker, Akash Saxena</p>
                                     </div>
                                     <div className='desc'>
                                         <h4>
-                                            <i class="fa fa-table" aria-hidden="true"></i> DESCRIPTION:
+                                            <i className="fa fa-table" aria-hidden="true"></i> DESCRIPTION:
                                         </h4>
                                         <p>A service booking application. Application has different services registered with Greenpal. Customers post their requests. Service providers compete for the job. Customer compares the services, choose the best one for their self and make payments.</p>   
                                     </div>

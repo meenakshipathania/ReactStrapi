@@ -35,7 +35,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-users"></i>
+                                          <i className="fa fa-users"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text1}</p>) : 'hgfhgf'}</p>
                                       </div>
@@ -47,7 +47,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-cloud-upload"></i>
+                                          <i className="fa fa-cloud-upload"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text2}</p>) : 'hgfhgf'}</p>
                                       </div>
@@ -59,7 +59,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-cog"></i>
+                                          <i className="fa fa-cog"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text3}</p>) : 'hgfhgf'}</p>
                                       </div>
@@ -73,7 +73,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-tachometer"></i>
+                                          <i className="fa fa-tachometer"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text4}</p>) : 'hgfhgf'}</p>
                                       </div>
@@ -85,7 +85,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-tv"></i>
+                                          <i className="fa fa-tv"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text5}</p>) : 'hgfhgf'}</p>
                                       </div>
@@ -97,7 +97,7 @@ function ServicesAbout() {
                                           data-wow-delay="200ms"
                                       >
                                           <div className="icon">
-                                          <i class="fa fa-gift"></i>
+                                          <i className="fa fa-gift"></i>
                                           </div>
                                           <p>{data ? data.map((x) => <p>{x.attributes.text6}</p>) : 'hgfhgf'}</p>
                                       </div>

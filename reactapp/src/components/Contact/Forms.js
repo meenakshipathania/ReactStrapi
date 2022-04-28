@@ -44,7 +44,7 @@ function Forms() {
         //     });
         // e.target.reset()
 
-        fetch('http://localhost:1337/api/conatct-datas', {
+        fetch('http://165.227.11.15:1338/api/conatct-datas', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ data: contact })
