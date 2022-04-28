@@ -11,7 +11,7 @@ function DetailsIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/apps?populate=*')
+            .get('http://165.227.11.15:1338/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -22,7 +22,7 @@ function DetailsIncity() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -32,7 +32,7 @@ function DetailsIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/free-demos?populate=*')
+            .get('http://165.227.11.15:1338/api/free-demos?populate=*')
             .then((res) => {
                 Setimg(res.data.data);
             })
@@ -43,7 +43,7 @@ function DetailsIncity() {
     }, []);
 
     function imageurl1(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

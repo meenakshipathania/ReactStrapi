@@ -19,7 +19,7 @@ function ShowCaseHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/sliders?populate=*')
+            .get('http://165.227.11.15:1338/api/sliders?populate=*')
             .then((res) => {
                 Setimg(res.data.data);
             })
@@ -29,7 +29,7 @@ function ShowCaseHomeThree() {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

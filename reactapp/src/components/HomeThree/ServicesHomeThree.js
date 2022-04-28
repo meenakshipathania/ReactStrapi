@@ -10,7 +10,7 @@ function ServicesHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/descriptions')
+            .get('http://165.227.11.15:1338/api/descriptions')
             .then((res) => {
                 Settext(res.data.data);
             })

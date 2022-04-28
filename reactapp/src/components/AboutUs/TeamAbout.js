@@ -6,7 +6,7 @@ function TeamAbout() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/teams?populate=*')
+            .get('http://165.227.11.15:1338/api/teams?populate=*')
             .then((res) => {
                 SetTeam(res.data.data);
             })
@@ -17,7 +17,7 @@ function TeamAbout() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

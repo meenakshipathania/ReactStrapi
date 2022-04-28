@@ -6,7 +6,7 @@ function HeroIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/apps')
+            .get('http://165.227.11.15:1338/api/apps')
             .then((res) => {
                 Setdata(res.data.data);
             })

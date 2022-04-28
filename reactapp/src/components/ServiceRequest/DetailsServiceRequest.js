@@ -7,7 +7,7 @@ function DetailsServiceRequest() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/nested-pages?populate=*')
+            .get('http://165.227.11.15:1338/api/nested-pages?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function DetailsServiceRequest() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }

@@ -10,7 +10,7 @@ function AboutHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/descriptions?populate=*')
+            .get('http://165.227.11.15:1338/api/descriptions?populate=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -20,17 +20,17 @@ function AboutHomeThree() {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl2(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image12.data[0].attributes.url;
         return baseurl + dataurl;
     }

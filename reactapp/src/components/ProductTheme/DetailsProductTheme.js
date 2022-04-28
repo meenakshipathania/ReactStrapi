@@ -7,7 +7,7 @@ function DetailsIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/apps?populate=*')
+            .get('http://165.227.11.15:1338/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })

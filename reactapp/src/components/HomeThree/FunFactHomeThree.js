@@ -4,7 +4,7 @@ import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
-const apiUrl = 'http://localhost:1337/api/funsections';
+const apiUrl = 'http://165.227.11.15:1338/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {

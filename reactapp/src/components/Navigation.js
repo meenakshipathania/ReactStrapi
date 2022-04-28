@@ -7,7 +7,7 @@ function Navigation() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://localhost:1337/api/logos?populate=*')
+            .get('http://165.227.11.15:1338/api/logos?populate=*')
             .then((res) => {
                 Setnavitems(res.data.data);
             })
