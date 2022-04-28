@@ -28,17 +28,17 @@ function DetailsIncity() {
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl10(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl11(atttribute) {
-        const baseurl = 'http://localhost:1337';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }
