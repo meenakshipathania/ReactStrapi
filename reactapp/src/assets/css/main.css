@@ -6528,7 +6528,7 @@ blockquote cite {
   background: #fff;
   color: #2b70fa;
 }
-.appie-about-page-content::before {
+/* .appie-about-page-content::before {
   position: absolute;
   content: "";
   left: 0;
@@ -6539,7 +6539,7 @@ blockquote cite {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .appie-about-page-content::before {
     width: 94vw;
