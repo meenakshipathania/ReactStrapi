@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Navigation() {
@@ -20,30 +20,33 @@ function Navigation() {
         <>
             <ul>
                 <li>
-                    <a href="/">
+                    {/* <a href="/">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
-                        {/* <i classNameName="fal fa-angle-down" /> */}
-                    </a>
+                         <i classNameName="fal fa-angle-down" /> 
+                    </a> */}
+                    <Link to='/'>
+                        {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
+                    </Link>
                 </li>
                 <li>
-                    <a href="/service">
+                    <Link to="/service">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name1}</a>) : 'hgfhgf'}
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/news">
+                    <Link to="/news">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/about-us">
+                    <Link to="/about-us">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/contact">
+                    <Link to="/contact">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name4}</a>) : 'hgfhgf'}
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </>
