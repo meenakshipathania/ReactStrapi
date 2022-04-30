@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import logo from '../../assets/images/logo-7.png';
+import StickyMenu from '../../lib/StickyMenu';
 import Navigation from '../Navigation';
 
-function HeaderIncity({ action }) {
+function HeaderNews({ action }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
@@ -17,15 +18,17 @@ function HeaderIncity({ action }) {
             });
         return () => request.cancel();
     }, []);
-
     function imageurl(atttribute) {
         const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    useEffect(() => {
+        StickyMenu();
+    });
     return (
         <>
-            <header className="appie-header-area appie-header-page-area appie-sticky componets">
+            <header className="appie-header-area appie-header-page-area appie-sticky">
                 <div className="container">
                     <div className="header-nav-box header-nav-box-3 header-nav-box-inner-page">
                         <div className="row align-items-center">
@@ -34,7 +37,7 @@ function HeaderIncity({ action }) {
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img
+                                                  <img className='loimg'
                                                       src={
                                                           x.attributes
                                                               ? imageurl(x.attributes)
@@ -81,4 +84,4 @@ function HeaderIncity({ action }) {
     );
 }
 
-export default HeaderIncity;
+export default HeaderNews;

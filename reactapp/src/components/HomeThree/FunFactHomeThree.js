@@ -4,28 +4,28 @@ import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
-const apiUrl = 'http://165.227.11.15:1338/api/funsections';
+// const apiUrl = 'http://165.227.11.15:1338/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {
         e.preventDefault();
         setVideoValue(!showVideo);
     };
-    const [gettext, Settext] = useState([]);
-    useEffect(() => {
-        const request = axios.CancelToken.source();
-        setTimeout(() => {
-            axios
-                .get(apiUrl, { cancelToken: request.token })
-                .then((res) => {
-                    Settext(res.data.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        }, 2000);
-        return () => request.cancel();
-    });
+    // const [gettext, Settext] = useState([]);
+    // useEffect(() => {
+    //     const request = axios.CancelToken.source();
+    //     setTimeout(() => {
+    //         axios
+    //             .get(apiUrl, { cancelToken: request.token })
+    //             .then((res) => {
+    //                 Settext(res.data.data);
+    //             })
+    //             .catch((error) => {
+    //                 console.log(error);
+    //             });
+    //     }, 2000);
+    //     return () => request.cancel();
+    // });
     return (
         <>
             {showVideo && (
@@ -47,13 +47,13 @@ function FunFactHomeThree() {
                                     <div className="col-lg-6">
                                         <div className="appie-fun-fact-content">
                                             <h2 className="title">Get Started with OcodeApp</h2>
-                                            <p>
+                                            {/* <p>
                                                 {gettext
                                                     ? gettext.map((x) => (
                                                           <p>{x.attributes.tagline}</p>
                                                       ))
                                                     : 'hgfhgf'}
-                                            </p>
+                                            </p> */}
                                             <div className="row">
                                                 <div className="col-sm-4">
                                                     <div className="appie-fun-fact-item">
@@ -65,11 +65,11 @@ function FunFactHomeThree() {
                                                             k
                                                         </h4>
                                                         <span>
-                                                            {gettext
+                                                            {/* {gettext
                                                                 ? gettext.map((x) => (
                                                                       <p>{x.attributes.tag1}</p>
                                                                   ))
-                                                                : 'hgfhgf'}
+                                                                : 'hgfhgf'} */}
                                                         </span>
                                                     </div>
                                                 </div>
@@ -83,11 +83,11 @@ function FunFactHomeThree() {
                                                             +
                                                         </h4>
                                                         <span>
-                                                            {gettext
+                                                            {/* {gettext
                                                                 ? gettext.map((x) => (
                                                                       <p>{x.attributes.tag2}</p>
                                                                   ))
-                                                                : 'hgfhgf'}
+                                                                : 'hgfhgf'} */}
                                                         </span>
                                                     </div>
                                                 </div>
@@ -101,11 +101,11 @@ function FunFactHomeThree() {
                                                             M
                                                         </h4>
                                                         <span>
-                                                            {gettext
+                                                            {/* {gettext
                                                                 ? gettext.map((x) => (
                                                                       <p>{x.attributes.tag3}</p>
                                                                   ))
-                                                                : 'hgfhgf'}
+                                                                : 'hgfhgf'} */}
                                                         </span>
                                                     </div>
                                                 </div>

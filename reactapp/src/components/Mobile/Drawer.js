@@ -167,18 +167,18 @@ function Drawer({ drawer, action }) {
                                 </div>
                                 <div className="footer-widget-info">
                                     <ul>
-                                        <li>
+                                        <li key={'envelop'}>
                                             <a href="#">
                                                 <i className="fal fa-envelope"></i>{' '}
                                                 support@appie.com
                                             </a>
                                         </li>
-                                        <li>
+                                        <li key={'phone'}>
                                             <a href="#">
                                                 <i className="fal fa-phone"></i> +(642) 342 762 44
                                             </a>
                                         </li>
-                                        <li>
+                                        <li key={'marker'}>
                                             <a href="#">
                                                 <i className="fal fa-map-marker-alt"></i> 442 Belle
                                                 Terre St Floor 7, San Francisco, AV 4206

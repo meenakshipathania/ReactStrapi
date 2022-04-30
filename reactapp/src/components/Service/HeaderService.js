@@ -62,7 +62,7 @@ function HeaderService({ action }) {
                                     </a> */}
                                     <a className="main-btn ml-30" href="#">
                                         {logo
-                                            ? logo.map((x) => <a>{x.attributes.getstart}</a>)
+                                            ? logo.map((x) => <span>{x.attributes.getstart}</span>)
                                             : 'hgfhgf'}
                                     </a>
                                     <div

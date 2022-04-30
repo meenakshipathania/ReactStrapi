@@ -96,8 +96,12 @@ function FooterHomeThree({ className }) {
                                         <Link to="/news">Product</Link>
                                     </li>
                                     <li>
+                                        <Link to="/blog">Blogs</Link>
+                                    </li>
+                                    <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </div>

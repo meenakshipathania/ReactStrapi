@@ -63,7 +63,7 @@ function SponserHomeTwo({ className }) {
                         )) : 'hgfhgf'}
                     </div>
                     <div className="row">
-                        {spo ? spo.map((x) => (
+                        {spo ? spo.slice(0,16).map((x) => (
                         <div className="col-lg-3">
                             <div className="appie-sponser-box d-flex justify-content-center">
                                 <div className="sponser-item">

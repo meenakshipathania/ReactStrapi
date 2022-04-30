@@ -59,7 +59,7 @@ function ServicesHomeThree() {
                                 </div>
                                 <h4 className="appie-title">
                                     {gettext
-                                        ? gettext.map((x) => <h4>{x.attributes.tag1}</h4>)
+                                        ? gettext.map((x) => <span>{x.attributes.tag1}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 {/* <p>
@@ -91,7 +91,7 @@ function ServicesHomeThree() {
                                 </div>
                                 <h4 className="appie-title">
                                     {gettext
-                                        ? gettext.map((x) => <h4>{x.attributes.tag2}</h4>)
+                                        ? gettext.map((x) => <span>{x.attributes.tag2}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 {/* <p>
@@ -123,7 +123,7 @@ function ServicesHomeThree() {
                                 </div>
                                 <h4 className="appie-title">
                                     {gettext
-                                        ? gettext.map((x) => <h4>{x.attributes.tag3}</h4>)
+                                        ? gettext.map((x) => <span>{x.attributes.tag3}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 {/* <p>
@@ -155,7 +155,7 @@ function ServicesHomeThree() {
                                 </div>
                                 <h4 className="appie-title">
                                     {gettext
-                                        ? gettext.map((x) => <h4>{x.attributes.tag4}</h4>)
+                                        ? gettext.map((x) => <span>{x.attributes.tag4}</span>)
                                         : 'hgfhgf'}
                                 </h4>
                                 {/* <p>

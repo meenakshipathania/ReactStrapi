@@ -64,11 +64,6 @@ function AboutHomeThree() {
                                         ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
                                         : 'hgfhgf'}
                                 </h3>
-                                {/* <p>
-                                    {text2
-                                        ? text2.map((x) => <p>{x.attributes.tagline}</p>)
-                                        : 'hgfhgf'}
-                                </p> */}
                             </div>
                             <div className="row">
                                 <div className="col-sm-6">

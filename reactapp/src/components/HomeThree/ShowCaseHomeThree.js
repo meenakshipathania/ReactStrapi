@@ -19,7 +19,7 @@ function ShowCaseHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/sliders?populate=*')
+            .get('http://165.227.11.15:1338/api/brands?populate=*')
             .then((res) => {
                 Setimg(res.data.data);
             })
@@ -78,7 +78,7 @@ function ShowCaseHomeThree() {
                                 <div className="col-lg-12">
                                     <Slider ref={sliderRef} {...settings}>
                                         {img
-                                            ? img.map((x) => (
+                                            ? img.slice(16,26).map((x) => (
                                                   <div>
                                                       <div className="appie-showcase-item mt-30">
                                                           <a className="appie-image-popup">

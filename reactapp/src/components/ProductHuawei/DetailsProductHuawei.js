@@ -27,17 +27,15 @@ function DetailsIncity() {
         allStars.forEach( (star) => {
             star.className = "far fa-star";
         })
-        for(let j=0; j < e.currentTarget.id ; j++) {
+        for(let j=0; j < e.currentTarget.id; j++) {
             allStars[j].className = "fa fa-star";
         }
       }
-
 
       const [review, setReview] = useState('');
       const [name, setName] = useState('');
       const [email, setEmail] = useState('');
       
-  
       const form = useRef();
       const handleSubmitForm = (e) => {
           e.preventDefault();
@@ -64,7 +62,6 @@ function DetailsIncity() {
               console.log("new review added")
           })
       }
-
     return (
         <>
             <section className="appie-service-details-area pt-100 pb-100">
@@ -120,7 +117,7 @@ function DetailsIncity() {
                                     <div className='row'>
                                         <textarea cols='250' rows='10' name='comment' required value={review} onChange={(e) => setReview(e.target.value)}></textarea>
                                     </div>
-                                    <div className='row'>
+                                    <div className='row'>ddsd
                                         <label className='lab' for='name'>Name</label>
                                     </div>
                                     <div className='row'>

@@ -5,16 +5,17 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Loader from './components/Helper/Loader';
 import ScrollToTop from './components/Helper/ScrollToTop';
-import HomeEight from './components/HomeEight';
-import HomeFive from './components/HomeFive';
-import HomeFour from './components/HomeFour';
+// import HomeEight from './components/HomeEight';
+// import HomeFive from './components/HomeFive';
+// import HomeFour from './components/HomeFour';
 // import HomeOne from './components/HomeOne';
-import HomeSeven from './components/HomeSeven';
-import HomeSix from './components/HomeSix';
+// import HomeSeven from './components/HomeSeven';
+// import HomeSix from './components/HomeSix';
 import HomeThree from './components/HomeThree';
 // import Hometwo from './components/HomeTwo';
 import News from './components/News';
-import SingleNews from './components/News/SingleNews';
+import Blogsa from './components/Blogs';
+// import SingleNews from './components/Blogs/SingleBlog';
 import Service from './components/Service';
 import ServiceRequest from './components/ServiceRequest';
 import Incity from './components/incity';
@@ -43,6 +44,12 @@ import ScriptProduct3 from './components/ScriptProduct-3';
 import ScriptProduct4 from './components/ScriptProduct-4';
 import ProductTheme2 from './components/ProductTheme-2';
 import ProductTheme3 from './components/ProductTheme-3';
+import SingleBlog1 from './components/Blogs/SingleBlog1';
+import SingleBlog2 from './components/Blogs/SingleBlog2';
+import SingleBlog3 from './components/Blogs/SingleBlog3';
+import SingleBlog4 from './components/Blogs/SingleBlog4';
+import SingleBlog5 from './components/Blogs/SingleBlog5';
+import SingleBlog6 from './components/Blogs/SingleBlog6';
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -67,13 +74,19 @@ function Routes() {
                             <Route exact path="/" component={HomeThree} />
                             {/* <Route exact path="/home-two" component={Hometwo} />
                             <Route exact path="/home-three" component={HomeThree} /> */}
-                            <Route exact path="/home-four" component={HomeFour} />
+                            {/* <Route exact path="/home-four" component={HomeFour} />
                             <Route exact path="/home-five" component={HomeFive} />
                             <Route exact path="/home-six" component={HomeSix} />
                             <Route exact path="/home-seven" component={HomeSeven} />
-                            <Route exact path="/home-eight" component={HomeEight} />
+                            <Route exact path="/home-eight" component={HomeEight} /> */}
                             <Route exact path="/news" component={News} />
-                            <Route exact path="/news/single-news" component={SingleNews} />
+                            <Route exact path="/blog1" component={SingleBlog1} />
+                            <Route exact path="/blog2" component={SingleBlog2} />
+                            <Route exact path="/blog3" component={SingleBlog3} />
+                            <Route exact path="/blog4" component={SingleBlog4} />
+                            <Route exact path="/blog5" component={SingleBlog5} />
+                            <Route exact path="/blog6" component={SingleBlog6} />
+                            <Route exact path="/blog" component={Blogsa} />
                             <Route exact path="/service" component={Service} />
                             <Route exact path="/service/serviceRequest" component={ServiceRequest} />
                             <Route exact path="/service/incity" component={Incity} />
