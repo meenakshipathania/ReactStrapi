@@ -4966,9 +4966,9 @@ p {
 }
 
 .post-thumb img {
-  width: auto;
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 400px;
   border-radius: 10px;
 }
 
@@ -8454,7 +8454,7 @@ input[type=search] {
   border-radius: 30px;
 }
 button[type=submit] {
-  width: 48px;
+  width: 48%;
   height: 48px;
   line-height: 48px;
   display: inline-block;
@@ -8664,6 +8664,11 @@ button span{
   }
   .product-details dt {
     text-align: left;
+}
+}
+@media only screen and (max-width: 768px){
+.blog-sidebar {
+  margin-left: 0px;
 }
 }
 /*# sourceMappingURL=style.css.map */

@@ -27,29 +27,29 @@ function Blog() {
     return (
         <>
             <div className="single-post-area">
-                <p>{ text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para1}</p>) : 'Home'}</p>
+                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para1}</p>) : 'Home'}
                 <div className="post-thumb">
                 { text2['attributes']  ? text2['attributes']['nested'].map((x) => (
-                  <a href="demo"><img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" /></a>
+                  <img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" />
                   ))
                : 'hgfhgf'}
                 </div>
                 <h4 className="article-title">{ text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>) : 'Home'}</h4>
-                <p>
+                
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para2}</p>) : 'Home'}
-                </p>
-                <p>
+                
+               
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para3}</p>) : 'Home'}
-                </p>
+                
                 <blockquote>
-                    <p>
+                    
                     { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para4}</p>) : 'Home'}
-                    </p>
+                   
                     <cite>Indigo Violet</cite>
                 </blockquote>
-                <p>
+               
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para5}</p>) : 'Home'}
-                </p>
+                
                 <div className="post-tags">
                     <h5>Tags:</h5>
                     <a href="#">Bisy LMS</a>

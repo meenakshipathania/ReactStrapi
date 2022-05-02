@@ -30,7 +30,7 @@ function Blog() {
                 <p>{ text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para1}</p>) : 'Home'}</p>
                 <div className="post-thumb">
                 { text2['attributes']  ? text2['attributes']['nested'].map((x) => (
-                  <a href="demo"><img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" /></a>
+                  <img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" />
                   ))
                : 'hgfhgf'}
                 </div>
