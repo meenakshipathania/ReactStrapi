@@ -20,6 +20,20 @@ function BlogSideBar() {
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
+
+    const [data1, Setdata1] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/categories?populate=*')
+            .then((res) => {
+                Setdata1(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
     return (
         <div className="blog-sidebar">
             <aside className="widget widget-search">
@@ -33,34 +47,38 @@ function BlogSideBar() {
             <aside className="widget widget-categories">
                 <h3 className="widget-title">Categories</h3>
                 <ul>
+                {data1
+                    ? data1.map((x) => (
                     <li>
-                        <a href="#">Web Design</a>
-                        <span>(24)</span>
+                        <a href="#">{x.attributes.name}</a>
+                        {/* <span>(24)</span> */}
                     </li>
-                    <li>
-                        <a href="#">Marketing</a>
-                        <span>(15)</span>
-                    </li>
-                    <li>
-                        <a href="#">Frontend</a>
-                        <span>(8)</span>
-                    </li>
-                    <li>
-                        <a href="#">IT & Software</a>
-                        <span>(13)</span>
-                    </li>
-                    <li>
-                        <a href="#">Photography</a>
-                        <span>(4)</span>
-                    </li>
-                    <li>
-                        <a href="#">Technology</a>
-                        <span>(16)</span>
-                    </li>
-                    <li>
-                        <a href="#">General</a>
-                        <span>(12)</span>
-                    </li>
+                    // <li>
+                    //     <a href="#">Marketing</a>
+                    //     <span>(15)</span>
+                    // </li>
+                    // <li>
+                    //     <a href="#">Frontend</a>
+                    //     <span>(8)</span>
+                    // </li>
+                    // <li>
+                    //     <a href="#">IT & Software</a>
+                    //     <span>(13)</span>
+                    // </li>
+                    // <li>
+                    //     <a href="#">Photography</a>
+                    //     <span>(4)</span>
+                    // </li>
+                    // <li>
+                    //     <a href="#">Technology</a>
+                    //     <span>(16)</span>
+                    // </li>
+                    // <li>
+                    //     <a href="#">General</a>
+                    //     <span>(12)</span>
+                    // </li>
+                    ))
+                    : 'hgfhgf'}
                 </ul>
             </aside>
             <aside className="widget widget-trend-post">
@@ -113,7 +131,7 @@ function BlogSideBar() {
                     <span>July 4, 2020</span>
                 </div> */}
             </aside>
-            <aside className="widget">
+            {/* <aside className="widget">
                 <h3 className="widget-title">Popular Tags</h3>
                 <div className="tags">
                     <a href="#">Bisy LMS</a>
@@ -127,7 +145,7 @@ function BlogSideBar() {
                     <a href="#">Politico</a>
                     <a href="#">Live Cases</a>
                 </div>
-            </aside>
+            </aside> */}
         </div>
     );
 }

@@ -4797,8 +4797,38 @@ p {
   transition: all 0.4s ease;
 }
 
+.stickylogo {
+  display: none;
+}
+header.appie-header-area.appie-header-3-area.appie-sticky.sticky .stickylogo {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  margin-left: 100%;
+}
+header.appie-header-area.appie-header-3-area.appie-sticky.sticky  img.loimg{
+  display: none;
+}
 .search-form button:hover {
   color: #2b70fa;
+}
+.appie-header-area.appie-header-page-area.appie-sticky.sticky .stickylogo {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  margin-left: 100%;
+}
+.appie-header-area.appie-header-page-area.appie-sticky.sticky img.loimg {
+  display: none;
+}
+header.appie-header-area.appie-header-page-area.appie-sticky.componets.sticky .stickylogo {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  margin-left: 100%;
+}
+header.appie-header-area.appie-header-page-area.appie-sticky.componets.sticky img.loimg {
+  display: none;
 }
 
 .blog-sidebar .widget ul {
@@ -4835,7 +4865,7 @@ p {
 }
 
 .blog-sidebar .widget ul li a:hover {
-  color: #2b70fa;
+  color: #cc1c3b;
 }
 
 .blog-sidebar .widget ul li span {
@@ -4876,7 +4906,7 @@ p {
 }
 
 .popular-post h5 a:hover {
-  color: #2b70fa;
+  color: #cc1c3b;
 }
 
 .popular-post span {
@@ -5510,7 +5540,7 @@ blockquote cite {
 }
 
 .b-post-details h3 a:hover {
-  color: #2b70fa;
+  color: #cc1c3b;
 }
 
 .post-item-1:hover {

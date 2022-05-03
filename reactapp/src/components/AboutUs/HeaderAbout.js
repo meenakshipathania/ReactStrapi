@@ -24,6 +24,11 @@ function HeaderAbout({ action }) {
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    function imageurl1(atttribute) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = atttribute.logo1.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     useEffect(() => {
         StickyMenu();
     });
@@ -48,6 +53,20 @@ function HeaderAbout({ action }) {
                                                   />
                                               </a>
                                           ))
+                                        : 'hgfhgf'}
+                                        {logo
+                                        ? logo.map((x) => (
+                                            <a href="/">
+                                                <img className='stickylogo'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl1(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>

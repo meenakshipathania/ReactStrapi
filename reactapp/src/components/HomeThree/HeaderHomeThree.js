@@ -17,10 +17,14 @@ function HeaderHomeThree({ action }) {
             });
         return () => request.cancel();
     }, []);
-
     function imageurl(atttribute) {
         const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
+    function imageurl1(atttribute) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = atttribute.logo1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     useEffect(() => {
@@ -36,17 +40,32 @@ function HeaderHomeThree({ action }) {
                                 <div className="appie-logo-box">
                                     {logo
                                         ? logo.map((x) => (
-                                              <a href="/">
-                                                  <img className='loimg'
-                                                      src={
-                                                          x.attributes
-                                                              ? imageurl(x.attributes)
-                                                              : 'hgghtyu'
-                                                      }
-                                                      alt=""
-                                                  />
-                                              </a>
-                                          ))
+                                            <a href="/">
+                                                <img className='loimg'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
+                                        : 'hgfhgf'}
+
+                                    {logo
+                                        ? logo.map((x) => (
+                                            <a href="/">
+                                                <img className='stickylogo'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl1(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>

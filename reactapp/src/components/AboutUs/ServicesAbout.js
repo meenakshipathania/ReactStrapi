@@ -22,7 +22,7 @@ function ServicesAbout() {
                     <div className="row align-items-end">
                         <div className="col-lg-12 col-md-8">
                             <div className="appie-section-title">
-                                <h3 className="appie-title">  {data ? data.map((x) => <h3>{x.attributes.heading}</h3>) : 'hgfhgf'}</h3>
+                                <h3 className="appie-title">  {data ? data.map((x) => <span>{x.attributes.heading}</span>) : 'hgfhgf'}</h3>
                                 <p>  {data ? data.map((x) => <p>{x.attributes.para}</p>) : 'hgfhgf'} </p>
                             </div>
                         </div>
