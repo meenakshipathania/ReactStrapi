@@ -23,7 +23,7 @@ function ServicesAbout() {
                         <div className="col-lg-12 col-md-8">
                             <div className="appie-section-title">
                                 <h3 className="appie-title">  {data ? data.map((x) => <span>{x.attributes.heading}</span>) : 'hgfhgf'}</h3>
-                                <p>  {data ? data.map((x) => <p>{x.attributes.para}</p>) : 'hgfhgf'} </p>
+                                <p> {data ? data.map((x) => <span>{x.attributes.para}</span>) : 'hgfhgf'} </p>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-users"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text1}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text1}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                                   <div className="col-lg-4 col-md-6">
@@ -49,7 +49,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-cloud-upload"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text2}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text2}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                                   <div className="col-lg-4 col-md-6">
@@ -61,7 +61,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-cog"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text3}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text3}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                     </div>
@@ -75,7 +75,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-tachometer"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text4}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text4}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                                   <div className="col-lg-4 col-md-6">
@@ -87,7 +87,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-tv"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text5}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text5}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                                   <div className="col-lg-4 col-md-6">
@@ -99,7 +99,7 @@ function ServicesAbout() {
                                           <div className="icon">
                                           <i className="fa fa-gift"></i>
                                           </div>
-                                          <p>{data ? data.map((x) => <p>{x.attributes.text6}</p>) : 'hgfhgf'}</p>
+                                          <p>{data ? data.map((x) => <span>{x.attributes.text6}</span>) : 'hgfhgf'}</p>
                                       </div>
                                   </div>
                     </div>

@@ -27,7 +27,7 @@ function Blog() {
     return (
         <>
             <div className="single-post-area">
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para1}</p>) : 'Home'}
+                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para1}</span>) : 'Home'}
                 <div className="post-thumb">
                 { text2['attributes']  ? text2['attributes']['nested'].map((x) => (
                   <img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" />
@@ -36,19 +36,19 @@ function Blog() {
                 </div>
                 <h4 className="article-title">{ text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>) : 'Home'}</h4>
                 
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para2}</p>) : 'Home'}
+                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>) : 'Home'}
                 
                
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para3}</p>) : 'Home'}
+                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para3}</span>) : 'Home'}
                 
                 <blockquote>
                     
-                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para4}</p>) : 'Home'}
+                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para4}</span>) : 'Home'}
                    
                     <cite>Indigo Violet</cite>
                 </blockquote>
                
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para5}</p>) : 'Home'}
+                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>) : 'Home'}
                 
                 <div className="post-tags">
                     <h5>Tags:</h5>
@@ -73,7 +73,7 @@ function Blog() {
                     <a href="#">Justin Case</a>
                     <span>About Author</span>
                     <p>
-                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para6}</p>) : 'Home'}
+                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para6}</span>) : 'Home'}
                     </p>
                 </div>
                 
