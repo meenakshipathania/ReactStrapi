@@ -19,6 +19,7 @@
 }
 .appie-visible.active {
   opacity: 100;
+  overflow: hidden;
 }
 /* .appie-home-loader {
   transition: all 0.5s ease-in-out;

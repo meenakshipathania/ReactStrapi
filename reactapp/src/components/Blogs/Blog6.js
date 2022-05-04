@@ -161,7 +161,7 @@ function Blog() {
                         <div className="col-md-12">
                             <input type="url" name="url" placeholder="Website" />
                         </div>
-                        <div className="col-md-12">
+                        {/* <div className="col-md-12">
                             <div className="save-comment">
                                 <input id="history-name" type="checkbox" />
                                 <label htmlFor="history-name">
@@ -169,7 +169,7 @@ function Blog() {
                                     time I comment.
                                 </label>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-md-12">
                             <textarea placeholder="Coment"></textarea>
                         </div>
