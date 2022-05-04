@@ -82,7 +82,7 @@ function HeaderHomeThree({ action }) {
                                             ? logo.map((x) => <a>{x.attributes.login}</a>)
                                             : 'hgfhgf'}
                                     </a> */}
-                                    <a className="main-btn ml-30" href="#">
+                                    <a className="main-btn ml-30" href="/contact">
                                         {logo
                                             ? logo.map((x) => <a>{x.attributes.getstart}</a>)
                                             : 'hgfhgf'}

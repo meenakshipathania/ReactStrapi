@@ -61,7 +61,7 @@ function HeroHomeThree() {
                                         : 'hgfhgf'}
                                 </p>
                                 <div className="hero-btns">
-                                    <a className="main-btn" href="#">
+                                    <a className="main-btn" href="/contact">
                                         Get a Quote
                                     </a>
                                     <a
