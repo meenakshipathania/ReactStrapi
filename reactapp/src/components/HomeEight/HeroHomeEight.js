@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import hero from '../../assets/images/hero-thumb-9.png';
+// import hero from '../../assets/images/hero-thumb-9.png';
 import shapeOne from '../../assets/images/shape/1.png';
 import shapeTwo from '../../assets/images/shape/2.png';
 import shapeThree from '../../assets/images/shape/3.png';
@@ -33,21 +33,21 @@ function HeroHomeEight() {
                         <div className="col-lg-6">
                             <div className="appie-hero-content appie-hero-content-8">
                                 <h1 className="appie-title">{head
-                                        ? head.map((x) => <a>{x.attributes.threefirst}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threefirst}</span>)
                                         : 'hgfhgf'}</h1>
-                                 <p>
+                                 <p className="parawhite">
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecfirst}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecfirst}</span>)
                                         : 'hgfhgf'}
                                 </p>
-                                <p>
+                                <p className="parawhite">
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecsec}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecsec}</span>)
                                         : 'hgfhgf'}
                                 </p>
-                                <p>
+                                <p className="parawhite">
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecthree}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecthree}</span>)
                                         : 'hgfhgf'}
                                 </p>
                                 <ul>

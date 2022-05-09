@@ -4836,7 +4836,18 @@ header.appie-header-area.appie-header-page-area.appie-sticky.componets.sticky .s
 header.appie-header-area.appie-header-page-area.appie-sticky.componets.sticky img.loimg {
   display: none;
 }
-
+header.appie-header-area.appie-header-8-area.appie-sticky.sticky .stickylogo {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  margin-left: 100%;
+}
+header.appie-header-area.appie-header-8-area.appie-sticky.sticky img.loimg {
+  display: none;
+}
+.parawhite{
+  color:white;
+}
 .blog-sidebar .widget ul {
   margin: 0;
   padding: 0;

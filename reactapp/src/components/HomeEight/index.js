@@ -10,7 +10,7 @@ import HeaderHomeEight from './HeaderHomeEight';
 import HeroHomeEight from './HeroHomeEight';
 import ServicesHomeEight from './ServicesHomeEight';
 import SignupHomeEight from './SignupHomeEight';
-import TeamHomeEight from './TeamHomeEight';
+// import TeamHomeEight from './TeamHomeEight';
 import TestimonialHomeEight from './TestimonialHomeEight';
 import WorkPartHomeEight from './WorkPartHomeEight';
 
@@ -25,7 +25,7 @@ function HomeEight() {
             <ServicesHomeEight />
             <WorkPartHomeEight />
             <FaqHomeEight />/
-            <TeamHomeEight />
+            {/* <TeamHomeEight /> */}
             <TestimonialHomeEight />
             <BlogHomeEight />
             <SignupHomeEight className="appie-signup-8-area" />
