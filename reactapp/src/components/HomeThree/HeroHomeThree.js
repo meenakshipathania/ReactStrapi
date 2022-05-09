@@ -42,22 +42,22 @@ function HeroHomeThree() {
                             <div className="appie-hero-content text-center">
                                 <h1 className="appie-title">
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threefirst}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threefirst}</span>)
                                         : 'hgfhgf'}
                                 </h1>
                                 <p>
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecfirst}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecfirst}</span>)
                                         : 'hgfhgf'}
                                 </p>
                                 <p>
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecsec}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecsec}</span>)
                                         : 'hgfhgf'}
                                 </p>
                                 <p>
                                     {head
-                                        ? head.map((x) => <a>{x.attributes.threesecthree}</a>)
+                                        ? head.map((x) => <span>{x.attributes.threesecthree}</span>)
                                         : 'hgfhgf'}
                                 </p>
                                 <div className="hero-btns">

@@ -143,7 +143,7 @@ function FooterHomeThree({ className }) {
                                         <a href="#">
                                             <i className="fal fa-envelope" />
                                             {logo
-                                                ? logo.map((x) => <a>{x.attributes.email}</a>)
+                                                ? logo.map((x) => <span>{x.attributes.email}</span>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
@@ -151,11 +151,11 @@ function FooterHomeThree({ className }) {
                                         <a href="#">
                                             <i className="fal fa-phone" />
                                             {logo
-                                                ? logo.map((x) => <a>{x.attributes.phone1}</a>)
+                                                ? logo.map((x) => <span>{x.attributes.phone1}</span>)
                                                 : 'hgfhgf'}
                                             <br></br>
                                             {logo
-                                                ? logo.map((x) => <a>{x.attributes.phone2}</a>)
+                                                ? logo.map((x) => <span>{x.attributes.phone2}</span>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
@@ -163,7 +163,7 @@ function FooterHomeThree({ className }) {
                                         <a href="#">
                                             <i className="fal fa-map-marker-alt" />
                                             {logo
-                                                ? logo.map((x) => <a>{x.attributes.location}</a>)
+                                                ? logo.map((x) => <span>{x.attributes.location}</span>)
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
