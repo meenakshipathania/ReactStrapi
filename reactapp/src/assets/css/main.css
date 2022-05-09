@@ -874,7 +874,7 @@ p {
   top: 0;
   right: 0;
   z-index: 1010;
-  background: #0a44b9;;
+  background: #0e1133;
   box-shadow: 0 15px 30px 0 #0000000f;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1414,15 +1414,18 @@ p {
   }
 }
 .appie-header-8-area .header-nav-box .appie-btn-box .main-btn {
-  background: #db0f30;
-  border-color: #db0f30;
+  background: #cc1c3b;
+  border-color: #cc1c3b;
 }
 .appie-header-8-area .header-nav-box .appie-btn-box .main-btn:hover {
-  background: #fff;
+  background: transparent;
   color: #db0f30;
 }
 .appie-header-8-area .header-nav-box .appie-header-main-menu ul > li a:hover {
   color: #db0f30;
+}
+section.appie-team-area.appie-team-about-area.appie-team-8-area.pt-90.pb-90 {
+  background-color: #eef1f6;
 }
 
 /*===========================
@@ -1671,6 +1674,7 @@ p {
 .appie-hero-area.appie-hero-8-area {
   position: relative;
   z-index: 10;
+  background-image: url(../images/hero-bg.jpg);
 }
 .appie-hero-area.appie-hero-8-area .home-8-shape-1 {
   position: absolute;
@@ -1813,27 +1817,28 @@ p {
   }
 }
 .appie-hero-content ul li a {
-  background: #0e1133;
+  background: #cc1c3b;
   color: #fff;
   line-height: 40px;
   padding: 0 23px;
   border-radius: 6px;
-  border: 2px solid #0e1133;
+  border: 2px solid #cc1c3b;
 }
 .appie-hero-content ul li a i {
   padding-right: 6px;
 }
 .appie-hero-content ul li a:hover {
   background: transparent;
-  color: #0e1133;
+  color: #cc1c3b;
 }
 .appie-hero-content ul li a.item-2 {
   background: transparent;
-  color: #0e1133;
+  color: #cc1c3b;
 }
 .appie-hero-content ul li a.item-2:hover {
-  background: #0e1133;
+  background: #cc1c3b;
   color: #fff;
+  border: 2px solid #cc1c3b;
 }
 .appie-hero-content.appie-hero-content-4 {
   padding-right: 40px;
@@ -4354,7 +4359,7 @@ p {
   right: 0;
   height: 100%;
   width: 50%;
-  background-image: url(../images/faq-play-bg.png);
+  background-image: url(../images/how-it-work-thumb.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4403,7 +4408,7 @@ p {
   display: flex;
 }
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1 {
-  background: rgba(42, 109, 245, 0.9);
+  background: #cc1c3b;
   padding: 50px 60px;
 }
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1 .title {
@@ -4522,12 +4527,13 @@ p {
   z-index: -1;
 }
 .appie-blog-3-area.appie-blog-8-area .blog-btn a {
-  border-color: #db0f30;
-  color: #db0f30;
+  border-color: #cc1c3b;
+  background-color: #cc1c3b;
+  color: #fff;
 }
 .appie-blog-3-area.appie-blog-8-area .blog-btn a:hover {
-  background: #db0f30;
-  color: #fff;
+  background: transparent;
+  color: #cc1c3b
 }
 
 .appie-blog-item-3 {

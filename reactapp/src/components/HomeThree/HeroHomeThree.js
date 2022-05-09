@@ -68,7 +68,7 @@ function HeroHomeThree() {
                                         onClick={(e) => handleShowVideo(e)}
                                         className="appie-video-popup"
                                         href="https://www.youtube.com/watch?v=EE7NqzhMDms"
-                                    >
+                                        >
                                         <i className="fas fa-play" /> Play Video
                                     </a>
                                 </div>

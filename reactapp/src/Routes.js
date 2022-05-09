@@ -5,7 +5,7 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Loader from './components/Helper/Loader';
 import ScrollToTop from './components/Helper/ScrollToTop';
-// import HomeEight from './components/HomeEight';
+import HomeEight from './components/HomeEight';
 // import HomeFive from './components/HomeFive';
 // import HomeFour from './components/HomeFour';
 // import HomeOne from './components/HomeOne';
@@ -77,8 +77,8 @@ function Routes() {
                             {/* <Route exact path="/home-four" component={HomeFour} />
                             <Route exact path="/home-five" component={HomeFive} />
                             <Route exact path="/home-six" component={HomeSix} />
-                            <Route exact path="/home-seven" component={HomeSeven} />
-                            <Route exact path="/home-eight" component={HomeEight} /> */}
+                            <Route exact path="/home-seven" component={HomeSeven} />*/}
+                            <Route exact path="/home-eight" component={HomeEight} /> 
                             <Route exact path="/news" component={News} />
                             <Route exact path="/blog1" component={SingleBlog1} />
                             <Route exact path="/blog2" component={SingleBlog2} />

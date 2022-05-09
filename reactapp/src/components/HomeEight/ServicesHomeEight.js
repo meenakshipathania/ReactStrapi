@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import serviceThumb from '../../assets/images/service-thumb-1.png';
 
 function ServicesHomeEight() {
+    const [text2, Settext2] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/descriptions?populate=*')
+            .then((res) => {
+                Settext2(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
+    function imageurl(atttribute) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = atttribute.image1.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <section
@@ -12,8 +31,10 @@ function ServicesHomeEight() {
                     <div className="row align-items-end">
                         <div className="col-lg-6 col-md-8">
                             <div className="appie-section-title">
-                                <h3 className="appie-title">Solution for every need.</h3>
-                                <p>The app provides design and digital marketing.</p>
+                                <h3 className="appie-title"> {text2
+                                        ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
+                                        : 'hgfhgf'}</h3>
+                                {/* <p>The app provides design and digital marketing.</p> */}
                             </div>
                         </div>
                     </div>
@@ -35,10 +56,12 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-tv" />
                                         </div>
-                                        <h4 className="title">Carefully designed</h4>
-                                        <p>
+                                        <h4 className="title">{text2
+                                                ? text2.map((x) => <span>{x.attributes.text1}</span>)
+                                                : 'hgfhgf'}</h4>
+                                        {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -57,10 +80,12 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-code" />
                                         </div>
-                                        <h4 className="title">Clean Modern Code</h4>
-                                        <p>
+                                        <h4 className="title"> {text2
+                                                ? text2.map((x) => <span>{x.attributes.text2}</span>)
+                                                : 'hgfhgf'}</h4>
+                                        {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -79,13 +104,15 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-user-friends" />
                                         </div>
-                                        <h4 className="title">User Interactive</h4>
-                                        <p>
+                                        <h4 className="title"> {text2
+                                                ? text2.map((x) => <span>{x.attributes.text3}</span>)
+                                                : 'hgfhgf'}</h4>
+                                        {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6">
+                                {/* <div className="col-lg-6 col-md-6">
                                     <div
                                         className="
                     appie-single-service-2 appie-single-service-about
@@ -106,12 +133,21 @@ function ServicesHomeEight() {
                                             He lost his bottle loo don't get shirty with me ruddy.
                                         </p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-lg-5">
                             <div className="service-thumb">
-                                <img src={serviceThumb} alt="" />
+                            {text2
+                                    ? text2.map((x) => (
+                                          <img
+                                              src={
+                                                  x.attributes ? imageurl(x.attributes) : 'hgghtyu'
+                                              }
+                                              alt=""
+                                          />
+                                      ))
+                                    : 'hgfhgf'}
                             </div>
                         </div>
                     </div>

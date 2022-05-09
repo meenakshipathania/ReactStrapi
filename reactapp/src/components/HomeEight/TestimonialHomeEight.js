@@ -1,10 +1,29 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import user from '../../assets/images/testimonial-user-1.png';
 
 function TestimonialHomeEight() {
+    const [img, Setimg] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/testimonials?populate=*')
+            .then((res) => {
+                Setimg(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
+    function imageurl(data) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = data.image.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     const articleCarosel = useRef();
     const peopleCarosel = useRef();
     const sliderNext = () => {
@@ -28,7 +47,7 @@ function TestimonialHomeEight() {
         autoplay: false,
         arrows: false,
         dots: false,
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 1,
     };
     return (
@@ -57,204 +76,38 @@ function TestimonialHomeEight() {
                                     <i className="fal fa-arrow-left"></i>
                                 </span>
                                 <Slider {...settingsForArticle} ref={articleCarosel}>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
+                                    {img
+                                        ? img.map((x) => (
+                                            <div className="testimonial-parent-item">
+                                                <div className="testimonial-box">
+                                                    <div className="icon">
+                                                        <i className="fas fa-quote-left"></i>
+                                                    </div>
+                                                    <div className="ratings-icon">
+                                                        <ul>
+                                                            <li>
+                                                                <i className="fas fa-star"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i className="fas fa-star"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i className="fas fa-star"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i className="fas fa-star"></i>
+                                                            </li>
+                                                            <li>
+                                                                <i className="fas fa-star"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p>{x.attributes.text}</p>
+                                                </div>
                                             </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
-                                            </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
-                                            </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
-                                            </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
-                                            </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-parent-item">
-                                        <div className="testimonial-box">
-                                            <div className="icon">
-                                                <i className="fas fa-quote-left"></i>
-                                            </div>
-                                            <div className="ratings-icon">
-                                                <ul>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <p>
-                                                Twit some dodgy chav he legged it crikey blatant
-                                                starkers pukka show off show off pick your nose and
-                                                blow off morish bum bag boot quaint, Oxford off his
-                                                nut I bugger up the kyver brilliant bits and bobs
-                                                haggle buggered.
-                                            </p>
-                                        </div>
-                                    </div>
+                                        ))
+                                        : 'hgfhgf'}
+
                                 </Slider>
                                 <span
                                     onClick={sliderNext}
@@ -268,60 +121,26 @@ function TestimonialHomeEight() {
                         <div className="col-lg-4 col-md-8 col-sm-10">
                             <div className="testimonial-box-about-slider-small-active">
                                 <Slider {...settingsForPeople} ref={peopleCarosel}>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <img src={user} alt="" />
-                                        </div>
-                                        <div className="content text-center">
-                                            <h5 className="title">Bodrum Salvador</h5>
-                                            <span>Product Designer</span>
-                                        </div>
-                                    </div>
+                                    {img
+                                        ? img.map((x) => (
+                                            <div className="item">
+                                                <div className="thumb">
+                                                    <img
+                                                        src={
+                                                            x.attributes
+                                                                ? imageurl(x.attributes)
+                                                                : 'hgghtyu'
+                                                        }
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div className="content text-center">
+                                                    <h5 className="title">{x.attributes.name}</h5>
+                                                    <span>{x.attributes.position}</span>
+                                                </div>
+                                            </div>
+                                        ))
+                                    : 'hgfhgf'}
                                 </Slider>
                             </div>
                         </div>

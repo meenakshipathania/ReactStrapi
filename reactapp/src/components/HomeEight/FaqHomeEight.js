@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
 function FaqHomeEight() {
+    const [data, Setdata] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/logos')
+            .then((res) => {
+                Setdata(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
     const [showQuestion, setQuestion] = useState(0);
     const [showVideo, setVideoValue] = useState(false);
     const openQuestion = (e, value) => {
@@ -26,11 +40,15 @@ function FaqHomeEight() {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="appie-section-title">
-                                <h3 className="appie-title">Get started with Appie Template.</h3>
-                                <p>
+                                <h1 className="appie-title">{data
+                                    ? data.map((x) => (
+                                          <span className="title"> {x.attributes.heading}</span>
+                                      ))
+                                    : 'hgfhgf'}</h1>
+                                {/* <p>
                                     He nicked it tickety boo harry the cras bargy chap mush spiffing
                                     spend a penny the full monty burke butty.
-                                </p>
+                                </p> */}
                             </div>
                             <div
                                 className="faq-accordion wow fadeInRight mt-30"
@@ -49,7 +67,7 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4>Does Appie have dynamic content?</h4>
+                                                <h4> {data ? data.map((x) => <span> {x.attributes.q1}</span>): 'hgfhgf'}</h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -59,9 +77,7 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                        Naff Oxford vagabond in my flat chinwag
-                                                        blatant grub tomfoolery that I bits and bobs
-                                                        up the cras boot.
+                                                    {data ? data.map((x) => <span> {x.attributes.a1}</span>): 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -75,7 +91,7 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4>Where do I usually find FAQs in a page?</h4>
+                                                <h4>{data ? data.map((x) => <span> {x.attributes.q2}</span>): 'hgfhgf'}?</h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -85,9 +101,7 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                        Naff Oxford vagabond in my flat chinwag
-                                                        blatant grub tomfoolery that I bits and bobs
-                                                        up the cras boot.
+                                                    {data ? data.map((x) => <span> {x.attributes.a2}</span>): 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -101,7 +115,7 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4>Website & Mobile App Design</h4>
+                                                <h4>{data ? data.map((x) => <span> {x.attributes.q3}</span>): 'hgfhgf'}</h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -111,9 +125,7 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                        Naff Oxford vagabond in my flat chinwag
-                                                        blatant grub tomfoolery that I bits and bobs
-                                                        up the cras boot.
+                                                    {data ? data.map((x) => <span> {x.attributes.a3}</span>): 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -125,7 +137,7 @@ function FaqHomeEight() {
                     </div>
                 </div>
                 <div className="faq-play-box">
-                    <div className="play-btn">
+                    {/* <div className="play-btn">
                         <a
                             onClick={(e) => handleShowVideo(e)}
                             className="appie-video-popup"
@@ -133,7 +145,7 @@ function FaqHomeEight() {
                         >
                             <i className="fas fa-play" />
                         </a>
-                    </div>
+                    </div> */}
                     <div className="faq-play-counter">
                         <div className="box-1">
                             <h4 className="title">

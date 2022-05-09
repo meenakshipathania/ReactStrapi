@@ -2,10 +2,10 @@ import React from 'react';
 import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
 import Drawer from '../Mobile/Drawer';
-import AboutHomeEight from './AboutHomeEight';
+// import AboutHomeEight from './AboutHomeEight';
 import BlogHomeEight from './BlogHomeEight';
 import FaqHomeEight from './FaqHomeEight';
-import FooterHomeEight from './FooterHomeEight';
+import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import HeaderHomeEight from './HeaderHomeEight';
 import HeroHomeEight from './HeroHomeEight';
 import ServicesHomeEight from './ServicesHomeEight';
@@ -21,15 +21,15 @@ function HomeEight() {
             <Drawer drawer={drawer} action={setDrawer.toggle} />
             <HeaderHomeEight drawer={drawer} action={setDrawer.toggle} />
             <HeroHomeEight />
-            <AboutHomeEight />
+            {/* <AboutHomeEight /> */}
             <ServicesHomeEight />
             <WorkPartHomeEight />
-            <FaqHomeEight />
+            <FaqHomeEight />/
             <TeamHomeEight />
             <TestimonialHomeEight />
             <BlogHomeEight />
             <SignupHomeEight className="appie-signup-8-area" />
-            <FooterHomeEight />
+            <FooterHomeThree />
             <BackToTop className="back-to-top-8" />
         </>
     );

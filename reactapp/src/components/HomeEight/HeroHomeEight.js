@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import hero from '../../assets/images/hero-thumb-9.png';
 import shapeOne from '../../assets/images/shape/1.png';
 import shapeTwo from '../../assets/images/shape/2.png';
@@ -6,6 +7,24 @@ import shapeThree from '../../assets/images/shape/3.png';
 import shapeFour from '../../assets/images/shape/4.png';
 
 function HeroHomeEight() {
+    const [head, Sethead] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/descriptions?populate=*')
+            .then((res) => {
+                Sethead(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
+    function imageurl(atttribute) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = atttribute.imagex.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <section className="appie-hero-area appie-hero-8-area">
@@ -13,10 +32,23 @@ function HeroHomeEight() {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="appie-hero-content appie-hero-content-8">
-                                <h1 className="appie-title">We’re a full-range design app</h1>
+                                <h1 className="appie-title">{head
+                                        ? head.map((x) => <a>{x.attributes.threefirst}</a>)
+                                        : 'hgfhgf'}</h1>
+                                 <p>
+                                    {head
+                                        ? head.map((x) => <a>{x.attributes.threesecfirst}</a>)
+                                        : 'hgfhgf'}
+                                </p>
                                 <p>
-                                    Jolly good excuse my french boot super my good sir cup of char
-                                    richard about chinwag.
+                                    {head
+                                        ? head.map((x) => <a>{x.attributes.threesecsec}</a>)
+                                        : 'hgfhgf'}
+                                </p>
+                                <p>
+                                    {head
+                                        ? head.map((x) => <a>{x.attributes.threesecthree}</a>)
+                                        : 'hgfhgf'}
                                 </p>
                                 <ul>
                                     <li>
@@ -40,7 +72,18 @@ function HeroHomeEight() {
                                     data-wow-duration="1000ms"
                                     data-wow-delay="600ms"
                                 >
-                                    <img src={hero} alt="" />
+                                    {head
+                                        ? head.map((x) => (
+                                              <img
+                                                  src={
+                                                      x.attributes
+                                                          ? imageurl(x.attributes)
+                                                          : 'hgghtyu'
+                                                  }
+                                                  alt=""
+                                              />
+                                          ))
+                                        : 'hgfhgf'}
                                 </div>
                             </div>
                         </div>
