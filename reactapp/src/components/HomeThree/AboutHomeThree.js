@@ -175,7 +175,7 @@ function AboutHomeThree() {
                                             {text2
                                                 ? text2.map((x) => <h5>{x.attributes.text14}</h5>)
                                                 : 'hgfhgf'}
-                                        </h5>
+                                        </h5>5
                                     </div>
                                 </div>
                                 <div className="col-lg-12">

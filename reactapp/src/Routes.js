@@ -80,12 +80,12 @@ function Routes() {
                             <Route exact path="/home-seven" component={HomeSeven} />*/}
                             <Route exact path="/home-eight" component={HomeEight} /> 
                             <Route exact path="/news" component={News} />
-                            <Route exact path="/blog1" component={SingleBlog1} />
-                            <Route exact path="/blog2" component={SingleBlog2} />
-                            <Route exact path="/blog3" component={SingleBlog3} />
-                            <Route exact path="/blog4" component={SingleBlog4} />
-                            <Route exact path="/blog5" component={SingleBlog5} />
-                            <Route exact path="/blog6" component={SingleBlog6} />
+                            <Route exact path="/education/blog-1" component={SingleBlog1} />
+                            <Route exact path="/education/blog-2" component={SingleBlog2} />
+                            <Route exact path="/education/blog-3" component={SingleBlog3} />
+                            <Route exact path="/education/blog-4" component={SingleBlog4} />
+                            <Route exact path="/education/blog-5" component={SingleBlog5} />
+                            <Route exact path="/education/blog-6" component={SingleBlog6} />
                             <Route exact path="/blog" component={Blogsa} />
                             <Route exact path="/service" component={Service} />
                             <Route exact path="/service/serviceRequest" component={ServiceRequest} />
