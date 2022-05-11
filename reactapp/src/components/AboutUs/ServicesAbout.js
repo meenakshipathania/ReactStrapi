@@ -20,7 +20,7 @@ function ServicesAbout() {
             <section className="appie-services-2-area pt-90 pb-55" id="service">
                 <div className="container">
                     <div className="row align-items-end">
-                        <div className="col-lg-12 col-md-8">
+                        <div className="col-lg-12 col-md-12">
                             <div className="appie-section-title">
                                 <h3 className="appie-title">  {data ? data.map((x) => <span>{x.attributes.heading}</span>) : 'hgfhgf'}</h3>
                                 <p> {data ? data.map((x) => <span>{x.attributes.para}</span>) : 'hgfhgf'} </p>

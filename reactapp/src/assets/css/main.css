@@ -5675,6 +5675,9 @@ blockquote cite {
   border-radius: 6px;
   border: 0;
 }
+button.sub_but {
+  width: 80px;
+}
 .appie-project-content .input-box button {
   margin-left: 10px;
   padding: 0 30px;
@@ -5698,6 +5701,19 @@ blockquote cite {
   }
 }
 
+@media only screen and (max-width: 575px) {
+  .appie-sticky.sticky {
+    padding-top: 5px;
+    height: 64px;
+  }
+  .appie-header-area.appie-header-page-area.appie-sticky.sticky .stickylogo {
+    margin-left: 0%;
+  }
+  header.appie-header-area.appie-header-3-area.appie-sticky.sticky .stickylogo {
+  
+    margin-left: 0%;
+  }
+}
 .appie-project-3-area.appie-project-5-area {
   background: #eef1f6;
 }
@@ -6456,7 +6472,7 @@ blockquote cite {
   padding-top: 227px;
   height: 450px;
   background-image: url(../images/about.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;

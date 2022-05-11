@@ -56,11 +56,11 @@ function Product() {
                             placeholder="Search for themes, plugins, and scripts..."
                             title="Searvh for:"
                         />
-                        <button type="submit">
+                        <button type="submit" className='sub_but'>
                             <span className="icon-search">
                                 <i className="fa fa-search" aria-hidden="true"></i>
                             </span>
-                        </button>
+                        </button> 
                     </div>
                 </form>
             </div>
