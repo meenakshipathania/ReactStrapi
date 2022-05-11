@@ -5710,7 +5710,9 @@ button.sub_but {
     margin-left: 0%;
   }
   header.appie-header-area.appie-header-3-area.appie-sticky.sticky .stickylogo {
-  
+    margin-left: 0%;
+  }
+  header.appie-header-area.appie-header-8-area.appie-sticky.sticky .stickylogo {
     margin-left: 0%;
   }
 }
