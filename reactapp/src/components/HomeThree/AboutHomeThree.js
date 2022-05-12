@@ -235,7 +235,7 @@ function AboutHomeThree() {
                                     </h3>
                                     <p>
                                         {text2
-                                            ? text2.map((x) => <p>{x.attributes.tagline}</p>)
+                                            ? text2 .map((x) => <p>{x.attributes.tagline}</p>)
                                             : 'hgfhgf'}
                                     </p>
                                 </div>
