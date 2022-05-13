@@ -50,6 +50,8 @@ import SingleBlog3 from './components/Blogs/SingleBlog3';
 import SingleBlog4 from './components/Blogs/SingleBlog4';
 import SingleBlog5 from './components/Blogs/SingleBlog5';
 import SingleBlog6 from './components/Blogs/SingleBlog6';
+import SingleApp1 from './components/AppServices/singleapp1';
+import AppService from './components/AppServices';
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -115,6 +117,8 @@ function Routes() {
                             <Route exact path="/script/script-product-2" component={ScriptProduct2} />
                             <Route exact path="/script/script-product-3" component={ScriptProduct3} />
                             <Route exact path="/script/script-product-4" component={ScriptProduct4} />
+                            <Route exact path="/appservice" component={AppService} />
+                            <Route exact path="/app-consulting" component={SingleApp1} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />

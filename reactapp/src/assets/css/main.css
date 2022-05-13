@@ -902,14 +902,14 @@ p {
   color: #ff3e66;
 }
 .appie-header-area.appie-header-3-area.appie-sticky.sticky {
-  background: #0e1133;
+  background: #fff;
   padding-right: 20px;
 }
 .appie-header-area.appie-header-4-area.appie-sticky.sticky {
   background: linear-gradient(90deg, #6b1fcd 0%, #374ede 100%);
 }
 .appie-header-area.appie-header-page-area.appie-sticky.sticky {
-  background: #0e1133;
+  background: #fff;
 }
 .appie-header-area.appie-header-7-area.appie-sticky.sticky {
   background: #290645;
@@ -1160,8 +1160,14 @@ p {
 .appie-header-main-menu ul > li > a {
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  /* color: #fff; */
   line-height: 45px;
+}
+header.appie-header-area.appie-header-3-area.appie-sticky.sticky ul li a {
+  color: blue;
+}
+header.appie-header-area.appie-header-page-area.appie-sticky.sticky .appie-header-main-menu ul li a {
+  color: blue;
 }
 .appie-header-main-menu ul > li > a i {
   padding-left: 6px;
@@ -5504,7 +5510,7 @@ blockquote cite {
 
 .post-item-1 img {
   width: 100%;
-  height: auto;
+  height: 350px;
   border-radius: 10px 10px 0 0;
 }
 

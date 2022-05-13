@@ -70,12 +70,12 @@ function HeaderAbout({ action }) {
                                         : 'hgfhgf'}
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
+                            <div className="col-lg-7 col-md-2 col-sm-2 order-3 order-sm-2">
                                 <div className="appie-header-main-menu">
                                     <Navigation />
                                 </div>
                             </div>
-                            <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                            <div className="col-lg-3  col-md-5 col-sm-5 col-5 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
                                     {/* <a className="login-btn" href="#">
                                         <i className="fal fa-user"></i>

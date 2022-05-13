@@ -20,32 +20,33 @@ function Navigation() {
         <>
             <ul>
                 <li>
-                    {/* <a href="/">
-                        {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
-                         <i classNameName="fal fa-angle-down" /> 
-                    </a> */}
                     <Link to='/'>
                         {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/service">
+                    <Link to="/appservice">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name1}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/news">
+                    <Link to="/service">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/about-us">
+                    <Link to="/news">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/contact">
+                    <Link to="/about-us">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name4}</a>) : 'hgfhgf'}
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/contact">
+                        {navitems ? navitems.map((x) => <a>{x.attributes.name5}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
             </ul>
