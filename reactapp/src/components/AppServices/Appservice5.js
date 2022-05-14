@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-// import singlePost from '../../assets/images/single-post/1.jpg';
 import author from '../../assets/images/single-post/author.png';
 import cmnt1 from '../../assets/images/single-post/c1.png';
 import cmnt2 from '../../assets/images/single-post/c2.png';
@@ -10,7 +9,7 @@ function AppService1() {
     const [text2, Settext2] = useState([]);
   useEffect(() => {
      const request = axios.CancelToken.source();
-     axios.get('http://165.227.11.15:1338/api/services/1?populate[nested][populate]=*')
+     axios.get('http://165.227.11.15:1338/api/services/5?populate[nested][populate]=*')
            .then((res) => {
               Settext2(res.data.data);
            })
@@ -50,7 +49,7 @@ function AppService1() {
                
                 <p>
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>) : 'Home'}
-                </p>                
+                </p>
             </div>
         </>
     );

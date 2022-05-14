@@ -10,7 +10,7 @@ function AppService1() {
     const [text2, Settext2] = useState([]);
   useEffect(() => {
      const request = axios.CancelToken.source();
-     axios.get('http://165.227.11.15:1338/api/services/1?populate[nested][populate]=*')
+     axios.get('http://165.227.11.15:1338/api/services/3?populate[nested][populate]=*')
            .then((res) => {
               Settext2(res.data.data);
            })
@@ -50,7 +50,7 @@ function AppService1() {
                
                 <p>
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>) : 'Home'}
-                </p>                
+                </p>
             </div>
         </>
     );

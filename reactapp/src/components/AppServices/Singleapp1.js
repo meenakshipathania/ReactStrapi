@@ -3,33 +3,29 @@ import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
 import FooterHomeOne from '../HomeOne/FooterHomeOne';
 import Drawer from '../Mobile/Drawer';
-import Blog3 from './Blog3';
-import BlogSideBar from './BlogSideBar';
-import HeaderBlog from './HeaderBlog';
-import HeroBlog from './HeroBlog';
+import AppService1 from './Appservice1';
+import Header from './Header';
+import Hero from './Hero';
 
-function SingleBlog3() {
+function SingleApp1() {
     const [drawer, drawerAction] = useToggle(false);
     return (
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
-            <HeaderBlog action={drawerAction.toggle} />
-            <HeroBlog
-                title="Blog Detail"
+            <Header action={drawerAction.toggle} />
+            <Hero
+                title="APPS CONSULTING SERVICES"
                 breadcrumb={[
-                    { link: '/', title: 'home' },
-                    { link: '/blog', title: 'Blogs' },
-                    { link: '/education/blog3', title: 'Blog' },
+                    { link:'/',title:'home' },
+                    { link:'/app-services',title:'Services' },
+                    { link:'/app-consulting',title:'App Consulting' },
                 ]}
             />
             <section className="blogpage-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 col-md-7">
-                            <Blog3 />
-                        </div>
-                        <div className="col-lg-4 col-md-5">
-                            <BlogSideBar />
+                        <div className="col-lg-12 col-md-12">
+                            <AppService1 />
                         </div>
                     </div>
                 </div>
@@ -40,4 +36,4 @@ function SingleBlog3() {
     );
 }
 
-export default SingleBlog3;
+export default SingleApp1;

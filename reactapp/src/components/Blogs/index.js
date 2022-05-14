@@ -19,7 +19,7 @@ function Blogsa() {
                 title="Blogs"
                 breadcrumb={[
                     { link: '/', title: 'Home' },
-                    { link: '/blogs', title: 'Blogs' },
+                    { link: '/blog', title: 'Blogs' },
                 ]}
             />
             <section className="blogpage-section">

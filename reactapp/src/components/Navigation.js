@@ -25,7 +25,7 @@ function Navigation() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/appservice">
+                    <Link to="/app-services">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name1}</a>) : 'hgfhgf'}
                     </Link>
                 </li>

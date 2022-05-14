@@ -494,7 +494,7 @@ p {
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 20px;
-  color: white;
+  color: rgba(1,158,235,255);
 }
 
 .preloader {
@@ -874,7 +874,7 @@ p {
   top: 0;
   right: 0;
   z-index: 1010;
-  background: #0e1133;
+  background: #fff;
   box-shadow: 0 15px 30px 0 #0000000f;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -964,6 +964,9 @@ p {
   a {
   color: #0e1133;
 }
+header.appie-header-area.appie-header-8-area.appie-sticky .appie-header-main-menu ul > li > a {
+  color: #fff;
+}
 .header-nav-box.header-nav-box-3 .appie-btn-box .login-btn {
   color: #fff;
 }
@@ -977,7 +980,7 @@ p {
     color: white;
 }
 .header-nav-box.header-nav-box-3 .toggle-btn {
-  color: #fff;
+  color: #cc1c3b;
   font-size: 20px;
 }
 .header-nav-box.header-nav-box-3.header-nav-box-inner-page
@@ -1010,7 +1013,7 @@ p {
 .header-nav-box.header-nav-box-5 .appie-btn-box .main-btn {
   background: #f84a6e;
   border-color: #f84a6e;
-}#0e1133
+}
 .header-nav-box.header-nav-box-5 .appie-btn-box .main-btn:hover {
   background: transparent;
   color: #f84a6e;
@@ -1164,10 +1167,13 @@ p {
   line-height: 45px;
 }
 header.appie-header-area.appie-header-3-area.appie-sticky.sticky ul li a {
-  color: blue;
+  color: rgba(1,158,235,255);
+}
+header.appie-header-area.appie-header-8-area.appie-sticky.sticky ul li a {
+  color: rgba(1,158,235,255);
 }
 header.appie-header-area.appie-header-page-area.appie-sticky.sticky .appie-header-main-menu ul li a {
-  color: blue;
+  color: rgba(1,158,235,255);
 }
 .appie-header-main-menu ul > li > a i {
   padding-left: 6px;
@@ -5022,6 +5028,13 @@ header.appie-header-area.appie-header-8-area.appie-sticky.sticky img.loimg {
   width: 100%;
   max-width: 100%;
   height: 400px;
+  border-radius: 10px;
+}
+
+.post-thumb11 img {
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
   border-radius: 10px;
 }
 

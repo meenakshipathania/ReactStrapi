@@ -19,7 +19,7 @@ function AppService() {
                 title="SERVICES"
                 breadcrumb={[
                     { link: '/', title: 'Home' },
-                    { link: '/blogs', title: 'Services' },
+                    { link: '/app-services', title: 'Services' },
                 ]}
             />
             <section className="blogpage-section">

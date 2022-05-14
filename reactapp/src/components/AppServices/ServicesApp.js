@@ -46,20 +46,10 @@ function ServicesApp() {
                                     alt=""
                                 />
                                 <div className="b-post-details">
-                                    {/* <div className="bp-meta">
-                                        <a href="#">
-                                            <i className="fal fa-clock"></i>April 22, 2020
-                                        </a>
-                                        <a href="#">
-                                            <i className="fal fa-comments"></i>6 Comments
-                                        </a>
-                                    </div> */}
                                     <h3>
-                                        {/* <a href="/news/single-news"> */}
                                         <a href={'/'+x.attributes.slug}>{x.attributes.text}</a>
-                                        {/* </a> */}
                                     </h3>
-                                    <a className="read-more" href="single-post.html">
+                                    <a className="read-more" href={'/'+x.attributes.slug}>
                                         Read More<i className="fal fa-arrow-right"></i>
                                     </a>
                                 </div>

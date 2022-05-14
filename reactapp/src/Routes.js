@@ -50,8 +50,13 @@ import SingleBlog3 from './components/Blogs/SingleBlog3';
 import SingleBlog4 from './components/Blogs/SingleBlog4';
 import SingleBlog5 from './components/Blogs/SingleBlog5';
 import SingleBlog6 from './components/Blogs/SingleBlog6';
-import SingleApp1 from './components/AppServices/singleapp1';
 import AppService from './components/AppServices';
+import SingleApp1 from './components/AppServices/Singleapp1';
+import SingleApp2 from './components/AppServices/Singleapp2';
+import SingleApp3 from './components/AppServices/Singleapp3';
+import SingleApp4 from './components/AppServices/Singleapp4';
+import SingleApp5 from './components/AppServices/Singleapp5';
+import SingleApp6 from './components/AppServices/Singleapp6';
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -73,16 +78,16 @@ function Routes() {
                 <Router>
                     <ScrollToTop>
                         <Switch>
-                            <Route exact path="/" component={HomeThree} />
+                            <Route exact path="/home-three" component={HomeThree} />
                             {/* <Route exact path="/home-two" component={Hometwo} />
                             <Route exact path="/home-three" component={HomeThree} /> */}
                             {/* <Route exact path="/home-four" component={HomeFour} />
                             <Route exact path="/home-five" component={HomeFive} />
                             <Route exact path="/home-six" component={HomeSix} />
                             <Route exact path="/home-seven" component={HomeSeven} />*/}
-                            <Route exact path="/home-eight" component={HomeEight} /> 
+                            <Route exact path="/" component={HomeEight} /> 
                             <Route exact path="/news" component={News} />
-                            <Route exact path="/education/blog-1" component={SingleBlog1} />
+                            <Route exact path="/education/blog1" component={SingleBlog1} />
                             <Route exact path="/education/blog-2" component={SingleBlog2} />
                             <Route exact path="/education/blog-3" component={SingleBlog3} />
                             <Route exact path="/education/blog-4" component={SingleBlog4} />
@@ -117,8 +122,13 @@ function Routes() {
                             <Route exact path="/script/script-product-2" component={ScriptProduct2} />
                             <Route exact path="/script/script-product-3" component={ScriptProduct3} />
                             <Route exact path="/script/script-product-4" component={ScriptProduct4} />
-                            <Route exact path="/appservice" component={AppService} />
+                            <Route exact path="/app-services" component={AppService} />
                             <Route exact path="/app-consulting" component={SingleApp1} />
+                            <Route exact path="/app-design" component={SingleApp2} />
+                            <Route exact path="/mobile-app-development" component={SingleApp3} />
+                            <Route exact path="/progressive-web-apps" component={SingleApp4} />
+                            <Route exact path="/app-Maintenance-support" component={SingleApp5} />
+                            <Route exact path="/app-analytics" component={SingleApp6} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />

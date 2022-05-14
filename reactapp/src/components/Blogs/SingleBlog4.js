@@ -18,8 +18,8 @@ function SingleBlog4() {
                 title="Blog Detail"
                 breadcrumb={[
                     { link: '/', title: 'home' },
-                    { link: '/news', title: 'Blogs' },
-                    { link: '/news/single-news', title: 'Blog' },
+                    { link: '/blog', title: 'Blogs' },
+                    { link: '/education/blog4', title: 'Blog' },
                 ]}
             />
             <section className="blogpage-section">
