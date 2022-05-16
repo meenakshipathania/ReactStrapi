@@ -6,10 +6,10 @@ import Drawer from '../Mobile/Drawer';
 // import Blogs from './Blogs';
 // import BlogSideBar from './BlogSideBar';
 import HeaderNews from './HeaderNews';
-import Product from './Product';
+import Products from './Product';
 import HeroNews from './HeroNews';
 
-function News() {
+function Product() {
     const [drawer, drawerAction] = useToggle(false);
     return (
         <>
@@ -34,11 +34,11 @@ function News() {
                     </div>
                 </div>
             </section> */}
-            <Product />
+            <Products />
             <FooterHomeThree />
             <BackToTop />
         </>
     );
 }
 
-export default News;
+export default Product;

@@ -3,8 +3,8 @@ import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
 import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
-import HeaderNews from '../News/HeaderNews';
-import HeroNews from '../News/HeroNews';
+import HeaderNews from '../Product/HeaderNews';
+import HeroNews from '../Product/HeroNews';
 import Forms from './Forms';
 
 function Contact() {

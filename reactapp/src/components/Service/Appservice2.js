@@ -36,7 +36,6 @@ function AppService1() {
                   ))
                : 'hgfhgf'}
                 </div>
-               
                 <p>
                 { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>) : 'Home'}
                 </p>

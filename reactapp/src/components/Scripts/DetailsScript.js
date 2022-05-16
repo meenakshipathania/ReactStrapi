@@ -30,7 +30,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                         <ul className="businesslist listt">
                     <li>
-                        <a href="/script/scriptdemopaid">
+                        <a href="/product/script/demopaid">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -46,7 +46,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="/script/script-product-2">
+                        <a href="/product/script/script-product-2">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -62,7 +62,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="/script/script-product-3">
+                        <a href="/product/script/script-product-3">
                             {data
                                 ? data.map((x) => (
                                       <img
@@ -78,7 +78,7 @@ function DetailsIncity() {
                         </a>
                     </li>
                     <li>
-                        <a href="/script/script-product-4">
+                        <a href="/product/script/script-product-4">
                             {data
                                 ? data.map((x) => (
                                       <img

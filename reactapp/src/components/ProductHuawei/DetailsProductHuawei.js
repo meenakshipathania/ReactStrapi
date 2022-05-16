@@ -117,7 +117,7 @@ function DetailsIncity() {
                                     <div className='row'>
                                         <textarea cols='250' rows='10' name='comment' required value={review} onChange={(e) => setReview(e.target.value)}></textarea>
                                     </div>
-                                    <div className='row'>ddsd
+                                    <div className='row'>
                                         <label className='lab' for='name'>Name</label>
                                     </div>
                                     <div className='row'>

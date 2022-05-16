@@ -77,7 +77,7 @@ function HeaderNews({ action }) {
                             </div>
                             <div className="col-lg-3  col-md-5 col-sm-5 col-5 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
-                                    <a className="main-btn ml-30" href="#">
+                                    <a className="main-btn ml-30" href="/contact">
                                         {logo
                                             ? logo.map((x) => <span>{x.attributes.getstart}</span>)
                                             : 'hgfhgf'}

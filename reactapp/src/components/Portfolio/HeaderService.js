@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import logo from '../../assets/images/logo-7.png';
-import StickyMenu from '../../lib/StickyMenu';
 import Navigation from '../Navigation';
 
-function HeaderNews({ action }) {
+function HeaderService({ action }) {
     const [logo, Setlogo] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
@@ -18,6 +17,7 @@ function HeaderNews({ action }) {
             });
         return () => request.cancel();
     }, []);
+
     function imageurl(atttribute) {
         const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
@@ -28,9 +28,6 @@ function HeaderNews({ action }) {
         const dataurl = atttribute.logo1.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    useEffect(() => {
-        StickyMenu();
-    });
     return (
         <>
             <header className="appie-header-area appie-header-page-area appie-sticky">
@@ -41,19 +38,20 @@ function HeaderNews({ action }) {
                                 <div className="appie-logo-box">
                                     {logo
                                         ? logo.map((x) => (
-                                              <a href="/">
-                                                  <img className='loimg'
-                                                      src={
-                                                          x.attributes
-                                                              ? imageurl(x.attributes)
-                                                              : 'hgghtyu'
-                                                      }
-                                                      alt=""
-                                                  />
-                                              </a>
-                                          ))
+                                            <a href="/">
+                                                <img className='loimg'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
                                         : 'hgfhgf'}
-                                        {logo
+
+                                    {logo
                                         ? logo.map((x) => (
                                             <a href="/">
                                                 <img className='stickylogo'
@@ -82,7 +80,7 @@ function HeaderNews({ action }) {
                                             ? logo.map((x) => <a>{x.attributes.login}</a>)
                                             : 'hgfhgf'}
                                     </a> */}
-                                    <a className="main-btn ml-30" href="#">
+                                    <a className="main-btn ml-30" href="/contact">
                                         {logo
                                             ? logo.map((x) => <span>{x.attributes.getstart}</span>)
                                             : 'hgfhgf'}
@@ -103,4 +101,4 @@ function HeaderNews({ action }) {
     );
 }
 
-export default HeaderNews;
+export default HeaderService;

@@ -90,10 +90,10 @@ function FooterHomeThree({ className }) {
                                         <Link to="/about-us">About Us</Link>
                                     </li>
                                     <li>
-                                        <Link to="/Service">Portfolio</Link>
+                                        <Link to="/portfolio">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <Link to="/news">Product</Link>
+                                        <Link to="/product">Product</Link>
                                     </li>
                                     <li>
                                         <Link to="/blog">Blogs</Link>

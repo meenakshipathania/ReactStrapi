@@ -25,17 +25,17 @@ function Navigation() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/app-services">
+                    <Link to="/services">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name1}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/service">
+                    <Link to="/portfolio">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/news">
+                    <Link to="/product">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
                     </Link>
                 </li>

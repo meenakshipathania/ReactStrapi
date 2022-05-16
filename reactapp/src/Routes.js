@@ -13,10 +13,10 @@ import HomeEight from './components/HomeEight';
 // import HomeSix from './components/HomeSix';
 import HomeThree from './components/HomeThree';
 // import Hometwo from './components/HomeTwo';
-import News from './components/News';
+import Product from './components/Product';
 import Blogsa from './components/Blogs';
 // import SingleNews from './components/Blogs/SingleBlog';
-import Service from './components/Service';
+import Portfolio from './components/Portfolio';
 import ServiceRequest from './components/ServiceRequest';
 import Incity from './components/incity';
 import Greenpal from './components/Greenpal';
@@ -50,13 +50,13 @@ import SingleBlog3 from './components/Blogs/SingleBlog3';
 import SingleBlog4 from './components/Blogs/SingleBlog4';
 import SingleBlog5 from './components/Blogs/SingleBlog5';
 import SingleBlog6 from './components/Blogs/SingleBlog6';
-import AppService from './components/AppServices';
-import SingleApp1 from './components/AppServices/Singleapp1';
-import SingleApp2 from './components/AppServices/Singleapp2';
-import SingleApp3 from './components/AppServices/Singleapp3';
-import SingleApp4 from './components/AppServices/Singleapp4';
-import SingleApp5 from './components/AppServices/Singleapp5';
-import SingleApp6 from './components/AppServices/Singleapp6';
+import Service from './components/Service';
+import SingleApp1 from './components/Service/Singleapp1';
+import SingleApp2 from './components/Service/Singleapp2';
+import SingleApp3 from './components/Service/Singleapp3';
+import SingleApp4 from './components/Service/Singleapp4';
+import SingleApp5 from './components/Service/Singleapp5';
+import SingleApp6 from './components/Service/Singleapp6';
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -86,7 +86,7 @@ function Routes() {
                             <Route exact path="/home-six" component={HomeSix} />
                             <Route exact path="/home-seven" component={HomeSeven} />*/}
                             <Route exact path="/" component={HomeEight} /> 
-                            <Route exact path="/news" component={News} />
+                            <Route exact path="/product" component={Product} />
                             <Route exact path="/education/blog1" component={SingleBlog1} />
                             <Route exact path="/education/blog-2" component={SingleBlog2} />
                             <Route exact path="/education/blog-3" component={SingleBlog3} />
@@ -94,41 +94,41 @@ function Routes() {
                             <Route exact path="/education/blog-5" component={SingleBlog5} />
                             <Route exact path="/education/blog-6" component={SingleBlog6} />
                             <Route exact path="/blog" component={Blogsa} />
-                            <Route exact path="/service" component={Service} />
-                            <Route exact path="/service/serviceRequest" component={ServiceRequest} />
-                            <Route exact path="/service/incity" component={Incity} />
-                            <Route exact path="/service/greenpal" component={Greenpal} />
-                            <Route exact path="/service/gentra" component={Gentra} />
-                            <Route exact path="/service/vlife" component={Vlife} />
-                            <Route exact path="/service/fanzapp" component={Fanzapp} />
-                            <Route exact path="/service/huawei" component={Huawei} />
-                            <Route exact path="/service/mehanapp" component={Mehanapp} />
-                            <Route exact path="/service/collab" component={Collab} />
-                            <Route exact path="/compo" component={Compo} />
-                            <Route exact path="/script" component={Script} />
-                            <Route exact path="/theme" component={Theme} />
-                            <Route exact path="/product/huawei" component={ProductHuawei} />
-                            <Route exact path="/product/mehan" component={ProductMehan} />
-                            <Route exact path="/product/service-request" component={ProductService} />
-                            <Route exact path="/product/theme-product" component={ProductTheme} />
-                            <Route exact path="/product/theme-product-2" component={ProductTheme2} />
-                            <Route exact path="/product/theme-product-3" component={ProductTheme3} />
-                            <Route exact path="/compo/compofreedemo" component={CompoFreeDemo} />
-                            <Route exact path="/compo/greenpal" component={CompoGreenpal} />
-                            <Route exact path="/compo/plugin-product" component={CompoPlugin} />
-                            <Route exact path="/compo/plugin-product-3" component={CompoPlugin3} />
-                            <Route exact path="/compo/plugin-product-4" component={CompoPlugin4} />
-                            <Route exact path="/script/scriptdemopaid" component={ScriptDemoPaid} />
-                            <Route exact path="/script/script-product-2" component={ScriptProduct2} />
-                            <Route exact path="/script/script-product-3" component={ScriptProduct3} />
-                            <Route exact path="/script/script-product-4" component={ScriptProduct4} />
-                            <Route exact path="/app-services" component={AppService} />
-                            <Route exact path="/app-consulting" component={SingleApp1} />
-                            <Route exact path="/app-design" component={SingleApp2} />
-                            <Route exact path="/mobile-app-development" component={SingleApp3} />
-                            <Route exact path="/progressive-web-apps" component={SingleApp4} />
-                            <Route exact path="/app-Maintenance-support" component={SingleApp5} />
-                            <Route exact path="/app-analytics" component={SingleApp6} />
+                            <Route exact path="/portfolio" component={Portfolio} />
+                            <Route exact path="/portfolio/serviceRequest" component={ServiceRequest} />
+                            <Route exact path="/portfolio/incity" component={Incity} />
+                            <Route exact path="/portfolio/greenpal" component={Greenpal} />
+                            <Route exact path="/portfolio/gentra" component={Gentra} />
+                            <Route exact path="/portfolio/vlife" component={Vlife} />
+                            <Route exact path="/portfolio/fanzapp" component={Fanzapp} />
+                            <Route exact path="/portfolio/huawei" component={Huawei} />
+                            <Route exact path="/portfolio/mehanapp" component={Mehanapp} />
+                            <Route exact path="/portfolio/collab" component={Collab} />
+                            <Route exact path="/product/components" component={Compo} />
+                            <Route exact path="/product/script" component={Script} />
+                            <Route exact path="/product/theme" component={Theme} />
+                            <Route exact path="/huawei" component={ProductHuawei} />
+                            <Route exact path="/mehan" component={ProductMehan} />
+                            <Route exact path="/service-request" component={ProductService} />
+                            <Route exact path="/theme-product" component={ProductTheme} />
+                            <Route exact path="/theme-product-2" component={ProductTheme2} />
+                            <Route exact path="/theme-product-3" component={ProductTheme3} />
+                            <Route exact path="/product/components/freedemo" component={CompoFreeDemo} />
+                            <Route exact path="/product/components/greenpal" component={CompoGreenpal} />
+                            <Route exact path="/product/components/plugin-product" component={CompoPlugin} />
+                            <Route exact path="/product/components/plugin-product-3" component={CompoPlugin3} />
+                            <Route exact path="/product/components/plugin-product-4" component={CompoPlugin4} />
+                            <Route exact path="/product/script/demopaid" component={ScriptDemoPaid} />
+                            <Route exact path="/product/script/script-product-2" component={ScriptProduct2} />
+                            <Route exact path="/product/script/script-product-3" component={ScriptProduct3} />
+                            <Route exact path="/product/script/script-product-4" component={ScriptProduct4} />
+                            <Route exact path="/services" component={Service} />
+                            <Route exact path="/services/app-consulting" component={SingleApp1} />
+                            <Route exact path="/services/app-design" component={SingleApp2} />
+                            <Route exact path="/services/mobile-app-development" component={SingleApp3} />
+                            <Route exact path="/services/progressive-web-apps" component={SingleApp4} />
+                            <Route exact path="/services/app-Maintenance-support" component={SingleApp5} />
+                            <Route exact path="/services/app-analytics" component={SingleApp6} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />

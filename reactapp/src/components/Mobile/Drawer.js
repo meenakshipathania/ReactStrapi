@@ -116,14 +116,14 @@ function Drawer({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link to="/service">Portfolio</Link>
+                                            <Link to="/portfolio">Portfolio</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'pages')}
                                             id="pages"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link to="/news">Products</Link>
+                                            <Link to="/product">Products</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'news')}

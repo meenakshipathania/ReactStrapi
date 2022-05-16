@@ -5694,9 +5694,6 @@ blockquote cite {
   border-radius: 6px;
   border: 0;
 }
-button.sub_but {
-  width: 80px;
-}
 .appie-project-content .input-box button {
   margin-left: 10px;
   padding: 0 30px;
@@ -8641,6 +8638,9 @@ button span{
 }
 .listt li{
   padding-left: 9.5%;
+}
+button.sub_but {
+  width: 80px;
 }
 @media only screen and (max-width: 1200px){
   .listt li{

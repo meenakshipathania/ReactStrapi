@@ -66,17 +66,17 @@ function Product() {
             </div>
             <div className="coloumn">
                 <div className="First">
-                    <a href="compo">
+                    <a href="/product/components">
                         <h2 className="heading">COMPONENTS</h2>
                     </a>
                 </div>
                 <div className="second">
-                    <a href="script">
+                    <a href="/product/script">
                         <h2 className="heading">SCRIPTS</h2>
                     </a>
                 </div>
                 <div className="third">
-                    <a href="theme">
+                    <a href="product/theme">
                         <h2 className="heading">THEMES</h2>
                     </a>
                 </div>
@@ -94,7 +94,7 @@ function Product() {
                 
                 <ul className="businesslist listt">
                     <li>
-                        <a href="product/huawei">
+                        <a href="/huawei">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -110,7 +110,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="product/mehan">
+                        <a href="/mehan">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -126,7 +126,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="/product/service-request">
+                        <a href="/service-request">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -142,7 +142,7 @@ function Product() {
                         </a>
                     </li>
                     <li>
-                        <a href="/product/theme-product">
+                        <a href="/theme-product">
                             {heading
                                 ? heading.map((x) => (
                                       <img
