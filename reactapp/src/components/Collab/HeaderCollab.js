@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-// import logo from '../../assets/images/logo-7.png';
 import Navigation from '../Navigation';
 
 function HeaderIncity({ action }) {
@@ -23,6 +22,11 @@ function HeaderIncity({ action }) {
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    function imageurl1(atttribute) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = atttribute.logo1.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <header className="appie-header-area appie-header-page-area appie-sticky">
@@ -33,17 +37,31 @@ function HeaderIncity({ action }) {
                                 <div className="appie-logo-box">
                                     {logo
                                         ? logo.map((x) => (
-                                              <a href="/">
-                                                  <img className='loimg'
-                                                      src={
-                                                          x.attributes
-                                                              ? imageurl(x.attributes)
-                                                              : 'hgghtyu'
-                                                      }
-                                                      alt=""
-                                                  />
-                                              </a>
-                                          ))
+                                            <a href="/">
+                                                <img className='loimg'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
+                                        : 'hgfhgf'}
+                                    {logo
+                                        ? logo.map((x) => (
+                                            <a href="/">
+                                                <img className='stickylogo'
+                                                    src={
+                                                        x.attributes
+                                                            ? imageurl1(x.attributes)
+                                                            : 'hgghtyu'
+                                                    }
+                                                    alt=""
+                                                />
+                                            </a>
+                                        ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>
