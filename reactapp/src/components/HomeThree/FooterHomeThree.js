@@ -182,7 +182,7 @@ function FooterHomeThree({ className }) {
                 pt-35
               "
                             >
-                                <div className="apps-download-btn">
+                                {/* <div className="apps-download-btn">
                                     <ul>
                                         <li>
                                             <a href="#">
@@ -196,7 +196,7 @@ function FooterHomeThree({ className }) {
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
                                 <div className="copyright-text">
                                     <p>© 2018 ocodewire. All rights are reserved.</p>
                                 </div>

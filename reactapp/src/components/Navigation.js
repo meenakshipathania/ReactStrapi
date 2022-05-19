@@ -34,11 +34,11 @@ function Navigation() {
                         {navitems ? navitems.map((x) => <a>{x.attributes.name2}</a>) : 'hgfhgf'}
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/product">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name3}</a>) : 'hgfhgf'}
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/about-us">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name4}</a>) : 'hgfhgf'}

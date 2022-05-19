@@ -149,13 +149,13 @@ function FaqHomeEight() {
                     <div className="faq-play-counter">
                         <div className="box-1">
                             <h4 className="title">
-                                <CounterUpCom endValue="700" sectionSelect="counter" />k
+                                <CounterUpCom endValue="700" sectionSelect="counter" /><span>k</span>
                             </h4>
                             <span>App Downloads</span>
                         </div>
                         <div className="box-1 box-2">
                             <h4 className="title">
-                                <CounterUpCom endValue="545" sectionSelect="counter" />k
+                                <CounterUpCom endValue="545" sectionSelect="counter" /><span>k</span>
                             </h4>
                             <span>App Downloads</span>
                         </div>

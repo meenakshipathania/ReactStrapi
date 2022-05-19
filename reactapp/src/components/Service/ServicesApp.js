@@ -35,7 +35,7 @@ function ServicesApp() {
             <div className="row">
                 {data
                     ? data.slice(0,6).map((x) => (
-                        <div className="col-lg-4">
+                        <div className="col-md-4 col-lg-4">
                             <div className="post-item-1">
                                 <img
                                     src={
@@ -49,6 +49,7 @@ function ServicesApp() {
                                     <h3>
                                         <a href={'/'+x.attributes.slug}>{x.attributes.text}</a>
                                     </h3>
+                                    <p>{x.attributes.description}</p>
                                     <a className="read-more" href={'/'+x.attributes.slug}>
                                         Read More<i className="fal fa-arrow-right"></i>
                                     </a>

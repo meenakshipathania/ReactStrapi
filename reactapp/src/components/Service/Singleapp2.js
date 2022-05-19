@@ -1,7 +1,7 @@
 import React from 'react';
 import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
-import FooterHomeOne from '../HomeOne/FooterHomeOne';
+import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
 import AppService2 from './Appservice2';
 import Header from './Header';
@@ -30,7 +30,7 @@ function SingleApp2() {
                     </div>
                 </div>
             </section>
-            <FooterHomeOne />
+            <FooterHomeThree />
             <BackToTop />
         </>
     );

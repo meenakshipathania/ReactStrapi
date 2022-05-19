@@ -116,17 +116,24 @@ function Drawer({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link to="/portfolio">Portfolio</Link>
+                                            <Link to="/service">Services</Link>
                                         </li>
                                         <li
+                                            onClick={(e) => handler(e, 'portfolio')}
+                                            id="service"
+                                            className="menu-item-has-children active"
+                                        >
+                                            <Link to="/portfolio">Portfolio</Link>
+                                        </li>
+                                        {/* <li
                                             onClick={(e) => handler(e, 'pages')}
                                             id="pages"
                                             className="menu-item-has-children active"
                                         >
                                             <Link to="/product">Products</Link>
-                                        </li>
+                                        </li> */}
                                         <li
-                                            onClick={(e) => handler(e, 'news')}
+                                            onClick={(e) => handler(e, 'about-us')}
                                             id="news"
                                             className="menu-item-has-children active"
                                         >

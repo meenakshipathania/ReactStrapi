@@ -4423,12 +4423,15 @@ section.appie-team-area.appie-team-about-area.appie-team-8-area.pt-90.pb-90 {
   background: #cc1c3b;
   padding: 50px 60px;
 }
+.appie-header-main-menu {
+  text-align: center;
+}
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1 .title {
   font-size: 30px;
   color: #fff;
 }
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1 span {
-  font-size: 14px;
+  font-size: 16px;
   color: #d1dbfb;
 }
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1.box-2 {
@@ -5513,6 +5516,7 @@ blockquote cite {
   background: #fff;
   border-radius: 10px;
   margin-bottom: 30px;
+  text-align: center;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -5522,14 +5526,16 @@ blockquote cite {
 }
 
 .post-item-1 img {
-  width: 100%;
-  height: 350px;
+  width: 70%;
+  height: 270px;
+  max-width: 100%;
   border-radius: 10px 10px 0 0;
 }
 
 .b-post-details {
   position: relative;
   padding: 30px 35px 37px;
+  text-align: left;
 }
 
 .bp-meta {
@@ -6213,7 +6219,7 @@ blockquote cite {
 }
 .appie-header-main-menu ul > li a:hover {
  color: #cc1c3b;
- box-shadow: 0px 40px 40px 0px rgb(14 17 51 / 10%);
+ /* box-shadow: 0px 40px 40px 0px rgb(14 17 51 / 10%); */
  transform: translateY(-2px);
 }
 .appie_checkbox_common label {
