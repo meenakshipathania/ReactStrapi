@@ -164,7 +164,7 @@ function AboutHomeThree() {
                                 data-wow-delay="400ms"
                             >
                                 {text2['attributes'] ? text2['attributes']['nested'].map((x) => (
-                                    <img src={x.image1 ? imageurl(x.image1) : 'hgghtyu'} className="img" alt="img not found" />
+                                    <img src={x.image1 ? imageurl(x.image1) : 'hgghtyu'} className="img imghei" alt="img not found" />
                                 ))
                                     : 'hgfhgf'}
                             </div>
