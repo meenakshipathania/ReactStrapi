@@ -117,13 +117,23 @@ ol {
   padding: 0px;
   list-style-type: none;
 }
-
+.imghei{
+  height:350px
+}
 p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #505056;
   margin: 0px;
+}
+.lastpara{
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #505056;
+  margin: 20px;
 }
 .product-details dt.wid{
   width: 35%;

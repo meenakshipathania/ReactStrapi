@@ -46,7 +46,7 @@ function FunFactHomeThree() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="appie-fun-fact-content">
-                                            <h2 className="title">Get Started with OcodeApp</h2>
+                                            <h2 className="title">Get Started with Mobile Apps Devlopment</h2>
                                             {/* <p>
                                                 {gettext
                                                     ? gettext.map((x) => (

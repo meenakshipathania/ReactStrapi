@@ -27,9 +27,7 @@ function ServicesHomeThree() {
                         <div className="col-lg-6">
                             <div className="appie-section-title text-center">
                                 <h3 className="appie-title">
-                                    {gettext
-                                        ? gettext.map((x) => <span>{x.attributes.youwant}</span>)
-                                        : 'hgfhgf'}
+                                    About Mobile Apps Development
                                 </h3>
                                 {/* <p>
                                     {gettext

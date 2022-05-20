@@ -10,7 +10,7 @@ function AboutHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/descriptions?populate=*')
+            .get('http://165.227.11.15:1338/api/services/3?populate[nested][populate]=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -19,19 +19,9 @@ function AboutHomeThree() {
             });
         return () => request.cancel();
     }, []);
-    function imageurl(atttribute) {
+    function imageurl(data) {
         const baseurl = 'http://165.227.11.15:1338';
-        const dataurl = atttribute.image1.data[0].attributes.url;
-        return baseurl + dataurl;
-    }
-    function imageurl1(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
-        const dataurl = atttribute.image11.data[0].attributes.url;
-        return baseurl + dataurl;
-    }
-    function imageurl2(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
-        const dataurl = atttribute.image12.data[0].attributes.url;
+        const dataurl = data.data[0].attributes.url;
         return baseurl + dataurl;
     }
     return (
@@ -45,26 +35,20 @@ function AboutHomeThree() {
                                 data-wow-duration="2000ms"
                                 data-wow-delay="400ms"
                             >
-                                {text2
-                                    ? text2.map((x) => (
-                                          <img
-                                              src={
-                                                  x.attributes ? imageurl(x.attributes) : 'hgghtyu'
-                                              }
-                                              alt=""
-                                          />
-                                      ))
+                                {text2['attributes'] ? text2['attributes']['nested'].map((x) => (
+                                    <img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" />
+                                ))
                                     : 'hgfhgf'}
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="appie-traffic-title">
+                            {/* <div className="appie-traffic-title">
                                 <h3 className="title">
                                     {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
                                         : 'hgfhgf'}
                                 </h3>
-                            </div>
+                            </div> */}
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="appie-traffic-service mb-30">
@@ -72,9 +56,7 @@ function AboutHomeThree() {
                                             <i className="fas fa-bolt" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text1}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para1}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
@@ -84,9 +66,7 @@ function AboutHomeThree() {
                                             <img src={icon1} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text2}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
@@ -96,19 +76,17 @@ function AboutHomeThree() {
                                             <img src={icon5} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text3}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para3}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
-                                <div className="col-lg-12">
+                                {/* <div className="col-lg-12">
                                     <div className="traffic-btn mt-50">
                                         <a className="main-btn" href="/about-us">
                                             Learn More <i className="fal fa-arrow-right" />
                                         </a>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -116,9 +94,9 @@ function AboutHomeThree() {
                         <div className="col-lg-6">
                             <div className="appie-traffic-title">
                                 <h3 className="title">
-                                    {text2
+                                    {/* {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading1}</h3>)
-                                        : 'hgfhgf'}
+                                        : 'hgfhgf'} */}
                                     {/* {newservice
                                         ? newservice.map((x) => <h3>{x.attributes.heading}</h3>)
                                         : 'hgfhgf'} */}
@@ -136,9 +114,7 @@ function AboutHomeThree() {
                                             <img src={icon6} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text11}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para4}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
@@ -148,9 +124,7 @@ function AboutHomeThree() {
                                             <i className="fas fa-link" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text12}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
@@ -160,9 +134,7 @@ function AboutHomeThree() {
                                             <img src={icon7} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text13}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para6}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
@@ -172,19 +144,17 @@ function AboutHomeThree() {
                                             <i className="fas fa-cog" />
                                         </div>
                                         <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text14}</h5>)
-                                                : 'hgfhgf'}
+                                            {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para7}</span>) : 'Home'}
                                         </h5>
                                     </div>
                                 </div>
-                                <div className="col-lg-12">
+                                {/* <div className="col-lg-12">
                                     <div className="traffic-btn mt-50">
                                         <a className="main-btn" href="/about-us">
                                             Learn More <i className="fal fa-arrow-right" />
                                         </a>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -193,15 +163,9 @@ function AboutHomeThree() {
                                 data-wow-duration="2000ms"
                                 data-wow-delay="400ms"
                             >
-                                {text2
-                                    ? text2.map((x) => (
-                                          <img
-                                              src={
-                                                  x.attributes ? imageurl1(x.attributes) : 'hgghtyu'
-                                              }
-                                              alt=""
-                                          />
-                                      ))
+                                {text2['attributes'] ? text2['attributes']['nested'].map((x) => (
+                                    <img src={x.image1 ? imageurl(x.image1) : 'hgghtyu'} className="img imghei" alt="img not found" />
+                                ))
                                     : 'hgfhgf'}
                             </div>
                         </div>
@@ -212,31 +176,21 @@ function AboutHomeThree() {
                                     data-wow-duration="2000ms"
                                     data-wow-delay="400ms"
                                 >
-                                    {text2
-                                        ? text2.map((x) => (
-                                              <img
-                                                  src={
-                                                      x.attributes
-                                                          ? imageurl2(x.attributes)
-                                                          : 'hgghtyu'
-                                                  }
-                                                  alt=""
-                                              />
-                                          ))
-                                        : 'hgfhgf'}
+                                    {text2['attributes'] ? text2['attributes']['nested'].map((x) => (
+                                    <img src={x.image2 ? imageurl(x.image2) : 'hgghtyu'} className="img" alt="img not found" />
+                                ))
+                                    : 'hgfhgf'}
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="appie-traffic-title">
                                     <h3 className="title">
-                                        {text2
+                                        {/* {text2
                                             ? text2.map((x) => <h3>{x.attributes.heading3}</h3>)
-                                            : 'hgfhgf'}
+                                            : 'hgfhgf'} */}
                                     </h3>
-                                    <p>
-                                        {text2
-                                            ? text2 .map((x) => <p>{x.attributes.tagline}</p>)
-                                            : 'hgfhgf'}
+                                    <p className='lastpara'>
+                                    {text2['attributes'] ? text2['attributes']['nested'].map((x) => <p>{x.para8}</p>) : 'Home'}
                                     </p>
                                 </div>
                             </div>

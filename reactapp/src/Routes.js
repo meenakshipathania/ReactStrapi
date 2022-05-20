@@ -51,12 +51,12 @@ import SingleBlog4 from './components/Blogs/SingleBlog4';
 import SingleBlog5 from './components/Blogs/SingleBlog5';
 import SingleBlog6 from './components/Blogs/SingleBlog6';
 import Service from './components/Service';
-import SingleApp1 from './components/Service/Singleapp1';
-import SingleApp2 from './components/Service/Singleapp2';
-import SingleApp3 from './components/Service/Singleapp3';
-import SingleApp4 from './components/Service/Singleapp4';
-import SingleApp5 from './components/Service/Singleapp5';
-import SingleApp6 from './components/Service/Singleapp6';
+import ServiceUI from './components/ServiceUI';
+import ServiceAppConsulting from './components/ServiceAppConsulting';
+import ServiceQA from './components/ServiceQA';
+import ServicePWA from './components/ServiceProgressive';
+import ServiceMaintain from './components/ServiceMaintain';
+
 function Routes() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -78,7 +78,7 @@ function Routes() {
                 <Router>
                     <ScrollToTop>
                         <Switch>
-                            <Route exact path="/home-three" component={HomeThree} />
+                            {/* <Route exact path="/ho" component={HomeThree} /> */}
                             {/* <Route exact path="/home-two" component={Hometwo} />
                             <Route exact path="/home-three" component={HomeThree} /> */}
                             {/* <Route exact path="/home-four" component={HomeFour} />
@@ -123,12 +123,12 @@ function Routes() {
                             <Route exact path="/product/script/script-product-3" component={ScriptProduct3} />
                             <Route exact path="/product/script/script-product-4" component={ScriptProduct4} />
                             <Route exact path="/services" component={Service} />
-                            <Route exact path="/services/app-consulting" component={SingleApp1} />
-                            <Route exact path="/services/app-design" component={SingleApp2} />
-                            <Route exact path="/services/mobile-app-development" component={SingleApp3} />
-                            <Route exact path="/services/progressive-web-apps" component={SingleApp4} />
-                            <Route exact path="/services/app-Maintenance-support" component={SingleApp5} />
-                            <Route exact path="/services/app-analytics" component={SingleApp6} />
+                            <Route exact path="/services/app-consulting" component={ServiceAppConsulting} />
+                            <Route exact path="/services/app-design" component={ServiceUI} />
+                            <Route exact path="/services/mobile-app-development" component={HomeThree} />
+                            <Route exact path="/services/progressive-web-apps" component={ServicePWA} />
+                            <Route exact path="/services/app-Maintenance-support" component={ServiceMaintain} />
+                            <Route exact path="/services/app-analytics" component={ServiceQA} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/error" component={Error} />

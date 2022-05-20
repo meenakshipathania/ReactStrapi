@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import useToggle from '../../Hooks/useToggle';
 import StickyMenu from '../../lib/StickyMenu';
 import BackToTop from '../BackToTop';
-import FooterHomeThree from '../HomeThree/FooterHomeThree';
+import FooterHomeThree from '../HomeThree';
 import Drawer from '../Mobile/Drawer';
 import DetailsCompoPlugin from './DetailsCompoPlugin';
-import HeaderHomeThree from '../HomeThree/HeaderHomeThree';
+import HeaderHomeThree from '../HomeThree';
 import HeroCompo from '../CompoGreenpal/HeroCompoGreenpal';
 
 function CompoPlugin() {
