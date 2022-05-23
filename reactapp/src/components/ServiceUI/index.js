@@ -9,7 +9,7 @@ import AboutHomeThree from './AboutHomeThree';
 import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import FunFactHomeThree from './FunFactHomeThree';
 import HeaderHomeThree from '../HomeThree/HeaderHomeThree';
-import HeroHomeThree from '../HomeThree/HeroHomeThree';
+import HeroHomeThree from './HeroHomeThree';
 import ProjectHomeThree from '../HomeThree/ProjectHomeThree';
 import ServicesHomeThree from './ServiceHomeThree';
 // import ShowCaseHomeThree from './ShowCaseHomeThree';

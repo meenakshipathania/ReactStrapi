@@ -23,6 +23,19 @@ function HeroHomeThree() {
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    const [text2, Settext2] = useState([]);
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/services/3?populate[nested][populate]=*')
+            .then((res) => {
+                Settext2(res.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        return () => request.cancel();
+    }, []);
     const handleShowVideo = (e) => {
         e.preventDefault();
         setVideoValue(!showVideo);
@@ -41,9 +54,7 @@ function HeroHomeThree() {
                         <div className="col-lg-10">
                             <div className="appie-hero-content text-center">
                                 <h1 className="appie-title">
-                                    {head
-                                        ? head.map((x) => <span>{x.attributes.threefirst}</span>)
-                                        : 'hgfhgf'}
+                                {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>) : 'Home'}
                                 </h1>
                                 <p>
                                     {head
