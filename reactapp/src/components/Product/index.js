@@ -1,7 +1,7 @@
 import React from 'react';
 import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
-import FooterHomeThree from '../HomeThree';
+import FooterHomeThree from '../HomeThree/FooterHomeThree';
 import Drawer from '../Mobile/Drawer';
 // import Blogs from './Blogs';
 // import BlogSideBar from './BlogSideBar';
