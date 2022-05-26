@@ -46,7 +46,8 @@ img {
   margin-left: 110px;
 }
 .loimg{
-  width: 100%;
+  width: 60%;
+  max-width: 60%;
   height: 55px;
 }
 
@@ -4863,7 +4864,7 @@ header.appie-header-area.appie-header-page-area.appie-sticky.componets.sticky im
 }
 header.appie-header-area.appie-header-8-area.appie-sticky.sticky .stickylogo {
   display: inline-block;
-  width: 100%;
+  width: 60%;
   height: 55px;
   /* margin-left: 100%; */
 }
@@ -4938,7 +4939,7 @@ header.appie-header-area.appie-header-8-area.appie-sticky.sticky img.loimg {
 .popular-post h5 {
   font-size: 15px;
   line-height: 20px;
-  color: #2c234d;
+  color: #2c234d; 
   margin: 0 0 12px;
   font-weight: 700;
 }

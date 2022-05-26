@@ -150,17 +150,17 @@ function Drawer({ drawer, action }) {
                                 </div>
                                 <div className="offcanvas-social">
                                     <ul className="text-center">
-                                        <li>
+                                        {/* <li>
                                             <a href="$">
                                                 <i className="fab fa-facebook-f"></i>
                                             </a>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <a href="$">
                                                 <i className="fab fa-twitter"></i>
                                             </a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a href="$">
                                                 <i className="fab fa-instagram"></i>
                                             </a>
@@ -169,7 +169,7 @@ function Drawer({ drawer, action }) {
                                             <a href="$">
                                                 <i className="fab fa-dribbble"></i>
                                             </a>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="footer-widget-info">
@@ -177,18 +177,29 @@ function Drawer({ drawer, action }) {
                                         <li key={'envelop'}>
                                             <a href="#">
                                                 <i className="fal fa-envelope"></i>{' '}
-                                                support@appie.com
+                                                {logo
+                                                ? logo.map((x) => <span>{x.attributes.email}</span>)
+                                                : 'hgfhgf'}
                                             </a>
                                         </li>
                                         <li key={'phone'}>
                                             <a href="#">
-                                                <i className="fal fa-phone"></i> +(642) 342 762 44
+                                                <i className="fal fa-phone"></i>
+                                                {logo
+                                                ? logo.map((x) => <span>{x.attributes.phone1}</span>)
+                                                : 'hgfhgf'}
+                                                <br></br>
+                                            {logo
+                                                ? logo.map((x) => <span>{x.attributes.phone2}</span>)
+                                                : 'hgfhgf'}
                                             </a>
                                         </li>
                                         <li key={'marker'}>
                                             <a href="#">
-                                                <i className="fal fa-map-marker-alt"></i> 442 Belle
-                                                Terre St Floor 7, San Francisco, AV 4206
+                                                <i className="fal fa-map-marker-alt"></i>
+                                                {logo
+                                                ? logo.map((x) => <span>{x.attributes.location}</span>)
+                                                : 'hgfhgf'}
                                             </a>
                                         </li>
                                     </ul>
