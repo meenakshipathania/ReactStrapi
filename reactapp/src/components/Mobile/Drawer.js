@@ -116,7 +116,7 @@ function Drawer({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link to="/service">Services</Link>
+                                            <Link to="/services">Services</Link>
                                         </li>
                                         <li
                                             onClick={(e) => handler(e, 'portfolio')}

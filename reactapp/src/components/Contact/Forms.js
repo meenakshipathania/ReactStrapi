@@ -96,18 +96,18 @@ function Forms() {
                                 </div>
                                 <div className="ab-social">
                                     <h5>Follow Us</h5>
-                                    <a className="fac" href="#">
+                                    {/* <a className="fac" href="#">
                                         <i className="fab fa-facebook-f"></i>
-                                    </a>
+                                    </a> */}
                                     <a className="twi" href="#">
                                         <i className="fab fa-twitter"></i>
                                     </a>
-                                    <a className="you" href="#">
+                                    {/* <a className="you" href="#">
                                         <i className="fab fa-youtube"></i>
                                     </a>
                                     <a className="lin" href="#">
                                         <i className="fab fa-linkedin-in"></i>
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                         </div>

@@ -54,17 +54,17 @@ function FooterHomeThree({ className }) {
                                 </a>
                                 <div className="social mt-30">
                                     <ul>
-                                        <li>
+                                        {/* <li>
                                             <a href="#">
                                                 <i className="fab fa-facebook-f" />
                                             </a>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <a href="#">
                                                 <i className="fab fa-twitter" />
                                             </a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a href="#">
                                                 <i className="fab fa-pinterest-p" />
                                             </a>
@@ -73,7 +73,7 @@ function FooterHomeThree({ className }) {
                                             <a href="#">
                                                 <i className="fab fa-linkedin-in" />
                                             </a>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ function FooterHomeThree({ className }) {
                                     </ul>
                                 </div> */}
                                 <div className="copyright-text">
-                                    <p>© 2018 ocodewire. All rights are reserved.</p>
+                                    <p>© 2022 ocodewire. All rights are reserved.</p>
                                 </div>
                             </div>
                         </div>
