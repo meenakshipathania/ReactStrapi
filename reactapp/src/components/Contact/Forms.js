@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 function Forms() {
@@ -22,18 +22,17 @@ function Forms() {
     const [phone, setPhone] = useState('');
     const [country, setCountry] = useState('');
     const [message, setMessage] = useState('');
-    
 
     const form = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
         const contact = { firstname, lastname, email, phone, country, message };
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhone("");
-        setCountry("");
-        setMessage("");
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setCountry('');
+        setMessage('');
 
         // important//////////////
         // emailjs.sendForm('service_6o3palp', 'template_58uclcx', form.current, 'pYfziu1Gd30wQSISj')
@@ -46,13 +45,12 @@ function Forms() {
 
         fetch('http://165.227.11.15:1338/api/conatct-datas', {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ data: contact })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: contact }),
         }).then(() => {
-            console.log("new contact added")
-        })
-    }
-
+            console.log('new contact added');
+        });
+    };
 
     return (
         <>
@@ -118,28 +116,66 @@ function Forms() {
                                     Do you have any query? Enter your detail below. We will be
                                     contact with you.
                                 </p>
-                                <form ref={form} onSubmit={handleSubmit} action="#" method="post" className="row">
+                                <form
+                                    ref={form}
+                                    onSubmit={handleSubmit}
+                                    action="#"
+                                    method="post"
+                                    className="row"
+                                >
                                     <div className="col-md-6">
-                                        <input type="text" name="firstname" placeholder="First Name" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+                                        <input
+                                            type="text"
+                                            name="firstname"
+                                            placeholder="First Name"
+                                            value={firstname}
+                                            onChange={(e) => setFirstName(e.target.value)}
+                                        />
                                     </div>
                                     <div className="col-md-6">
-                                        <input type="text" name="lastname" placeholder="Last Name" value={lastname} onChange={(e) => setLastName(e.target.value)} />
+                                        <input
+                                            type="text"
+                                            name="lastname"
+                                            placeholder="Last Name"
+                                            value={lastname}
+                                            onChange={(e) => setLastName(e.target.value)}
+                                        />
                                     </div>
                                     <div className="col-md-6">
                                         <input
                                             type="email"
                                             name="email"
-                                            placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)}
+                                            placeholder="Email Address"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </div>
                                     <div className="col-md-6">
-                                        <input type="tel" pattern="[0-9]{10}" name="phone" placeholder="Telephone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                        <input
+                                            type="tel"
+                                            pattern="[0-9]{10}"
+                                            name="phone"
+                                            placeholder="Telephone"
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
+                                        />
                                     </div>
                                     <div className="col-md-12">
-                                        <input type="text" name="country" placeholder="Country" value={country} onChange={(e) => setCountry(e.target.value)} />
+                                        <input
+                                            type="text"
+                                            name="country"
+                                            placeholder="Country"
+                                            value={country}
+                                            onChange={(e) => setCountry(e.target.value)}
+                                        />
                                     </div>
                                     <div className="col-md-12">
-                                        <textarea name="message" placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                                        <textarea
+                                            name="message"
+                                            placeholder="Message"
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                        ></textarea>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="condition-check">

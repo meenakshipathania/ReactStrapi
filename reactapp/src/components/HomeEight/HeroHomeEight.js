@@ -32,10 +32,12 @@ function HeroHomeEight() {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="appie-hero-content appie-hero-content-8">
-                                <h1 className="appie-title">{head
+                                <h1 className="appie-title">
+                                    {head
                                         ? head.map((x) => <span>{x.attributes.threefirst}</span>)
-                                        : 'hgfhgf'}</h1>
-                                 <p className="parawhite">
+                                        : 'hgfhgf'}
+                                </h1>
+                                <p className="parawhite">
                                     {head
                                         ? head.map((x) => <span>{x.attributes.threesecfirst}</span>)
                                         : 'hgfhgf'}

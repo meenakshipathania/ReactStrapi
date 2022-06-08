@@ -22,14 +22,14 @@ function Drawer({ drawer, action }) {
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
-    const [itemSize, setSize] = useState('0px');
-    const [item, setItem] = useState('home');
+    // const [itemSize, setSize] = useState('0px');
+    // const [item, setItem] = useState('home');
     const handler = (e, value) => {
         e.preventDefault();
         const getItems = document.querySelectorAll(`#${value} li`).length;
         if (getItems > 0) {
-            setSize(`${43 * getItems}px`);
-            setItem(value);
+            // setSize(`${43 * getItems}px`);
+            // setItem(value);
         }
     };
     return (
@@ -52,7 +52,8 @@ function Drawer({ drawer, action }) {
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img className='loimg'
+                                                  <img
+                                                      className="loimg"
                                                       src={
                                                           x.attributes
                                                               ? imageurl(x.attributes)
@@ -74,7 +75,7 @@ function Drawer({ drawer, action }) {
                                             {/* <span className="menu-expand">
                                                 <i className="fa fa-angle-down"></i> 
                                             </span> */}
-                                             <Link to="/">Home</Link>
+                                            <Link to="/">Home</Link>
                                             {/* <a href="/">Home</a> */}
                                             {/* <ul
                                                 className="sub-menu"
@@ -174,32 +175,40 @@ function Drawer({ drawer, action }) {
                                 </div>
                                 <div className="footer-widget-info">
                                     <ul>
-                                        <li key={'envelop'}>
+                                        <li key="envelop">
                                             <a href="#">
                                                 <i className="fal fa-envelope"></i>{' '}
                                                 {logo
-                                                ? logo.map((x) => <span>{x.attributes.email}</span>)
-                                                : 'hgfhgf'}
+                                                    ? logo.map((x) => (
+                                                          <span>{x.attributes.email}</span>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </a>
                                         </li>
-                                        <li key={'phone'}>
+                                        <li key="phone">
                                             <a href="#">
                                                 <i className="fal fa-phone"></i>
                                                 {logo
-                                                ? logo.map((x) => <span>{x.attributes.phone1}</span>)
-                                                : 'hgfhgf'}
+                                                    ? logo.map((x) => (
+                                                          <span>{x.attributes.phone1}</span>
+                                                      ))
+                                                    : 'hgfhgf'}
                                                 <br></br>
-                                            {logo
-                                                ? logo.map((x) => <span>{x.attributes.phone2}</span>)
-                                                : 'hgfhgf'}
+                                                {logo
+                                                    ? logo.map((x) => (
+                                                          <span>{x.attributes.phone2}</span>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </a>
                                         </li>
-                                        <li key={'marker'}>
+                                        <li key="marker">
                                             <a href="#">
                                                 <i className="fal fa-map-marker-alt"></i>
                                                 {logo
-                                                ? logo.map((x) => <span>{x.attributes.location}</span>)
-                                                : 'hgfhgf'}
+                                                    ? logo.map((x) => (
+                                                          <span>{x.attributes.location}</span>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </a>
                                         </li>
                                     </ul>

@@ -47,7 +47,9 @@ function FooterHomeThree({ className }) {
                                         : 'hgfhgf'}
                                 </div>
                                 <p>
-                                    {logo ? logo.map((x) => <span>{x.attributes.des}</span>) : 'hgfhgf'}
+                                    {logo
+                                        ? logo.map((x) => <span>{x.attributes.des}</span>)
+                                        : 'hgfhgf'}
                                 </p>
                                 <a href="#">
                                     Read More <i className="fal fa-arrow-right" />
@@ -101,7 +103,6 @@ function FooterHomeThree({ className }) {
                                     <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>
-                                   
                                 </ul>
                             </div>
                         </div>
@@ -151,11 +152,15 @@ function FooterHomeThree({ className }) {
                                         <a href="#">
                                             <i className="fal fa-phone" />
                                             {logo
-                                                ? logo.map((x) => <span>{x.attributes.phone1}</span>)
+                                                ? logo.map((x) => (
+                                                      <span>{x.attributes.phone1}</span>
+                                                  ))
                                                 : 'hgfhgf'}
                                             <br></br>
                                             {logo
-                                                ? logo.map((x) => <span>{x.attributes.phone2}</span>)
+                                                ? logo.map((x) => (
+                                                      <span>{x.attributes.phone2}</span>
+                                                  ))
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
@@ -163,7 +168,9 @@ function FooterHomeThree({ className }) {
                                         <a href="#">
                                             <i className="fal fa-map-marker-alt" />
                                             {logo
-                                                ? logo.map((x) => <span>{x.attributes.location}</span>)
+                                                ? logo.map((x) => (
+                                                      <span>{x.attributes.location}</span>
+                                                  ))
                                                 : 'hgfhgf'}
                                         </a>
                                     </li>
