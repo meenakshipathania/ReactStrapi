@@ -35,7 +35,7 @@ function BlogHomeThree() {
                     </div>
                     <div className="row">
                         {data
-                            ? data.slice(0,4).map((x) => (
+                            ? data.slice(0, 4).map((x) => (
                                   <div className="col-lg-6">
                                       <div className="appie-blog-item-3 mt-30">
                                           <div className="thumb">
@@ -50,7 +50,9 @@ function BlogHomeThree() {
                                           </div>
                                           <div className="content">
                                               <h5 className="title">
-                                                  <a href={'/'+x.attributes.slug}>{x.attributes.tag}</a>
+                                                  <a href={'/' + x.attributes.slug}>
+                                                      {x.attributes.tag}
+                                                  </a>
                                               </h5>
                                               <div className="meta-item">
                                                   <ul>

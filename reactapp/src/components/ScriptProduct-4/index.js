@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import useToggle from '../../Hooks/useToggle';
 import StickyMenu from '../../lib/StickyMenu';
@@ -19,7 +18,7 @@ function ScriptProduct4() {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderHomeThree action={drawerAction.toggle} />
             <HeroCompo />
-            <DetailsScriptProduct/>
+            <DetailsScriptProduct />
             <FooterHomeThree />
             <BackToTop />
         </>

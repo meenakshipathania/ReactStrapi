@@ -17,7 +17,7 @@ function CompoPlugin3() {
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderHomeThree action={drawerAction.toggle} />
-            <HeroCompo/>
+            <HeroCompo />
             <DetailsCompoPlugin3 />
             <FooterHomeThree />
             <BackToTop />

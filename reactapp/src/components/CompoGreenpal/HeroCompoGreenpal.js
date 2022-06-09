@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 function HeroIncity() {
     return (
         <>
             <div className="appie-page-title-area components">
-                <div className="container-fluid">
-                </div>
+                <div className="container-fluid"></div>
             </div>
         </>
     );

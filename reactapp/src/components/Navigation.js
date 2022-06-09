@@ -20,7 +20,7 @@ function Navigation() {
         <>
             <ul>
                 <li>
-                    <Link to='/'>
+                    <Link to="/">
                         {navitems ? navitems.map((x) => <a>{x.attributes.name}</a>) : 'hgfhgf'}
                     </Link>
                 </li>

@@ -39,7 +39,8 @@ function HeaderIncity({ action }) {
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img className='loimg'
+                                                  <img
+                                                      className="loimg"
                                                       src={
                                                           x.attributes
                                                               ? imageurl(x.attributes)
@@ -50,10 +51,11 @@ function HeaderIncity({ action }) {
                                               </a>
                                           ))
                                         : 'hgfhgf'}
-                                         {logo
+                                    {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img className='stickylogo'
+                                                  <img
+                                                      className="stickylogo"
                                                       src={
                                                           x.attributes
                                                               ? imageurl1(x.attributes)

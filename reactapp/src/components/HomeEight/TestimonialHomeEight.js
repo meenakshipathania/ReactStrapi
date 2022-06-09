@@ -3,7 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import user from '../../assets/images/testimonial-user-1.png';
+// import user from '../../assets/images/testimonial-user-1.png';
 
 function TestimonialHomeEight() {
     const [img, Setimg] = useState([]);
@@ -78,36 +78,35 @@ function TestimonialHomeEight() {
                                 <Slider {...settingsForArticle} ref={articleCarosel}>
                                     {img
                                         ? img.map((x) => (
-                                            <div className="testimonial-parent-item">
-                                                <div className="testimonial-box">
-                                                    <div className="icon">
-                                                        <i className="fas fa-quote-left"></i>
-                                                    </div>
-                                                    <div className="ratings-icon">
-                                                        <ul>
-                                                            <li>
-                                                                <i className="fas fa-star"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i className="fas fa-star"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i className="fas fa-star"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i className="fas fa-star"></i>
-                                                            </li>
-                                                            <li>
-                                                                <i className="fas fa-star"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <p>{x.attributes.text}</p>
-                                                </div>
-                                            </div>
-                                        ))
+                                              <div className="testimonial-parent-item">
+                                                  <div className="testimonial-box">
+                                                      <div className="icon">
+                                                          <i className="fas fa-quote-left"></i>
+                                                      </div>
+                                                      <div className="ratings-icon">
+                                                          <ul>
+                                                              <li>
+                                                                  <i className="fas fa-star"></i>
+                                                              </li>
+                                                              <li>
+                                                                  <i className="fas fa-star"></i>
+                                                              </li>
+                                                              <li>
+                                                                  <i className="fas fa-star"></i>
+                                                              </li>
+                                                              <li>
+                                                                  <i className="fas fa-star"></i>
+                                                              </li>
+                                                              <li>
+                                                                  <i className="fas fa-star"></i>
+                                                              </li>
+                                                          </ul>
+                                                      </div>
+                                                      <p>{x.attributes.text}</p>
+                                                  </div>
+                                              </div>
+                                          ))
                                         : 'hgfhgf'}
-
                                 </Slider>
                                 <span
                                     onClick={sliderNext}
@@ -123,24 +122,24 @@ function TestimonialHomeEight() {
                                 <Slider {...settingsForPeople} ref={peopleCarosel}>
                                     {img
                                         ? img.map((x) => (
-                                            <div className="item">
-                                                <div className="thumb">
-                                                    <img
-                                                        src={
-                                                            x.attributes
-                                                                ? imageurl(x.attributes)
-                                                                : 'hgghtyu'
-                                                        }
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="content text-center">
-                                                    <h5 className="title">{x.attributes.name}</h5>
-                                                    <span>{x.attributes.position}</span>
-                                                </div>
-                                            </div>
-                                        ))
-                                    : 'hgfhgf'}
+                                              <div className="item">
+                                                  <div className="thumb">
+                                                      <img
+                                                          src={
+                                                              x.attributes
+                                                                  ? imageurl(x.attributes)
+                                                                  : 'hgghtyu'
+                                                          }
+                                                          alt=""
+                                                      />
+                                                  </div>
+                                                  <div className="content text-center">
+                                                      <h5 className="title">{x.attributes.name}</h5>
+                                                      <span>{x.attributes.position}</span>
+                                                  </div>
+                                              </div>
+                                          ))
+                                        : 'hgfhgf'}
                                 </Slider>
                             </div>
                         </div>

@@ -38,32 +38,34 @@ function HeaderService({ action }) {
                                 <div className="appie-logo-box">
                                     {logo
                                         ? logo.map((x) => (
-                                            <a href="/">
-                                                <img className='loimg'
-                                                    src={
-                                                        x.attributes
-                                                            ? imageurl(x.attributes)
-                                                            : 'hgghtyu'
-                                                    }
-                                                    alt=""
-                                                />
-                                            </a>
-                                        ))
+                                              <a href="/">
+                                                  <img
+                                                      className="loimg"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
                                         : 'hgfhgf'}
 
                                     {logo
                                         ? logo.map((x) => (
-                                            <a href="/">
-                                                <img className='stickylogo'
-                                                    src={
-                                                        x.attributes
-                                                            ? imageurl1(x.attributes)
-                                                            : 'hgghtyu'
-                                                    }
-                                                    alt=""
-                                                />
-                                            </a>
-                                        ))
+                                              <a href="/">
+                                                  <img
+                                                      className="stickylogo"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl1(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>

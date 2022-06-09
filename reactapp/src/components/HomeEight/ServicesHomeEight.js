@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import serviceThumb from '../../assets/images/service-thumb-1.png';
+// import serviceThumb from '../../assets/images/service-thumb-1.png';
 
 function ServicesHomeEight() {
     const [text2, Settext2] = useState([]);
@@ -31,9 +31,11 @@ function ServicesHomeEight() {
                     <div className="row align-items-end">
                         <div className="col-lg-6 col-md-8">
                             <div className="appie-section-title">
-                                <h3 className="appie-title"> {text2
+                                <h3 className="appie-title">
+                                    {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
-                                        : 'hgfhgf'}</h3>
+                                        : 'hgfhgf'}
+                                </h3>
                                 {/* <p>The app provides design and digital marketing.</p> */}
                             </div>
                         </div>
@@ -56,9 +58,13 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-tv" />
                                         </div>
-                                        <h4 className="title">{text2
-                                                ? text2.map((x) => <span>{x.attributes.text1}</span>)
-                                                : 'hgfhgf'}</h4>
+                                        <h4 className="title">
+                                            {text2
+                                                ? text2.map((x) => (
+                                                      <span>{x.attributes.text1}</span>
+                                                  ))
+                                                : 'hgfhgf'}
+                                        </h4>
                                         {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
                                         </p> */}
@@ -80,9 +86,13 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-code" />
                                         </div>
-                                        <h4 className="title"> {text2
-                                                ? text2.map((x) => <span>{x.attributes.text2}</span>)
-                                                : 'hgfhgf'}</h4>
+                                        <h4 className="title">
+                                            {text2
+                                                ? text2.map((x) => (
+                                                      <span>{x.attributes.text2}</span>
+                                                  ))
+                                                : 'hgfhgf'}
+                                        </h4>
                                         {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
                                         </p> */}
@@ -104,9 +114,13 @@ function ServicesHomeEight() {
                                         <div className="icon">
                                             <i className="fal fa-user-friends" />
                                         </div>
-                                        <h4 className="title"> {text2
-                                                ? text2.map((x) => <span>{x.attributes.text3}</span>)
-                                                : 'hgfhgf'}</h4>
+                                        <h4 className="title">
+                                            {text2
+                                                ? text2.map((x) => (
+                                                      <span>{x.attributes.text3}</span>
+                                                  ))
+                                                : 'hgfhgf'}
+                                        </h4>
                                         {/* <p>
                                             He lost his bottle loo don't get shirty with me ruddy.
                                         </p> */}
@@ -138,7 +152,7 @@ function ServicesHomeEight() {
                         </div>
                         <div className="col-lg-5">
                             <div className="service-thumb">
-                            {text2
+                                {text2
                                     ? text2.map((x) => (
                                           <img
                                               src={

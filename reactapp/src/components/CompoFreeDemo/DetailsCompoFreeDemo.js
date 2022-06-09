@@ -51,17 +51,18 @@ function DetailsIncity() {
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
-                                        <img className='bora'
-                                            src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                            alt=""
-                                        />
-                                    ))
+                                          <img
+                                              className="bora"
+                                              src={
+                                                  x.attributes ? imageurl(x.attributes) : 'hgghtyu'
+                                              }
+                                              alt=""
+                                          />
+                                      ))
                                     : 'hgfhgf'}
                             </div>
                             <div className="extra-txt">
-                                {data
-                                    ? data.map((x) => <h3>{x.attributes.demo}</h3>)
-                                    : 'hgghtyu'}
+                                {data ? data.map((x) => <h3>{x.attributes.demo}</h3>) : 'hgghtyu'}
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-3 col-xs-3 extra-right">
@@ -71,34 +72,35 @@ function DetailsIncity() {
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-30'>
+                    <div className="row mt-30">
                         {data1
                             ? data1.slice(0, 4).map((x) => (
-                                <div className="col-md-3">
-
-                                    <img
-                                        src={x.attributes ? imageurl1(x.attributes) : 'hgghtyu'}
-                                        alt=""
-                                    />
-
-                                </div>
-                            ))
+                                  <div className="col-md-3">
+                                      <img
+                                          src={x.attributes ? imageurl1(x.attributes) : 'hgghtyu'}
+                                          alt=""
+                                      />
+                                  </div>
+                              ))
                             : 'hgfhgf'}
                     </div>
 
-                    <div className='row mt-100 ml-2 mr-2 ancho'>
+                    <div className="row mt-100 ml-2 mr-2 ancho">
                         <a href="#">Description &nbsp; &nbsp; Reviews (0)</a>
                     </div>
                     <div className="row">
                         <div className="col-lg-7">
-                            <div className='review'>
+                            <div className="review">
                                 <h2>DESCRIPTION</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem of type and scrambled it to make a type specimen book.</p>
-
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem of type and scrambled it to make a type specimen
+                                    book.
+                                </p>
                             </div>
                         </div>
                         <div className="col-lg-5">
-                            <div className='product-details'>
+                            <div className="product-details">
                                 <div className="btns">
                                     <a href="#" target="_self" className="btn btn-success">
                                         Purchase Now
@@ -106,13 +108,21 @@ function DetailsIncity() {
                                 </div>
                                 <h6>PRODUCT DETAILS</h6>
                                 <dl>
-                                    <dt className='wid'>Version:</dt><dd>1</dd>
-                                    <dt className='wid'>Size:</dt><dd>1mb</dd>
-                                    <dt className='wid'>Ionic:</dt><dd>1</dd>
-                                    <dt className='wid'>Platforms:</dt><dd>all</dd>
-                                    <dt className='wid'>Released:</dt><dd>October 24, 2017</dd>
-                                    <dt className='wid'>Updated:</dt><dd>October 24, 2017</dd>
-                                    <dt className='wid'>Category:</dt><dd><span className="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
+                                    <dt className="wid">Version:</dt> <dd>1</dd>
+                                    <dt className="wid">Size:</dt> <dd>1mb</dd>
+                                    <dt className="wid">Ionic:</dt> <dd>1</dd>
+                                    <dt className="wid">Platforms:</dt> <dd>all</dd>
+                                    <dt className="wid">Released:</dt> <dd>October 24, 2017</dd>
+                                    <dt className="wid">Updated:</dt> <dd>October 24, 2017</dd>
+                                    <dt className="wid">Category:</dt>
+                                    <dd>
+                                        <span className="posted_in">
+                                            <a href="#" rel="tag">
+                                                Components
+                                            </a>
+                                            .
+                                        </span>
+                                    </dd>
                                 </dl>
                             </div>
                         </div>

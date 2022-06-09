@@ -40,7 +40,9 @@ function ProjectHomeThree({ className }) {
                                       ))
                                     : 'hgfhgf'}
                                 <a className="main-btn" href="#">
-                                    {data ? data.map((x) => <span>{x.attributes.text}</span>) : 'hgfhgf'}
+                                    {data
+                                        ? data.map((x) => <span>{x.attributes.text}</span>)
+                                        : 'hgfhgf'}
                                 </a>
                             </div>
                         </div>

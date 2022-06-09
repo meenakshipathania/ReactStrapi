@@ -34,7 +34,9 @@ function HeroService() {
                                         : 'hgfhgf'}
                                 </span>
                                 {data1
-                                    ? data1.map((x) => <h1 className="title">{x.attributes.tag}</h1>)
+                                    ? data1.map((x) => (
+                                          <h1 className="title">{x.attributes.tag}</h1>
+                                      ))
                                     : 'hgfhgf'}
                                 <div className="thumb">
                                     {data1

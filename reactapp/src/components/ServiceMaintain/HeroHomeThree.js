@@ -54,7 +54,11 @@ function HeroHomeThree() {
                         <div className="col-lg-10">
                             <div className="appie-hero-content text-center">
                                 <h1 className="appie-title">
-                                {text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>) : 'Home'}
+                                    {text2['attributes']
+                                        ? text2['attributes']['nested'].map((x) => (
+                                              <span>{x.head}</span>
+                                          ))
+                                        : 'Home'}
                                 </h1>
                                 <p>
                                     {head
@@ -79,7 +83,7 @@ function HeroHomeThree() {
                                         onClick={(e) => handleShowVideo(e)}
                                         className="appie-video-popup"
                                         href="https://www.youtube.com/watch?v=EE7NqzhMDms"
-                                        >
+                                    >
                                         <i className="fas fa-play" /> Play Video
                                     </a>
                                 </div>

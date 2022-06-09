@@ -26,9 +26,7 @@ function ServicesHomeThree() {
                     <div className="row justify-content-center">
                         <div className="col-lg-6">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    About Apps consulting Services
-                                </h3>
+                                <h3 className="appie-title">About Apps consulting Services</h3>
                                 {/* <p>
                                     {gettext
                                         ? gettext.map((x) => <p>{x.attributes.small_line}</p>)

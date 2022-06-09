@@ -34,38 +34,34 @@ function Blogs() {
         <>
             <div className="row">
                 {data
-                    ? data.slice(0,6).map((x) => (
-                        <div className="col-lg-6">
-                            <div className="post-item-1">
-                                <img
-                                    src={
-                                        x.attributes
-                                            ? imageurl(x.attributes)
-                                            : 'hgghtyu'
-                                    }
-                                    alt=""
-                                />
-                                <div className="b-post-details">
-                                    <div className="bp-meta">
-                                        <a href="#">
-                                            <i className="fal fa-clock"></i>April 22, 2020
-                                        </a>
-                                        <a href="#">
-                                            <i className="fal fa-comments"></i>6 Comments
-                                        </a>
-                                    </div>
-                                    <h3>
-                                        {/* <a href="/news/single-news"> */}
-                                        <a href={'/'+x.attributes.slug}>{x.attributes.tag}</a>
-                                        {/* </a> */}
-                                    </h3>
-                                    <a className="read-more" href="single-post.html">
-                                        Read More<i className="fal fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))
+                    ? data.slice(0, 6).map((x) => (
+                          <div className="col-lg-6">
+                              <div className="post-item-1">
+                                  <img
+                                      src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
+                                      alt=""
+                                  />
+                                  <div className="b-post-details">
+                                      <div className="bp-meta">
+                                          <a href="#">
+                                              <i className="fal fa-clock"></i>April 22, 2020
+                                          </a>
+                                          <a href="#">
+                                              <i className="fal fa-comments"></i>6 Comments
+                                          </a>
+                                      </div>
+                                      <h3>
+                                          {/* <a href="/news/single-news"> */}
+                                          <a href={'/' + x.attributes.slug}>{x.attributes.tag}</a>
+                                          {/* </a> */}
+                                      </h3>
+                                      <a className="read-more" href="single-post.html">
+                                          Read More<i className="fal fa-arrow-right"></i>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      ))
                     : 'hgfhgf'}
             </div>
             {/* <div className="row">

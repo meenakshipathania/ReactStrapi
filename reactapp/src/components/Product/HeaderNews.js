@@ -42,7 +42,8 @@ function HeaderNews({ action }) {
                                     {logo
                                         ? logo.map((x) => (
                                               <a href="/">
-                                                  <img className='loimg'
+                                                  <img
+                                                      className="loimg"
                                                       src={
                                                           x.attributes
                                                               ? imageurl(x.attributes)
@@ -53,19 +54,20 @@ function HeaderNews({ action }) {
                                               </a>
                                           ))
                                         : 'hgfhgf'}
-                                        {logo
+                                    {logo
                                         ? logo.map((x) => (
-                                            <a href="/">
-                                                <img className='stickylogo'
-                                                    src={
-                                                        x.attributes
-                                                            ? imageurl1(x.attributes)
-                                                            : 'hgghtyu'
-                                                    }
-                                                    alt=""
-                                                />
-                                            </a>
-                                        ))
+                                              <a href="/">
+                                                  <img
+                                                      className="stickylogo"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl1(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+
 function BlogSideBar() {
     const [data, Setdata] = useState([]);
     useEffect(() => {
@@ -47,61 +48,57 @@ function BlogSideBar() {
             <aside className="widget widget-categories">
                 <h3 className="widget-title">Categories</h3>
                 <ul>
-                {data1
-                    ? data1.map((x) => (
-                    <li>
-                        <a href="#">{x.attributes.name}</a>
-                        {/* <span>(24)</span> */}
-                    </li>
-                    // <li>
-                    //     <a href="#">Marketing</a>
-                    //     <span>(15)</span>
-                    // </li>
-                    // <li>
-                    //     <a href="#">Frontend</a>
-                    //     <span>(8)</span>
-                    // </li>
-                    // <li>
-                    //     <a href="#">IT & Software</a>
-                    //     <span>(13)</span>
-                    // </li>
-                    // <li>
-                    //     <a href="#">Photography</a>
-                    //     <span>(4)</span>
-                    // </li>
-                    // <li>
-                    //     <a href="#">Technology</a>
-                    //     <span>(16)</span>
-                    // </li>
-                    // <li>
-                    //     <a href="#">General</a>
-                    //     <span>(12)</span>
-                    // </li>
-                    ))
-                    : 'hgfhgf'}
+                    {data1
+                        ? data1.map((x) => (
+                              <li>
+                                  <a href="#">{x.attributes.name}</a>
+                                  {/* <span>(24)</span> */}
+                              </li>
+                              // <li>
+                              //     <a href="#">Marketing</a>
+                              //     <span>(15)</span>
+                              // </li>
+                              // <li>
+                              //     <a href="#">Frontend</a>
+                              //     <span>(8)</span>
+                              // </li>
+                              // <li>
+                              //     <a href="#">IT & Software</a>
+                              //     <span>(13)</span>
+                              // </li>
+                              // <li>
+                              //     <a href="#">Photography</a>
+                              //     <span>(4)</span>
+                              // </li>
+                              // <li>
+                              //     <a href="#">Technology</a>
+                              //     <span>(16)</span>
+                              // </li>
+                              // <li>
+                              //     <a href="#">General</a>
+                              //     <span>(12)</span>
+                              // </li>
+                          ))
+                        : 'hgfhgf'}
                 </ul>
             </aside>
             <aside className="widget widget-trend-post">
                 <h3 className="widget-title">Popular Posts</h3>
                 {data
-                    ? data.slice(6,11).map((x) => (
-                        <div className="popular-post">
-                            <a href="single-post.html">
-                                <img
-                                    src={
-                                        x.attributes
-                                            ? imageurl(x.attributes)
-                                            : 'hgghtyu'
-                                    }
-                                    alt=""
-                                />
-                            </a>
-                            <h5>
-                                <a href="single-post.html">{x.attributes.tag}</a>
-                            </h5>
-                            <span>March 10, 2020</span>
-                        </div>
-                    ))
+                    ? data.slice(6, 11).map((x) => (
+                          <div className="popular-post">
+                              <a href="single-post.html">
+                                  <img
+                                      src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
+                                      alt=""
+                                  />
+                              </a>
+                              <h5>
+                                  <a href="single-post.html">{x.attributes.tag}</a>
+                              </h5>
+                              <span>March 10, 2020</span>
+                          </div>
+                      ))
                     : 'hgfhgf'}
                 {/* <div className="popular-post">
                     <a href="single-post.html">

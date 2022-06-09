@@ -31,11 +31,14 @@ function DetailsIncity() {
                             <div className="extra-img">
                                 {data
                                     ? data.map((x) => (
-                                        <img className='bora'
-                                            src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                            alt=""
-                                        />
-                                    ))
+                                          <img
+                                              className="bora"
+                                              src={
+                                                  x.attributes ? imageurl(x.attributes) : 'hgghtyu'
+                                              }
+                                              alt=""
+                                          />
+                                      ))
                                     : 'hgfhgf'}
                             </div>
                             <div className="extra-txt">
@@ -51,19 +54,22 @@ function DetailsIncity() {
                             </div>
                         </div>
                     </div>
-                    <div className='row mt-100 ml-2 mr-2 ancho'>
+                    <div className="row mt-100 ml-2 mr-2 ancho">
                         <a href="#">Description &nbsp; &nbsp; Reviews (0)</a>
                     </div>
                     <div className="row">
                         <div className="col-lg-7">
-                            <div className='review'>
+                            <div className="review">
                                 <h2>DESCRIPTION</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem of type and scrambled it to make a type specimen book.</p>
-                                     
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem of type and scrambled it to make a type specimen
+                                    book.
+                                </p>
                             </div>
                         </div>
                         <div className="col-lg-5">
-                            <div className='product-details'>
+                            <div className="product-details">
                                 <div className="btns">
                                     <a href="#" target="_self" className="btn btn-success">
                                         Purchase Now
@@ -71,13 +77,21 @@ function DetailsIncity() {
                                 </div>
                                 <h6>PRODUCT DETAILS</h6>
                                 <dl>
-                                    <dt>Version:</dt><dd></dd>
-                                    <dt>Size:</dt><dd></dd>
-                                    <dt>Ionic:</dt><dd></dd>
-                                    <dt>Platforms:</dt><dd></dd>
-                                    <dt>Released:</dt><dd></dd>
-                                    <dt>Updated:</dt><dd></dd>
-                                    <dt>Category:</dt><dd><span className="posted_in"> <a href="#" rel="tag">Components</a>.</span></dd>
+                                    <dt>Version:</dt> <dd></dd>
+                                    <dt>Size:</dt> <dd></dd>
+                                    <dt>Ionic:</dt> <dd></dd>
+                                    <dt>Platforms:</dt> <dd></dd>
+                                    <dt>Released:</dt> <dd></dd>
+                                    <dt>Updated:</dt> <dd></dd>
+                                    <dt>Category:</dt>
+                                    <dd>
+                                        <span className="posted_in">
+                                            <a href="#" rel="tag">
+                                                Components
+                                            </a>
+                                            .
+                                        </span>
+                                    </dd>
                                 </dl>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import logo from '../../assets/images/logo-9.png';
+// import logo from '../../assets/images/logo-9.png';
 import StickyMenu from '../../lib/StickyMenu';
 import Navigation from '../Navigation';
 
@@ -39,34 +39,36 @@ function HeaderHomeEight({ action }) {
                         <div className="row align-items-center">
                             <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
                                 <div className="appie-logo-box">
-                                {logo
+                                    {logo
                                         ? logo.map((x) => (
-                                            <a href="/">
-                                                <img className='loimg'
-                                                    src={
-                                                        x.attributes
-                                                            ? imageurl(x.attributes)
-                                                            : 'hgghtyu'
-                                                    }
-                                                    alt=""
-                                                />
-                                            </a>
-                                        ))
+                                              <a href="/">
+                                                  <img
+                                                      className="loimg"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
                                         : 'hgfhgf'}
 
                                     {logo
                                         ? logo.map((x) => (
-                                            <a href="/">
-                                                <img className='stickylogo'
-                                                    src={
-                                                        x.attributes
-                                                            ? imageurl1(x.attributes)
-                                                            : 'hgghtyu'
-                                                    }
-                                                    alt=""
-                                                />
-                                            </a>
-                                        ))
+                                              <a href="/">
+                                                  <img
+                                                      className="stickylogo"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl1(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              </a>
+                                          ))
                                         : 'hgfhgf'}
                                 </div>
                             </div>

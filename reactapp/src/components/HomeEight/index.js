@@ -24,7 +24,7 @@ function HomeEight() {
             {/* <AboutHomeEight /> */}
             <ServicesHomeEight />
             <WorkPartHomeEight />
-            <FaqHomeEight />/
+            <FaqHomeEight />
             {/* <TeamHomeEight /> */}
             <TestimonialHomeEight />
             <BlogHomeEight />

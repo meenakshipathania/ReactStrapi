@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import workThumb from '../../assets/images/how-it-work-thumb.png';
+// import workThumb from '../../assets/images/how-it-work-thumb.png';
 
 function WorkPartHomeEight() {
     const [text2, Settext2] = useState([]);
@@ -23,12 +23,12 @@ function WorkPartHomeEight() {
     }
     return (
         <>
-        <div className="appie-how-it-work-area pt-10 pb-100">
+            <div className="appie-how-it-work-area pt-10 pb-100">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="how-it-work-thumb text-center">
-                            {text2
+                                {text2
                                     ? text2.map((x) => (
                                           <img
                                               src={
@@ -42,9 +42,11 @@ function WorkPartHomeEight() {
                         </div>
                         <div className="col-lg-6">
                             <div className="appie-how-it-work-content">
-                                <h2 className="title">  {text2
+                                <h2 className="title">
+                                    {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading1}</h3>)
-                                        : 'hgfhgf'}</h2>
+                                        : 'hgfhgf'}
+                                </h2>
                                 {/* <p>
                                     The little rotter harry butty lurgy spend a peny spiffing skive
                                     off golly gosh baking cakes.
@@ -54,9 +56,11 @@ function WorkPartHomeEight() {
                                         <div className="how-it-work-box">
                                             <span>1</span>
                                             <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text11}</h5>)
-                                                : 'hgfhgf'}
+                                                {text2
+                                                    ? text2.map((x) => (
+                                                          <h5>{x.attributes.text11}</h5>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </h5>
                                         </div>
                                     </div>
@@ -64,9 +68,11 @@ function WorkPartHomeEight() {
                                         <div className="how-it-work-box">
                                             <span>2</span>
                                             <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text12}</h5>)
-                                                : 'hgfhgf'}
+                                                {text2
+                                                    ? text2.map((x) => (
+                                                          <h5>{x.attributes.text12}</h5>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </h5>
                                         </div>
                                     </div>
@@ -74,9 +80,11 @@ function WorkPartHomeEight() {
                                         <div className="how-it-work-box">
                                             <span>3</span>
                                             <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text13}</h5>)
-                                                : 'hgfhgf'}
+                                                {text2
+                                                    ? text2.map((x) => (
+                                                          <h5>{x.attributes.text13}</h5>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </h5>
                                         </div>
                                     </div>
@@ -84,9 +92,11 @@ function WorkPartHomeEight() {
                                         <div className="how-it-work-box">
                                             <span>4</span>
                                             <h5 className="title">
-                                            {text2
-                                                ? text2.map((x) => <h5>{x.attributes.text14}</h5>)
-                                                : 'hgfhgf'}
+                                                {text2
+                                                    ? text2.map((x) => (
+                                                          <h5>{x.attributes.text14}</h5>
+                                                      ))
+                                                    : 'hgfhgf'}
                                             </h5>
                                         </div>
                                     </div>

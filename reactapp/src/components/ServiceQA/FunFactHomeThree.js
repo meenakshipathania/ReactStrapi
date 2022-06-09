@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+// import axios from 'axios';
 import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
@@ -46,7 +46,9 @@ function FunFactHomeThree() {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="appie-fun-fact-content">
-                                            <h2 className="title">Get Started with Apps QA And Analytic services</h2>
+                                            <h2 className="title">
+                                                Get Started with Apps QA And Analytic services
+                                            </h2>
                                             {/* <p>
                                                 {gettext
                                                     ? gettext.map((x) => (

@@ -45,39 +45,41 @@ function ServicesApp() {
     }, []);
     return (
         <>
-            <div className='container'>
+            <div className="container">
                 <div className="row mb-20">
                     <div className="col-lg-12">
                         <div className="appie-section-title text-center">
-                            <h3 className="appie-title">{head ? head.map((x) => <span>{x.attributes.head7}</span>) : 'hgfhgf'}</h3>
+                            <h3 className="appie-title">
+                                {head
+                                    ? head.map((x) => <span>{x.attributes.head7}</span>)
+                                    : 'hgfhgf'}
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     {data
                         ? data.slice(0, 6).map((x) => (
-                            <div className="col-md-4 col-lg-4">
-                                <div className="post-item-1">
-                                    <img
-                                        src={
-                                            x.attributes
-                                                ? imageurl(x.attributes)
-                                                : 'hgghtyu'
-                                        }
-                                        alt=""
-                                    />
-                                    <div className="b-post-details">
-                                        <h3>
-                                            <a href={'/' + x.attributes.slug}>{x.attributes.text}</a>
-                                        </h3>
-                                        <p>{x.attributes.description}</p>
-                                        <a className="read-more" href={'/' + x.attributes.slug}>
-                                            Read More<i className="fal fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
+                              <div className="col-md-4 col-lg-4">
+                                  <div className="post-item-1">
+                                      <img
+                                          src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
+                                          alt=""
+                                      />
+                                      <div className="b-post-details">
+                                          <h3>
+                                              <a href={'/' + x.attributes.slug}>
+                                                  {x.attributes.text}
+                                              </a>
+                                          </h3>
+                                          <p>{x.attributes.description}</p>
+                                          <a className="read-more" href={'/' + x.attributes.slug}>
+                                              Read More<i className="fal fa-arrow-right"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          ))
                         : 'hgfhgf'}
                 </div>
             </div>

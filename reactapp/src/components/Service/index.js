@@ -15,7 +15,7 @@ function Service() {
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <Header action={drawerAction.toggle} />
-             <Hero
+            <Hero
                 title="SERVICES"
                 breadcrumb={[
                     { link: '/', title: 'Home' },
@@ -34,7 +34,7 @@ function Service() {
                     </div>
                 </div>
             </section>
-            {/*<Product /> */}
+            {/* <Product /> */}
             <FooterHomeThree />
             <BackToTop />
         </>

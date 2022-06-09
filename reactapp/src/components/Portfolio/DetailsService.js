@@ -145,7 +145,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text1}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text1}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -165,7 +169,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text2}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text2}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -185,7 +193,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text3}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text3}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -205,7 +217,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text4}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text4}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -237,7 +253,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text5}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text5}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -257,7 +277,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text6}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text6}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -289,7 +313,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text7}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text7}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -309,7 +337,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text8}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text8}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>
@@ -329,7 +361,11 @@ function DetailsService() {
                                                       ))
                                                     : 'hgfhgf'}
                                                 {data
-                                                    ? data.map((x) => <h6 className='padd'>{x.attributes.text9}</h6>)
+                                                    ? data.map((x) => (
+                                                          <h6 className="padd">
+                                                              {x.attributes.text9}
+                                                          </h6>
+                                                      ))
                                                     : 'hgghtyu'}
                                             </a>
                                         </li>

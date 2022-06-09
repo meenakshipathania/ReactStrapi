@@ -15,7 +15,7 @@ function Blogsa() {
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderBlog action={drawerAction.toggle} />
-             <HeroBlog
+            <HeroBlog
                 title="Blogs"
                 breadcrumb={[
                     { link: '/', title: 'Home' },
@@ -34,7 +34,7 @@ function Blogsa() {
                     </div>
                 </div>
             </section>
-            {/*<Product /> */}
+            {/* <Product /> */}
             <FooterHomeThree />
             <BackToTop />
         </>

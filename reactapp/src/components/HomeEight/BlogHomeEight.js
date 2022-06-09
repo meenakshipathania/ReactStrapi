@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import blog4 from '../../assets/images/blog-4.jpg';
-import blog5 from '../../assets/images/blog-5.jpg';
-import blog6 from '../../assets/images/blog-6.jpg';
-import blog7 from '../../assets/images/blog-7.jpg';
+// import blog4 from '../../assets/images/blog-4.jpg';
+// import blog5 from '../../assets/images/blog-5.jpg';
+// import blog6 from '../../assets/images/blog-6.jpg';
+// import blog7 from '../../assets/images/blog-7.jpg';
 import shape5 from '../../assets/images/shape/5.png';
 import shape12 from '../../assets/images/shape/shape-12.png';
 
@@ -40,12 +40,12 @@ function BlogHomeEight() {
                         </div>
                     </div>
                     <div className="row">
-                    {data
-                            ? data.slice(0,4).map((x) => (
-                        <div className="col-lg-6">
-                            <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-                                <div className="thumb">
-                                <img
+                        {data
+                            ? data.slice(0, 4).map((x) => (
+                                  <div className="col-lg-6">
+                                      <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
+                                          <div className="thumb">
+                                              <img
                                                   src={
                                                       x.attributes
                                                           ? imageurl(x.attributes)
@@ -53,26 +53,30 @@ function BlogHomeEight() {
                                                   }
                                                   alt=""
                                               />
-                                </div>
-                                <div className="content">
-                                    <h5 className="title">
-                                    <a href={'/'+x.attributes.slug}>{x.attributes.tag}</a>
-                                    </h5>
-                                    <div className="meta-item">
-                                        <ul>
-                                            <li>
-                                                <i className="fal fa-clock"></i> July 14, 2022
-                                            </li>
-                                            <li>
-                                                <i className="fal fa-comments"></i> July 14, 2022
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          ))
-                          : 'hgfhgf'}
+                                          </div>
+                                          <div className="content">
+                                              <h5 className="title">
+                                                  <a href={'/' + x.attributes.slug}>
+                                                      {x.attributes.tag}
+                                                  </a>
+                                              </h5>
+                                              <div className="meta-item">
+                                                  <ul>
+                                                      <li>
+                                                          <i className="fal fa-clock"></i> July 14,
+                                                          2022
+                                                      </li>
+                                                      <li>
+                                                          <i className="fal fa-comments"></i> July
+                                                          14, 2022
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              ))
+                            : 'hgfhgf'}
                         <div className="col-lg-12">
                             <div className="blog-btn text-center mt-60">
                                 <a className="main-btn" href="/blog">

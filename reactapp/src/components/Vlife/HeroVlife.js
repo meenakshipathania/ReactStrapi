@@ -23,7 +23,9 @@ function HeroServiceRequest() {
                         <div className="col-lg-12">
                             <div className="appie-page-title-item">
                                 {data1
-                                    ? data1.map((x) => <h1 className="title">{x.attributes.vlife}</h1>)
+                                    ? data1.map((x) => (
+                                          <h1 className="title">{x.attributes.vlife}</h1>
+                                      ))
                                     : 'hgfhgf'}
                             </div>
                         </div>

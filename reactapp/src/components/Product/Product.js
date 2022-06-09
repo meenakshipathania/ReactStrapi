@@ -56,11 +56,11 @@ function Product() {
                             placeholder="Search for themes, plugins, and scripts..."
                             title="Searvh for:"
                         />
-                        <button type="submit" className='sub_but'>
+                        <button type="submit" className="sub_but">
                             <span className="icon-search">
                                 <i className="fa fa-search" aria-hidden="true"></i>
                             </span>
-                        </button> 
+                        </button>
                     </div>
                 </form>
             </div>
@@ -89,9 +89,6 @@ function Product() {
                     Themes
                 </h3>
                 <hr></hr>
-
-
-                
                 <ul className="businesslist listt">
                     <li>
                         <a href="/huawei">
@@ -105,7 +102,7 @@ function Product() {
                                   ))
                                 : 'hgfhgf'}
                             {heading
-                                ? heading.map((x) => <h6 className='padd'>{x.attributes.text7}</h6>)
+                                ? heading.map((x) => <h6 className="padd">{x.attributes.text7}</h6>)
                                 : 'hgghtyu'}
                         </a>
                     </li>
@@ -121,7 +118,7 @@ function Product() {
                                   ))
                                 : 'hgfhgf'}
                             {heading
-                                ? heading.map((x) => <h6 className='padd'>{x.attributes.text8}</h6>)
+                                ? heading.map((x) => <h6 className="padd">{x.attributes.text8}</h6>)
                                 : 'hgghtyu'}
                         </a>
                     </li>
@@ -137,7 +134,7 @@ function Product() {
                                   ))
                                 : 'hgfhgf'}
                             {heading
-                                ? heading.map((x) => <h6 className='padd'>{x.attributes.text1}</h6>)
+                                ? heading.map((x) => <h6 className="padd">{x.attributes.text1}</h6>)
                                 : 'hgghtyu'}
                         </a>
                     </li>
@@ -153,7 +150,9 @@ function Product() {
                                   ))
                                 : 'hgfhgf'}
                             {heading
-                                ? heading.map((x) => <h6 className='padd'>{x.attributes.text10}</h6>)
+                                ? heading.map((x) => (
+                                      <h6 className="padd">{x.attributes.text10}</h6>
+                                  ))
                                 : 'hgghtyu'}
                         </a>
                     </li>

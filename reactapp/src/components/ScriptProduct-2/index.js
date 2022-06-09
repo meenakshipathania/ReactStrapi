@@ -18,7 +18,7 @@ function ScriptProduct2() {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderHomeThree action={drawerAction.toggle} />
             <HeroCompo />
-            <DetailsScriptProduct/>
+            <DetailsScriptProduct />
             <FooterHomeThree />
             <BackToTop />
         </>

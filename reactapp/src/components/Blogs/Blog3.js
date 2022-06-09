@@ -8,48 +8,60 @@ import cmnt3 from '../../assets/images/single-post/c3.png';
 
 function Blog() {
     const [text2, Settext2] = useState([]);
-  useEffect(() => {
-     const request = axios.CancelToken.source();
-     axios.get('http://165.227.11.15:1338/api/blogposts/3?populate[nested][populate]=*')
-           .then((res) => {
-              Settext2(res.data.data);
-           })
-           .catch((errordata) => {
-              console.log(errordata);
-           });
-     return () => request.cancel();
-  }, []);
-  function imageurl(data) {
-    const baseurl = 'http://165.227.11.15:1338';
-    const dataurl = data.data[0].attributes.url;
-    return baseurl + dataurl;
- }
+    useEffect(() => {
+        const request = axios.CancelToken.source();
+        axios
+            .get('http://165.227.11.15:1338/api/blogposts/3?populate[nested][populate]=*')
+            .then((res) => {
+                Settext2(res.data.data);
+            })
+            .catch((errordata) => {
+                console.log(errordata);
+            });
+        return () => request.cancel();
+    }, []);
+    function imageurl(data) {
+        const baseurl = 'http://165.227.11.15:1338';
+        const dataurl = data.data[0].attributes.url;
+        return baseurl + dataurl;
+    }
     return (
         <>
             <div className="single-post-area">
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para1}</span>) : 'Home'}
+                {text2['attributes']
+                    ? text2['attributes']['nested'].map((x) => <span>{x.para1}</span>)
+                    : 'Home'}
                 <div className="post-thumb">
-                { text2['attributes']  ? text2['attributes']['nested'].map((x) => (
-                  <img src={x.image ? imageurl(x.image) : 'hgghtyu'} className="img" alt="img not found" />
-                  ))
-               : 'hgfhgf'}
+                    {text2['attributes']
+                        ? text2['attributes']['nested'].map((x) => (
+                              <img
+                                  src={x.image ? imageurl(x.image) : 'hgghtyu'}
+                                  className="img"
+                                  alt="img not found"
+                              />
+                          ))
+                        : 'hgfhgf'}
                 </div>
-                <h4 className="article-title">{ text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>) : 'Home'}</h4>
-                
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>) : 'Home'}
-                
-               
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para3}</span>) : 'Home'}
-                
+                <h4 className="article-title">
+                    {text2['attributes']
+                        ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>)
+                        : 'Home'}
+                </h4>
+                {text2['attributes']
+                    ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>)
+                    : 'Home'}
+                {text2['attributes']
+                    ? text2['attributes']['nested'].map((x) => <span>{x.para3}</span>)
+                    : 'Home'}
                 <blockquote>
-                    
-                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para4}</span>) : 'Home'}
-                   
+                    {text2['attributes']
+                        ? text2['attributes']['nested'].map((x) => <span>{x.para4}</span>)
+                        : 'Home'}
                     <cite>Indigo Violet</cite>
                 </blockquote>
-               
-                { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>) : 'Home'}
-                
+                {text2['attributes']
+                    ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>)
+                    : 'Home'}
                 <div className="post-tags">
                     <h5>Tags:</h5>
                     <a href="#">Bisy LMS</a>
@@ -73,10 +85,11 @@ function Blog() {
                     <a href="#">Justin Case</a>
                     <span>About Author</span>
                     <p>
-                    { text2['attributes'] ? text2['attributes']['nested'].map((x) => <span>{x.para6}</span>) : 'Home'}
+                        {text2['attributes']
+                            ? text2['attributes']['nested'].map((x) => <span>{x.para6}</span>)
+                            : 'Home'}
                     </p>
                 </div>
-                
             </div>
             <div className="comment-area">
                 <h3>Comment (3)</h3>

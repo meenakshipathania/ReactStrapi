@@ -28,74 +28,98 @@ function DetailsIncity() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                        <ul className="businesslist listt">
-                    <li>
-                        <a href="/product/script/demopaid">
-                            {data
-                                ? data.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {data
-                                ? data.map((x) => <h6 className='padd'>{x.attributes.demopaid}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/product/script/script-product-2">
-                            {data
-                                ? data.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {data
-                                ? data.map((x) => <h6 className='padd'>{x.attributes.script2}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/product/script/script-product-3">
-                            {data
-                                ? data.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {data
-                                ? data.map((x) => <h6 className='padd'>{x.attributes.script3}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/product/script/script-product-4">
-                            {data
-                                ? data.map((x) => (
-                                      <img
-                                          className="business"
-                                          src={x.attributes ? imageurl(x.attributes) : 'hgghtyu'}
-                                          alt=""
-                                      />
-                                  ))
-                                : 'hgfhgf'}
-                            {data
-                                ? data.map((x) => <h6 className='padd'>{x.attributes.script4}</h6>)
-                                : 'hgghtyu'}
-                        </a>
-                    </li>
-                </ul>
-                            </div>
-                    </div> 
+                            <ul className="businesslist listt">
+                                <li>
+                                    <a href="/product/script/demopaid">
+                                        {data
+                                            ? data.map((x) => (
+                                                  <img
+                                                      className="business"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              ))
+                                            : 'hgfhgf'}
+                                        {data
+                                            ? data.map((x) => (
+                                                  <h6 className="padd">{x.attributes.demopaid}</h6>
+                                              ))
+                                            : 'hgghtyu'}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product/script/script-product-2">
+                                        {data
+                                            ? data.map((x) => (
+                                                  <img
+                                                      className="business"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              ))
+                                            : 'hgfhgf'}
+                                        {data
+                                            ? data.map((x) => (
+                                                  <h6 className="padd">{x.attributes.script2}</h6>
+                                              ))
+                                            : 'hgghtyu'}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product/script/script-product-3">
+                                        {data
+                                            ? data.map((x) => (
+                                                  <img
+                                                      className="business"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              ))
+                                            : 'hgfhgf'}
+                                        {data
+                                            ? data.map((x) => (
+                                                  <h6 className="padd">{x.attributes.script3}</h6>
+                                              ))
+                                            : 'hgghtyu'}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product/script/script-product-4">
+                                        {data
+                                            ? data.map((x) => (
+                                                  <img
+                                                      className="business"
+                                                      src={
+                                                          x.attributes
+                                                              ? imageurl(x.attributes)
+                                                              : 'hgghtyu'
+                                                      }
+                                                      alt=""
+                                                  />
+                                              ))
+                                            : 'hgfhgf'}
+                                        {data
+                                            ? data.map((x) => (
+                                                  <h6 className="padd">{x.attributes.script4}</h6>
+                                              ))
+                                            : 'hgghtyu'}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

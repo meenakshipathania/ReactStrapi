@@ -40,11 +40,13 @@ function FaqHomeEight() {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="appie-section-title">
-                                <h1 className="appie-title">{data
-                                    ? data.map((x) => (
-                                          <span className="title"> {x.attributes.heading}</span>
-                                      ))
-                                    : 'hgfhgf'}</h1>
+                                <h1 className="appie-title">
+                                    {data
+                                        ? data.map((x) => (
+                                              <span className="title"> {x.attributes.heading}</span>
+                                          ))
+                                        : 'hgfhgf'}
+                                </h1>
                                 {/* <p>
                                     He nicked it tickety boo harry the cras bargy chap mush spiffing
                                     spend a penny the full monty burke butty.
@@ -67,7 +69,13 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4> {data ? data.map((x) => <span> {x.attributes.q1}</span>): 'hgfhgf'}</h4>
+                                                <h4>
+                                                    {data
+                                                        ? data.map((x) => (
+                                                              <span> {x.attributes.q1}</span>
+                                                          ))
+                                                        : 'hgfhgf'}
+                                                </h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -77,7 +85,11 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                    {data ? data.map((x) => <span> {x.attributes.a1}</span>): 'hgfhgf'}
+                                                        {data
+                                                            ? data.map((x) => (
+                                                                  <span> {x.attributes.a1}</span>
+                                                              ))
+                                                            : 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -91,7 +103,13 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4>{data ? data.map((x) => <span> {x.attributes.q2}</span>): 'hgfhgf'}?</h4>
+                                                <h4>
+                                                    {data
+                                                        ? data.map((x) => (
+                                                              <span> {x.attributes.q2}</span>
+                                                          ))
+                                                        : 'hgfhgf'}
+                                                </h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -101,7 +119,11 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                    {data ? data.map((x) => <span> {x.attributes.a2}</span>): 'hgfhgf'}
+                                                        {data
+                                                            ? data.map((x) => (
+                                                                  <span> {x.attributes.a2}</span>
+                                                              ))
+                                                            : 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -115,7 +137,13 @@ function FaqHomeEight() {
                                     >
                                         <div className="accrodion-inner">
                                             <div className="accrodion-title">
-                                                <h4>{data ? data.map((x) => <span> {x.attributes.q3}</span>): 'hgfhgf'}</h4>
+                                                <h4>
+                                                    {data
+                                                        ? data.map((x) => (
+                                                              <span> {x.attributes.q3}</span>
+                                                          ))
+                                                        : 'hgfhgf'}
+                                                </h4>
                                             </div>
                                             <div
                                                 className="accrodion-content"
@@ -125,7 +153,11 @@ function FaqHomeEight() {
                                             >
                                                 <div className="inner">
                                                     <p>
-                                                    {data ? data.map((x) => <span> {x.attributes.a3}</span>): 'hgfhgf'}
+                                                        {data
+                                                            ? data.map((x) => (
+                                                                  <span> {x.attributes.a3}</span>
+                                                              ))
+                                                            : 'hgfhgf'}
                                                     </p>
                                                 </div>
                                             </div>
@@ -149,13 +181,15 @@ function FaqHomeEight() {
                     <div className="faq-play-counter">
                         <div className="box-1">
                             <h4 className="title">
-                                <CounterUpCom endValue="700" sectionSelect="counter" /><span>k</span>
+                                <CounterUpCom endValue="700" sectionSelect="counter" />
+                                <span>k</span>
                             </h4>
                             <span>App Downloads</span>
                         </div>
                         <div className="box-1 box-2">
                             <h4 className="title">
-                                <CounterUpCom endValue="545" sectionSelect="counter" /><span>k</span>
+                                <CounterUpCom endValue="545" sectionSelect="counter" />
+                                <span>k</span>
                             </h4>
                             <span>App Downloads</span>
                         </div>
