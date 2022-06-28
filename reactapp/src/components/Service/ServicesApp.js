@@ -15,7 +15,7 @@ function ServicesApp() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/services?populate=*')
+            .get('https://ocodeapps.com:1338/api/services?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -26,7 +26,7 @@ function ServicesApp() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -34,7 +34,7 @@ function ServicesApp() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/descriptions?populate=*')
+            .get('https://ocodeapps.com:1338/api/descriptions?populate=*')
             .then((res) => {
                 Sethead(res.data.data);
             })
