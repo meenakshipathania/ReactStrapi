@@ -1,4 +1,4 @@
-import React,{ useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import Sponser1 from '../../assets/images/sponser-1.png';
 // import Sponser10 from '../../assets/images/sponser-10.png';
@@ -17,7 +17,7 @@ function SponserHomeTwo({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/abouts')
+            .get('http://ocodeapps.com:1338/api/abouts')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -31,7 +31,7 @@ function SponserHomeTwo({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/brands?populate=*')
+            .get('http://ocodeapps.com:1338/api/brands?populate=*')
             .then((res) => {
                 Setspo(res.data.data);
             })
@@ -41,7 +41,7 @@ function SponserHomeTwo({ className }) {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -50,66 +50,43 @@ function SponserHomeTwo({ className }) {
             <section className={`appie-sponser-area pb-100 ${className}`}>
                 <div className="container">
                     <div className="row">
-                    {data1 ? data1.map((x) => (
-                        <div className="col-lg-12">
-                            <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                {x.attributes.spon1} <br />
-                                {x.attributes.spon2}
-                                </h3>
-                                <p>{x.attributes.spon3}</p>
-                            </div>
-                        </div>
-                        )) : 'hgfhgf'}
+                        {data1
+                            ? data1.map((x) => (
+                                  <div className="col-lg-12">
+                                      <div className="appie-section-title text-center">
+                                          <h3 className="appie-title">
+                                              {x.attributes.spon1} <br />
+                                              {x.attributes.spon2}
+                                          </h3>
+                                          <p>{x.attributes.spon3}</p>
+                                      </div>
+                                  </div>
+                              ))
+                            : 'hgfhgf'}
                     </div>
                     <div className="row">
-                        {spo ? spo.slice(0,16).map((x) => (
-                        <div className="col-lg-3">
-                            <div className="appie-sponser-box d-flex justify-content-center">
-                                <div className="sponser-item">
-                                    <img src={
-                                            x.attributes
-                                                ? imageurl(x.attributes)
-                                                : 'hgghtyu'
-                                        } alt="" />
-                                </div>
-                                {/* <div className="sponser-item">
-                                    <img src={Sponser2} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser3} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser4} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser5} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser6} alt="" />
-                                </div> */}
-                              
-                            </div>
-                            {/* <div className="appie-sponser-box item-2 d-flex justify-content-center">
-                                <div className="sponser-item">
-                                    <img src={Sponser7} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser8} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser9} alt="" />
-                                </div>
-                                <div className="sponser-item">
-                                    <img src={Sponser10} alt="" />
-                                </div>
-                            </div> */}
-                        </div>
-                          )) : 'hgfhgf'}
+                        {spo
+                            ? spo.slice(0, 16).map((x) => (
+                                  <div className="col-lg-3">
+                                      <div className="appie-sponser-box d-flex justify-content-center">
+                                          <div className="sponser-item">
+                                              <img
+                                                  src={
+                                                      x.attributes
+                                                          ? imageurl(x.attributes)
+                                                          : 'hgghtyu'
+                                                  }
+                                                  alt=""
+                                              />
+                                          </div>
+                                      </div>
+                                  </div>
+                              ))
+                            : 'hgfhgf'}
                     </div>
-                </div>
-                <div className="sponser-shape">
-                    <img src={sponserShape} alt="" />
+                    <div className="sponser-shape">
+                        <img src={sponserShape} alt="" />
+                    </div>
                 </div>
             </section>
         </>

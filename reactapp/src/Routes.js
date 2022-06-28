@@ -84,8 +84,8 @@ function Routes() {
                             {/* <Route exact path="/home-four" component={HomeFour} />
                             <Route exact path="/home-five" component={HomeFive} />
                             <Route exact path="/home-six" component={HomeSix} />
-                            <Route exact path="/home-seven" component={HomeSeven} />*/}
-                            <Route exact path="/" component={HomeEight} /> 
+                            <Route exact path="/home-seven" component={HomeSeven} /> */}
+                            <Route exact path="/" component={HomeEight} />
                             <Route exact path="/product" component={Product} />
                             <Route exact path="/education/blog1" component={SingleBlog1} />
                             <Route exact path="/education/blog-2" component={SingleBlog2} />
@@ -95,7 +95,11 @@ function Routes() {
                             <Route exact path="/education/blog-6" component={SingleBlog6} />
                             <Route exact path="/blog" component={Blogsa} />
                             <Route exact path="/portfolio" component={Portfolio} />
-                            <Route exact path="/portfolio/serviceRequest" component={ServiceRequest} />
+                            <Route
+                                exact
+                                path="/portfolio/serviceRequest"
+                                component={ServiceRequest}
+                            />
                             <Route exact path="/portfolio/incity" component={Incity} />
                             <Route exact path="/portfolio/greenpal" component={Greenpal} />
                             <Route exact path="/portfolio/gentra" component={Gentra} />
@@ -113,21 +117,73 @@ function Routes() {
                             <Route exact path="/theme-product" component={ProductTheme} />
                             <Route exact path="/theme-product-2" component={ProductTheme2} />
                             <Route exact path="/theme-product-3" component={ProductTheme3} />
-                            <Route exact path="/product/components/freedemo" component={CompoFreeDemo} />
-                            <Route exact path="/product/components/greenpal" component={CompoGreenpal} />
-                            <Route exact path="/product/components/plugin-product" component={CompoPlugin} />
-                            <Route exact path="/product/components/plugin-product-3" component={CompoPlugin3} />
-                            <Route exact path="/product/components/plugin-product-4" component={CompoPlugin4} />
-                            <Route exact path="/product/script/demopaid" component={ScriptDemoPaid} />
-                            <Route exact path="/product/script/script-product-2" component={ScriptProduct2} />
-                            <Route exact path="/product/script/script-product-3" component={ScriptProduct3} />
-                            <Route exact path="/product/script/script-product-4" component={ScriptProduct4} />
+                            <Route
+                                exact
+                                path="/product/components/freedemo"
+                                component={CompoFreeDemo}
+                            />
+                            <Route
+                                exact
+                                path="/product/components/greenpal"
+                                component={CompoGreenpal}
+                            />
+                            <Route
+                                exact
+                                path="/product/components/plugin-product"
+                                component={CompoPlugin}
+                            />
+                            <Route
+                                exact
+                                path="/product/components/plugin-product-3"
+                                component={CompoPlugin3}
+                            />
+                            <Route
+                                exact
+                                path="/product/components/plugin-product-4"
+                                component={CompoPlugin4}
+                            />
+                            <Route
+                                exact
+                                path="/product/script/demopaid"
+                                component={ScriptDemoPaid}
+                            />
+                            <Route
+                                exact
+                                path="/product/script/script-product-2"
+                                component={ScriptProduct2}
+                            />
+                            <Route
+                                exact
+                                path="/product/script/script-product-3"
+                                component={ScriptProduct3}
+                            />
+                            <Route
+                                exact
+                                path="/product/script/script-product-4"
+                                component={ScriptProduct4}
+                            />
                             <Route exact path="/services" component={Service} />
-                            <Route exact path="/services/app-consulting" component={ServiceAppConsulting} />
+                            <Route
+                                exact
+                                path="/services/app-consulting"
+                                component={ServiceAppConsulting}
+                            />
                             <Route exact path="/services/app-design" component={ServiceUI} />
-                            <Route exact path="/services/mobile-app-development" component={HomeThree} />
-                            <Route exact path="/services/progressive-web-apps" component={ServicePWA} />
-                            <Route exact path="/services/app-Maintenance-support" component={ServiceMaintain} />
+                            <Route
+                                exact
+                                path="/services/mobile-app-development"
+                                component={HomeThree}
+                            />
+                            <Route
+                                exact
+                                path="/services/progressive-web-apps"
+                                component={ServicePWA}
+                            />
+                            <Route
+                                exact
+                                path="/services/app-Maintenance-support"
+                                component={ServiceMaintain}
+                            />
                             <Route exact path="/services/app-analytics" component={ServiceQA} />
                             <Route exact path="/about-us" component={AboutUs} />
                             <Route exact path="/contact" component={Contact} />
