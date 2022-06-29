@@ -6,7 +6,7 @@ function Forms() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/logos')
+            .get('http://ocodeapps.com:1338/api/logos')
             .then((res) => {
                 Setlogo(res.data.data);
             })
@@ -43,7 +43,7 @@ function Forms() {
         //     });
         // e.target.reset()
 
-        fetch('https://ocodeapps.com:1338/api/conatct-datas', {
+        fetch('http://ocodeapps.com:1338/api/conatct-datas', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ data: contact }),
@@ -198,13 +198,13 @@ function Forms() {
             <div className="bisylms-map">
                 <iframe
                     title="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13721.681812082987!2d76.69135252866072!3d30.70657828169255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef3c91ffdd4d%3A0xe85acda7984ecef8!2soCode%20Technologies!5e0!3m2!1sen!2sin!4v1646379416727!5m2!1sen!2sin"
+                    src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13721.681812082987!2d76.69135252866072!3d30.70657828169255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef3c91ffdd4d%3A0xe85acda7984ecef8!2soCode%20Technologies!5e0!3m2!1sen!2sin!4v1646379416727!5m2!1sen!2sin"
                     width="600"
                     height="450"
                 ></iframe>
                 {/* <iframe
                     title="map"
-                    src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=39.966528,-75.158284&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=p&amp;z=16&amp;iwloc=B&amp;output=embed"
+                    src="http://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=39.966528,-75.158284&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=p&amp;z=16&amp;iwloc=B&amp;output=embed"
                 ></iframe> */}
             </div>
         </>

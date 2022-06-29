@@ -35,7 +35,7 @@ function HeroHomeFour() {
                                     <a
                                         onClick={(e) => handleShowVideo(e)}
                                         className="appie-video-popup"
-                                        href="https://www.youtube.com/watch?v=EE7NqzhMDms"
+                                        href="http://www.youtube.com/watch?v=EE7NqzhMDms"
                                     >
                                         <i className="fas fa-play"></i> Watch the trailer
                                     </a>

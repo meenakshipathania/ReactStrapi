@@ -11,7 +11,7 @@ function Blog() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/blogposts/2?populate[nested][populate]=*')
+            .get('http://ocodeapps.com:1338/api/blogposts/2?populate[nested][populate]=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -21,7 +21,7 @@ function Blog() {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'https://ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = data.data[0].attributes.url;
         return baseurl + dataurl;
     }

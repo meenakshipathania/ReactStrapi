@@ -10,7 +10,7 @@ function TeamHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/teams?populate=*')
+            .get('http://ocodeapps.com:1338/api/teams?populate=*')
             .then((res) => {
                 SetTeam(res.data.data);
             })
@@ -21,7 +21,7 @@ function TeamHomeEight() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'https://ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

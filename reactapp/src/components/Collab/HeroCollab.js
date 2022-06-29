@@ -6,7 +6,7 @@ function HeroIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/nested-pages')
+            .get('http://ocodeapps.com:1338/api/nested-pages')
             .then((res) => {
                 Setdata(res.data.data);
             })

@@ -4,7 +4,7 @@ import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
-// const apiUrl = 'https://ocodeapps.com:1338/api/funsections';
+// const apiUrl = 'http://ocodeapps.com:1338/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {
@@ -120,7 +120,7 @@ function FunFactHomeThree() {
                                             <a
                                                 onClick={(e) => handleShowVideo(e)}
                                                 className="appie-video-popup"
-                                                href="https://www.youtube.com/watch?v=EE7NqzhMDms"
+                                                href="http://www.youtube.com/watch?v=EE7NqzhMDms"
                                             >
                                                 <i className="fas fa-play" />
                                             </a>

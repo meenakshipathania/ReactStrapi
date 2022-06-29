@@ -8,7 +8,7 @@ function HeaderServiceRequest({ action }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/logos?populate=*')
+            .get('http://ocodeapps.com:1338/api/logos?populate=*')
             .then((res) => {
                 Setlogo(res.data.data);
             })
@@ -19,12 +19,12 @@ function HeaderServiceRequest({ action }) {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'https://ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'https://ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.logo1.data[0].attributes.url;
         return baseurl + dataurl;
     }

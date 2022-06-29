@@ -8,7 +8,7 @@ function FaqHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('https://ocodeapps.com:1338/api/logos')
+            .get('http://ocodeapps.com:1338/api/logos')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -173,7 +173,7 @@ function FaqHomeEight() {
                         <a
                             onClick={(e) => handleShowVideo(e)}
                             className="appie-video-popup"
-                            href="https://www.youtube.com/watch?v=EE7NqzhMDms"
+                            href="http://www.youtube.com/watch?v=EE7NqzhMDms"
                         >
                             <i className="fas fa-play" />
                         </a>
