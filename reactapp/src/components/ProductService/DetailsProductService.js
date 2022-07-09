@@ -7,7 +7,7 @@ function DetailsIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/apps?populate=*')
+            .get('http://dev.ocodeapps.com:1338/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function DetailsIncity() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://dev.ocodeapps.com:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -49,7 +49,7 @@ function DetailsIncity() {
         //         console.log(error.text);
         //     });
         // e.target.reset()
-        fetch('http://ocodeapps.com:1338/api/reviews', {
+        fetch('http://dev.ocodeapps.com:1338/api/reviews', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ data: contact }),

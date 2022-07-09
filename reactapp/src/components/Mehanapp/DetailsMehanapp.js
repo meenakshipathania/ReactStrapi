@@ -7,7 +7,7 @@ function DetailsIncity() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/nested-pages?populate=*')
+            .get('http://dev.ocodeapps.com:1338/api/nested-pages?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function DetailsIncity() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://dev.ocodeapps.com:1338';
         const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
