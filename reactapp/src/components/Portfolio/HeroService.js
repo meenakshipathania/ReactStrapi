@@ -7,7 +7,7 @@ function HeroService() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338//api/apps?populate=*')
+            .get('http://ocodeapps.com:1338/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -17,7 +17,7 @@ function HeroService() {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338/';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.imagehead.data[0].attributes.url;
         return baseurl + dataurl;
     }

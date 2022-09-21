@@ -6,7 +6,7 @@ function ProjectHomeOne() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338//api/logos?populate=*')
+            .get('http://ocodeapps.com:1338/api/logos?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -16,7 +16,7 @@ function ProjectHomeOne() {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338/';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -29,8 +29,8 @@ function ProjectHomeOne() {
                             <div
                                 className="appie-project-box wow animated slideInUp"
                                 data-wow-duration="1000ms"
-                                data-wow-delay="0ms" // const NewUrl = 'http://ocodeapps.com:1338//api/socialapps?populate=*';
-                                // const ApiUrl = 'http://ocodeapps.com:1338//api/otherapps?populate=*';
+                                data-wow-delay="0ms" // const NewUrl = 'http://ocodeapps.com:1338/api/socialapps?populate=*';
+                                // const ApiUrl = 'http://ocodeapps.com:1338/api/otherapps?populate=*';
                             >
                                 <div className="row">
                                     <div className="col-lg-6">
