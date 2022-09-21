@@ -10,7 +10,7 @@ function TestimonialHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://dev.ocodeapps.com:1338/api/testimonials?populate=*')
+            .get('http://ocodeapps.com:1338//api/testimonials?populate=*')
             .then((res) => {
                 Setimg(res.data.data);
             })
@@ -20,7 +20,7 @@ function TestimonialHomeEight() {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

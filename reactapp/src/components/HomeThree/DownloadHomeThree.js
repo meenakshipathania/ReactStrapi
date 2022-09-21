@@ -6,7 +6,7 @@ function DownloadHomeThree({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://dev.ocodeapps.com:1338/api/downloads?populate=*')
+            .get('http://ocodeapps.com:1338//api/downloads?populate=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -16,7 +16,7 @@ function DownloadHomeThree({ className }) {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

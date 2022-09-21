@@ -7,7 +7,7 @@ function Navigation() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://dev.ocodeapps.com:1338/api/logos')
+            .get('http://ocodeapps.com:1338//api/logos')
             .then((res) => {
                 Setnavitems(res.data.data);
             })

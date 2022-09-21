@@ -7,7 +7,7 @@ function WorkPartHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://dev.ocodeapps.com:1338/api/descriptions?populate=*')
+            .get('http://ocodeapps.com:1338//api/descriptions?populate=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -17,7 +17,7 @@ function WorkPartHomeEight() {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }

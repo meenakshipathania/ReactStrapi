@@ -6,7 +6,7 @@ function Product() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://dev.ocodeapps.com:1338/api/apps?populate=*')
+            .get('http://ocodeapps.com:1338//api/apps?populate=*')
             .then((res) => {
                 Setheading(res.data.data);
             })
@@ -16,22 +16,22 @@ function Product() {
         return () => request.cancel();
     }, []);
     function imageurl7(atttribute) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = atttribute.image7.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl8(atttribute) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl10(atttribute) {
-        const baseurl = 'http://dev.ocodeapps.com:1338';
+        const baseurl = 'http://ocodeapps.com:1338/';
         const dataurl = atttribute.image10.data[0].attributes.url;
         return baseurl + dataurl;
     }
