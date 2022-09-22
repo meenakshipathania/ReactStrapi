@@ -68,12 +68,12 @@ function ServicesApp() {
                                       />
                                       <div className="b-post-details">
                                           <h3>
-                                              <a href={'/' + x.attributes.slug}>
+                                              <a href={`/${x.attributes.slug}`}>
                                                   {x.attributes.text}
                                               </a>
                                           </h3>
                                           <p>{x.attributes.description}</p>
-                                          <a className="read-more" href={'/' + x.attributes.slug}>
+                                          <a className="read-more" href={`/${x.attributes.slug}`}>
                                               Read More<i className="fal fa-arrow-right"></i>
                                           </a>
                                       </div>

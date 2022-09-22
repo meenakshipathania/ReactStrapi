@@ -22,6 +22,7 @@ function DetailsIncity() {
         const dataurl = atttribute.image11.data[0].attributes.url;
         return baseurl + dataurl;
     }
+    /* eslint-disable no-param-reassign */
     function handleSubmit(e) {
         const allStars = document.querySelectorAll('.stars button i');
         allStars.forEach((star) => {
@@ -31,6 +32,7 @@ function DetailsIncity() {
             allStars[j].className = 'fa fa-star';
         }
     }
+    /* eslint-disable no-param-reassign */
     const [review, setReview] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

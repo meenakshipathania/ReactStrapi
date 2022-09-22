@@ -54,10 +54,8 @@ function HeroHomeThree() {
                         <div className="col-lg-10">
                             <div className="appie-hero-content text-center">
                                 <h1 className="appie-title">
-                                    {text2['attributes']
-                                        ? text2['attributes']['nested'].map((x) => (
-                                              <span>{x.head}</span>
-                                          ))
+                                    {text2.attributes
+                                        ? text2.attributes.nested.map((x) => <span>{x.head}</span>)
                                         : 'Home'}
                                 </h1>
                                 <p>

@@ -56,7 +56,7 @@ function BlogHomeEight() {
                                           </div>
                                           <div className="content">
                                               <h5 className="title">
-                                                  <a href={'/' + x.attributes.slug}>
+                                                  <a href={`/${x.attributes.slug}`}>
                                                       {x.attributes.tag}
                                                   </a>
                                               </h5>

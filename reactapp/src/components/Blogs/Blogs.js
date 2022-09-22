@@ -51,9 +51,7 @@ function Blogs() {
                                           </a>
                                       </div>
                                       <h3>
-                                          {/* <a href="/news/single-news"> */}
-                                          <a href={'/' + x.attributes.slug}>{x.attributes.tag}</a>
-                                          {/* </a> */}
+                                          <a href={`/${x.attributes.slug}`}>{x.attributes.tag}</a>
                                       </h3>
                                       <a className="read-more" href="single-post.html">
                                           Read More<i className="fal fa-arrow-right"></i>

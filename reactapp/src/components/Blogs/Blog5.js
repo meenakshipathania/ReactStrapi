@@ -29,13 +29,13 @@ function Blog() {
         <>
             <div className="single-post-area">
                 <p>
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => <span>{x.para1}</span>)
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => <span>{x.para1}</span>)
                         : 'Home'}
                 </p>
                 <div className="post-thumb">
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => (
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => (
                               <img
                                   src={x.image ? imageurl(x.image) : 'hgghtyu'}
                                   className="img"
@@ -45,31 +45,31 @@ function Blog() {
                         : 'hgfhgf'}
                 </div>
                 <h4 className="article-title">
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => <span>{x.head}</span>)
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => <span>{x.head}</span>)
                         : 'Home'}
                 </h4>
                 <p>
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => <span>{x.para2}</span>)
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => <span>{x.para2}</span>)
                         : 'Home'}
                 </p>
                 <p>
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => <span>{x.para3}</span>)
-                        : 'Home'}   
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => <span>{x.para3}</span>)
+                        : 'Home'}
                 </p>
                 <blockquote>
                     <p>
-                        {text2['attributes']
-                            ? text2['attributes']['nested'].map((x) => <span>{x.para4}</span>)
+                        {text2.attributes
+                            ? text2.attributes.nested.map((x) => <span>{x.para4}</span>)
                             : 'Home'}
                     </p>
                     <cite>Indigo Violet</cite>
                 </blockquote>
                 <p>
-                    {text2['attributes']
-                        ? text2['attributes']['nested'].map((x) => <span>{x.para5}</span>)
+                    {text2.attributes
+                        ? text2.attributes.nested.map((x) => <span>{x.para5}</span>)
                         : 'Home'}
                 </p>
                 <div className="post-tags">
@@ -95,8 +95,8 @@ function Blog() {
                     <a href="#">Justin Case</a>
                     <span>About Author</span>
                     <p>
-                        {text2['attributes']
-                            ? text2['attributes']['nested'].map((x) => <span>{x.para6}</span>)
+                        {text2.attributes
+                            ? text2.attributes.nested.map((x) => <span>{x.para6}</span>)
                             : 'Home'}
                     </p>
                 </div>

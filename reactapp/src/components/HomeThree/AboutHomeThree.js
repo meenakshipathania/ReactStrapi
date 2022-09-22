@@ -35,8 +35,8 @@ function AboutHomeThree() {
                                 data-wow-duration="2000ms"
                                 data-wow-delay="400ms"
                             >
-                                {text2['attributes']
-                                    ? text2['attributes']['nested'].map((x) => (
+                                {text2.attributes
+                                    ? text2.attributes.nested.map((x) => (
                                           <img
                                               src={x.image ? imageurl(x.image) : 'hgghtyu'}
                                               className="img"
@@ -61,8 +61,8 @@ function AboutHomeThree() {
                                             <i className="fas fa-bolt" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para1}</span>
                                                   ))
                                                 : 'Home'}
@@ -75,8 +75,8 @@ function AboutHomeThree() {
                                             <img src={icon1} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para2}</span>
                                                   ))
                                                 : 'Home'}
@@ -89,8 +89,8 @@ function AboutHomeThree() {
                                             <img src={icon5} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para3}</span>
                                                   ))
                                                 : 'Home'}
@@ -131,8 +131,8 @@ function AboutHomeThree() {
                                             <img src={icon6} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para4}</span>
                                                   ))
                                                 : 'Home'}
@@ -145,8 +145,8 @@ function AboutHomeThree() {
                                             <i className="fas fa-link" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para5}</span>
                                                   ))
                                                 : 'Home'}
@@ -159,8 +159,8 @@ function AboutHomeThree() {
                                             <img src={icon7} alt="" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para6}</span>
                                                   ))
                                                 : 'Home'}
@@ -173,8 +173,8 @@ function AboutHomeThree() {
                                             <i className="fas fa-cog" />
                                         </div>
                                         <h5 className="title">
-                                            {text2['attributes']
-                                                ? text2['attributes']['nested'].map((x) => (
+                                            {text2.attributes
+                                                ? text2.attributes.nested.map((x) => (
                                                       <span>{x.para7}</span>
                                                   ))
                                                 : 'Home'}
@@ -196,8 +196,8 @@ function AboutHomeThree() {
                                 data-wow-duration="2000ms"
                                 data-wow-delay="400ms"
                             >
-                                {text2['attributes']
-                                    ? text2['attributes']['nested'].map((x) => (
+                                {text2.attributes
+                                    ? text2.attributes.nested.map((x) => (
                                           <img
                                               src={x.image1 ? imageurl(x.image1) : 'hgghtyu'}
                                               className="img imghei"
@@ -214,8 +214,8 @@ function AboutHomeThree() {
                                     data-wow-duration="2000ms"
                                     data-wow-delay="400ms"
                                 >
-                                    {text2['attributes']
-                                        ? text2['attributes']['nested'].map((x) => (
+                                    {text2.attributes
+                                        ? text2.attributes.nested.map((x) => (
                                               <img
                                                   src={x.image2 ? imageurl(x.image2) : 'hgghtyu'}
                                                   className="img"
@@ -233,10 +233,8 @@ function AboutHomeThree() {
                                             : 'hgfhgf'} */}
                                     </h3>
                                     <p className="lastpara">
-                                        {text2['attributes']
-                                            ? text2['attributes']['nested'].map((x) => (
-                                                  <p>{x.para8}</p>
-                                              ))
+                                        {text2.attributes
+                                            ? text2.attributes.nested.map((x) => <p>{x.para8}</p>)
                                             : 'Home'}
                                     </p>
                                 </div>
