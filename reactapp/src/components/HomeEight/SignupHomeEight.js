@@ -7,7 +7,7 @@ function SponserHomeEight({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/abouts')
+            .get('http://165.227.11.15:1338/api/abouts')
             .then((res) => {
                 Setdata(res.data.data);
             })

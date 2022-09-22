@@ -6,7 +6,7 @@ function Forms() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/logos')
+            .get('http://165.227.11.15:1338/api/logos')
             .then((res) => {
                 Setlogo(res.data.data);
             })
@@ -43,7 +43,7 @@ function Forms() {
         //     });
         // e.target.reset()
 
-        fetch('http://ocodeapps.com:1338/api/conatct-datas', {
+        fetch('http://165.227.11.15:1338/api/conatct-datas', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ data: contact }),

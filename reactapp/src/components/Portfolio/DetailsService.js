@@ -7,7 +7,7 @@ function DetailsService() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/apps?populate=*')
+            .get('http://165.227.11.15:1338/api/apps?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,52 +18,52 @@ function DetailsService() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image1.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl2(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image2.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl3(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image3.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl4(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image4.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl5(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image5.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl6(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image6.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl7(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image7.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl8(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image8.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl9(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'http://165.227.11.15:1338';
         const dataurl = atttribute.image9.data[0].attributes.url;
         return baseurl + dataurl;
     }
