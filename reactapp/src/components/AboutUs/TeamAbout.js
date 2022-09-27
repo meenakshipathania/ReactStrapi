@@ -6,7 +6,7 @@ function TeamAbout() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/teams?populate=*')
+            .get('http://ocodeapps.com:1338/api/teams?populate=*')
             .then((res) => {
                 SetTeam(res.data.data);
             })
@@ -17,7 +17,7 @@ function TeamAbout() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -35,7 +35,7 @@ function TeamAbout() {
                     </div>
                     <div className="row">
                         {team
-                            ? team.map((x) => (
+                            ? team.slice(0, 8).map((x) => (
                                   <div className="col-lg-3 col-md-6">
                                       <div
                                           className="appie-team-item appie-team-item-about mt-30 wow animated fadeInUp"

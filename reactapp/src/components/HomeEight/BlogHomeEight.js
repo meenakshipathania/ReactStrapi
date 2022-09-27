@@ -12,7 +12,7 @@ function BlogHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/blogposts?populate=*')
+            .get('http://ocodeapps.com:1338/api/blogposts?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -23,7 +23,7 @@ function BlogHomeEight() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -56,9 +56,7 @@ function BlogHomeEight() {
                                           </div>
                                           <div className="content">
                                               <h5 className="title">
-                                                  <a href={`/${x.attributes.slug}`}>
-                                                      {x.attributes.tag}
-                                                  </a>
+                                                  <a href={x.attributes.slug}>{x.attributes.tag}</a>
                                               </h5>
                                               <div className="meta-item">
                                                   <ul>

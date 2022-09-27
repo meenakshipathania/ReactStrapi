@@ -17,7 +17,7 @@ function SponserHomeTwo({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/abouts')
+            .get('http://ocodeapps.com:1338/api/abouts')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -31,7 +31,7 @@ function SponserHomeTwo({ className }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/brands?populate=*')
+            .get('http://ocodeapps.com:1338/api/brands?populate=*')
             .then((res) => {
                 Setspo(res.data.data);
             })
@@ -41,7 +41,7 @@ function SponserHomeTwo({ className }) {
         return () => request.cancel();
     }, []);
     function imageurl(atttribute) {
-        const baseurl = 'http://165.227.11.15:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

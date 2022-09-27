@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import singlePost from '../../assets/images/single-post/1.jpg';
-import author from '../../assets/images/single-post/author.png';
-import cmnt1 from '../../assets/images/single-post/c1.png';
-import cmnt2 from '../../assets/images/single-post/c2.png';
-import cmnt3 from '../../assets/images/single-post/c3.png';
+// import author from '../../assets/images/single-post/author.png';
+// import cmnt1 from '../../assets/images/single-post/c1.png';
+// import cmnt2 from '../../assets/images/single-post/c2.png';
+// import cmnt3 from '../../assets/images/single-post/c3.png';
 
 function Blog() {
     const [text2, Settext2] = useState([]);
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://165.227.11.15:1338/api/blogposts/1?populate[nested][populate]=*')
+            .get('http://ocodeapps.com:1338/api/blogposts/1?populate[nested][populate]=*')
             .then((res) => {
                 Settext2(res.data.data);
             })
@@ -21,7 +21,7 @@ function Blog() {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'http://165.227.11.15:1338';
+        const baseurl = 'http://ocodeapps.com:1338';
         const dataurl = data.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -91,7 +91,7 @@ function Blog() {
                     </a>
                 </div>
                 <div className="post-admin">
-                    <img src={author} alt="" />
+                    {/* <img src={author} alt="" /> */}
                     <a href="#">Justin Case</a>
                     <span>About Author</span>
                     <p>
@@ -101,7 +101,7 @@ function Blog() {
                     </p>
                 </div>
             </div>
-            <div className="comment-area">
+            {/* <div className="comment-area">
                 <h3>Comment (3)</h3>
                 <ol className="comment-list">
                     <li>
@@ -169,7 +169,7 @@ function Blog() {
                         </ul>
                     </li>
                 </ol>
-            </div>
+            </div> */}
             <div className="comment-form-area">
                 <h3>Post a Comment</h3>
                 <p>Your email address will not be published. Required fields are marked</p>

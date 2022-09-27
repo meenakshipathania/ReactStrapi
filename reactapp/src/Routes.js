@@ -75,7 +75,7 @@ function Routes() {
                 </div>
             )}
             <div className={`appie-visible ${loading === false ? 'active' : ''}`}>
-                <Router>
+                <Router basename="/">
                     <ScrollToTop>
                         <Switch>
                             {/* <Route exact path="/ho" component={HomeThree} /> */}
@@ -88,11 +88,11 @@ function Routes() {
                             <Route exact path="/" component={HomeEight} />
                             <Route exact path="/product" component={Product} />
                             <Route exact path="/education/blog1" component={SingleBlog1} />
-                            <Route exact path="/education/blog-2" component={SingleBlog2} />
-                            <Route exact path="/education/blog-3" component={SingleBlog3} />
-                            <Route exact path="/education/blog-4" component={SingleBlog4} />
-                            <Route exact path="/education/blog-5" component={SingleBlog5} />
-                            <Route exact path="/education/blog-6" component={SingleBlog6} />
+                            <Route exact path="/education/blog2" component={SingleBlog2} />
+                            <Route exact path="/education/blog3" component={SingleBlog3} />
+                            <Route exact path="/education/blog4" component={SingleBlog4} />
+                            <Route exact path="/education/blog5" component={SingleBlog5} />
+                            <Route exact path="/education/blog6" component={SingleBlog6} />
                             <Route exact path="/blog" component={Blogsa} />
                             <Route exact path="/portfolio" component={Portfolio} />
                             <Route
