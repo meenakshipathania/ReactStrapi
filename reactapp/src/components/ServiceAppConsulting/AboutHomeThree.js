@@ -47,13 +47,13 @@ function AboutHomeThree() {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            {/* <div className="appie-traffic-title">
+                            <div className="appie-traffic-title">
                                 <h3 className="title">
                                     {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
                                         : 'hgfhgf'}
                                 </h3>
-                            </div> */}
+                            </div>
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="appie-traffic-service mb-30">
@@ -181,13 +181,13 @@ function AboutHomeThree() {
                                         </h5>
                                     </div>
                                 </div>
-                                {/* <div className="col-lg-12">
+                                <div className="col-lg-12">
                                     <div className="traffic-btn mt-50">
                                         <a className="main-btn" href="/about-us">
                                             Learn More <i className="fal fa-arrow-right" />
                                         </a>
                                     </div>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -228,9 +228,9 @@ function AboutHomeThree() {
                             <div className="col-lg-6">
                                 <div className="appie-traffic-title">
                                     <h3 className="title">
-                                        {/* {text2
+                                        {text2
                                             ? text2.map((x) => <h3>{x.attributes.heading3}</h3>)
-                                            : 'hgfhgf'} */}
+                                            : 'hgfhgf'}
                                     </h3>
                                     <p className="lastpara">
                                         {text2.attributes

@@ -83,7 +83,9 @@ function HeaderHomeEight({ action }) {
                                         <i className="fal fa-user" /> Login
                                     </a> */}
                                     <a className="main-btn ml-30" href="/contact">
-                                        Get Started
+                                        {logo
+                                            ? logo.map((x) => <span>{x.attributes.getstart}</span>)
+                                            : 'hgghtyu'}
                                     </a>
                                     <div
                                         onClick={(e) => action(e)}

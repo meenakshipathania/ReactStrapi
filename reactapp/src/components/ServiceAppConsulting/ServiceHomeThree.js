@@ -27,11 +27,11 @@ function ServicesHomeThree() {
                         <div className="col-lg-6">
                             <div className="appie-section-title text-center">
                                 <h3 className="appie-title">About Apps consulting Services</h3>
-                                {/* <p>
+                                <p>
                                     {gettext
                                         ? gettext.map((x) => <p>{x.attributes.small_line}</p>)
                                         : 'hgfhgf'}
-                                </p> */}
+                                </p>
                             </div>
                         </div>
                     </div>

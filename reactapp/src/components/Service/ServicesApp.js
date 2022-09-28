@@ -34,7 +34,7 @@ function ServicesApp() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/descriptions?populate=*')
+            .get('http://ocodeapps.com:1338/api/services?populate=*')
             .then((res) => {
                 Sethead(res.data.data);
             })
