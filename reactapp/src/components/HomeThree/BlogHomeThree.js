@@ -7,7 +7,7 @@ function BlogHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/blogposts?populate=*')
+            .get('https://admin.ocodeapps.com/api/blogposts?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function BlogHomeThree() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://admin.ocodeapps.com';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }

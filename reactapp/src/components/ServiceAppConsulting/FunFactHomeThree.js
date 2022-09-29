@@ -4,12 +4,28 @@ import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
+// const apiUrl = 'https://admin.ocodeapps.com/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {
         e.preventDefault();
         setVideoValue(!showVideo);
     };
+    // const [gettext, Settext] = useState([]);
+    // useEffect(() => {
+    //     const request = axios.CancelToken.source();
+    //     setTimeout(() => {
+    //         axios
+    //             .get(apiUrl, { cancelToken: request.token })
+    //             .then((res) => {
+    //                 Settext(res.data.data);
+    //             })
+    //             .catch((error) => {
+    //                 console.log(error);
+    //             });
+    //     }, 2000);
+    //     return () => request.cancel();
+    // });
     return (
         <>
             {showVideo && (
@@ -31,7 +47,8 @@ function FunFactHomeThree() {
                                     <div className="col-lg-6">
                                         <div className="appie-fun-fact-content">
                                             <h2 className="title">
-                                                Get Started with Apps Consulting Services
+                                                Get Started with Apps Maintenance And Support
+                                                Services
                                             </h2>
                                             {/* <p>
                                                 {gettext

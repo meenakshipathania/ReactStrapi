@@ -10,7 +10,7 @@ function ServicesHomeThree() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/descriptions')
+            .get('https://admin.ocodeapps.com/api/descriptions')
             .then((res) => {
                 Settext(res.data.data);
             })

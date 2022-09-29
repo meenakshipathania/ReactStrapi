@@ -7,7 +7,7 @@ function DetailsServiceRequest() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/nested-pages?populate=*')
+            .get('https://admin.ocodeapps.com/api/nested-pages?populate=*')
             .then((res) => {
                 Setdata(res.data.data);
             })
@@ -18,7 +18,7 @@ function DetailsServiceRequest() {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://admin.ocodeapps.com';
         const dataurl = atttribute.image5.data[0].attributes.url;
         return baseurl + dataurl;
     }

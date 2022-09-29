@@ -4434,7 +4434,7 @@ section.appie-team-area.appie-team-about-area.appie-team-8-area.pt-90.pb-90 {
   padding: 50px 60px;
 }
 .appie-header-main-menu {
-  text-align: center;
+  text-align: right;
 }
 .appie-faq-8-area .faq-play-box .faq-play-counter .box-1 .title {
   font-size: 30px;
@@ -6756,13 +6756,13 @@ blockquote cite {
 }
 .appie-about-8-box a {
   border: 2px solid #db0f30;
-  color: #db0f30;
-  background: #fff;
+  color: #fff;
+  background: #cc1c3b;
   margin-top: 30px;
 }
 .appie-about-8-box a:hover {
-  color: #fff;
-  background: #db0f30;
+  background: transparent;
+  color: #db0f30;
   border-color: #db0f30;
 }
 

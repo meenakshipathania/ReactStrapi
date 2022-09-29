@@ -4,7 +4,7 @@ import FunFactThumb from '../../assets/images/fun-fact-thumb.png';
 import CounterUpCom from '../../lib/CounterUpCom';
 import PopupVideo from '../PopupVideo';
 
-// const apiUrl = 'http://ocodeapps.com:1338/api/funsections';
+// const apiUrl = 'https://admin.ocodeapps.com/api/funsections';
 function FunFactHomeThree() {
     const [showVideo, setVideoValue] = useState(false);
     const handleShowVideo = (e) => {

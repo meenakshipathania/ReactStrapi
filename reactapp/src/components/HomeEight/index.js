@@ -2,7 +2,7 @@ import React from 'react';
 import useToggle from '../../Hooks/useToggle';
 import BackToTop from '../BackToTop';
 import Drawer from '../Mobile/Drawer';
-// import AboutHomeEight from './AboutHomeEight';
+import AboutHomeEight from './AboutHomeEight';
 import BlogHomeEight from './BlogHomeEight';
 import FaqHomeEight from './FaqHomeEight';
 import FooterHomeThree from '../HomeThree/FooterHomeThree';
@@ -21,7 +21,7 @@ function HomeEight() {
             <Drawer drawer={drawer} action={setDrawer.toggle} />
             <HeaderHomeEight drawer={drawer} action={setDrawer.toggle} />
             <HeroHomeEight />
-            {/* <AboutHomeEight /> */}
+            <AboutHomeEight />
             <ServicesHomeEight />
             <WorkPartHomeEight />
             <FaqHomeEight />

@@ -6,7 +6,7 @@ function HeroServiceRequest() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/nested-pages')
+            .get('https://admin.ocodeapps.com/api/nested-pages')
             .then((res) => {
                 Setdata(res.data.data);
             })

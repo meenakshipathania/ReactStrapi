@@ -8,7 +8,7 @@ function HeaderIncity({ action }) {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/logos?populate=*')
+            .get('https://admin.ocodeapps.com/api/logos?populate=*')
             .then((res) => {
                 Setlogo(res.data.data);
             })
@@ -19,12 +19,12 @@ function HeaderIncity({ action }) {
     }, []);
 
     function imageurl(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://admin.ocodeapps.com';
         const dataurl = atttribute.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
     function imageurl1(atttribute) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://admin.ocodeapps.com';
         const dataurl = atttribute.logo1.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -68,12 +68,12 @@ function HeaderIncity({ action }) {
                                         : 'hgfhgf'}
                                 </div>
                             </div>
-                            <div className="col-lg-7 col-md-2 col-sm-2 order-3 order-sm-2">
+                            <div className="col-lg-8 col-md-2 col-sm-2 order-3 order-sm-2">
                                 <div className="appie-header-main-menu">
                                     <Navigation />
                                 </div>
                             </div>
-                            <div className="col-lg-3  col-md-5 col-sm-5 col-5 order-2 order-sm-3">
+                            <div className="col-lg-2  col-md-5 col-sm-5 col-5 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
                                     {/* <a className="login-btn" href="#">
                                         <i className="fal fa-user"></i>

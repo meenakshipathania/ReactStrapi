@@ -10,7 +10,7 @@ function TestimonialHomeEight() {
     useEffect(() => {
         const request = axios.CancelToken.source();
         axios
-            .get('http://ocodeapps.com:1338/api/testimonials?populate=*')
+            .get('https://admin.ocodeapps.com/api/testimonials?populate=*')
             .then((res) => {
                 Setimg(res.data.data);
             })
@@ -20,7 +20,7 @@ function TestimonialHomeEight() {
         return () => request.cancel();
     }, []);
     function imageurl(data) {
-        const baseurl = 'http://ocodeapps.com:1338';
+        const baseurl = 'https://admin.ocodeapps.com';
         const dataurl = data.image.data[0].attributes.url;
         return baseurl + dataurl;
     }
@@ -77,7 +77,7 @@ function TestimonialHomeEight() {
                                 </span>
                                 <Slider {...settingsForArticle} ref={articleCarosel}>
                                     {img
-                                        ? img.map((x) => (
+                                        ? img.slice(0, 3).map((x) => (
                                               <div className="testimonial-parent-item">
                                                   <div className="testimonial-box">
                                                       <div className="icon">
