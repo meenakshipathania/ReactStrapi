@@ -161,7 +161,7 @@ function DetailsIncity() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link Link="/theme-product-3">
+                                    <Link to="/theme-product-3">
                                         {data
                                             ? data.map((x) => (
                                                   <img
