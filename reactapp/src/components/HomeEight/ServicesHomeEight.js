@@ -29,9 +29,14 @@ function ServicesHomeEight() {
             >
                 <div className="container">
                     <div className="row align-items-end">
+                        <div className="col-lg-12">
+                            <div className="appie-section-title mb-30">
+                                <h3 className="appie-title">Our Apps Development Services</h3>
+                            </div>
+                        </div>
                         <div className="col-lg-6 col-md-8">
                             <div className="appie-section-title">
-                                <h3 className="appie-title">
+                                <h3 className="appie-title" style={{ textAlign: 'left' }}>
                                     {text2
                                         ? text2.map((x) => <h3>{x.attributes.heading}</h3>)
                                         : 'hgfhgf'}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
 function DetailsService() {
@@ -130,7 +131,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="/portfolio/serviceRequest">
+                                            <Link to="/portfolio/serviceRequest">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -151,10 +152,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/incity">
+                                            <Link to="/portfolio/incity">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -175,10 +176,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/greenpal">
+                                            <Link to="/portfolio/greenpal">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -199,10 +200,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/gentra">
+                                            <Link to="/portfolio/gentra">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -223,7 +224,7 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -238,7 +239,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="/portfolio/vlife">
+                                            <Link to="/portfolio/vlife">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -259,10 +260,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/fanzapp">
+                                            <Link to="/portfolio/fanzapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -283,7 +284,7 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -298,7 +299,7 @@ function DetailsService() {
                                     <hr></hr>
                                     <ul className="businesslist">
                                         <li>
-                                            <a href="/portfolio/huawei">
+                                            <Link to="/portfolio/huawei">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -319,10 +320,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/mehanapp">
+                                            <Link to="/portfolio/mehanapp">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -343,10 +344,10 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="/portfolio/collab">
+                                            <Link to="/portfolio/collab">
                                                 {data
                                                     ? data.map((x) => (
                                                           <img
@@ -367,7 +368,7 @@ function DetailsService() {
                                                           </h6>
                                                       ))
                                                     : 'hgghtyu'}
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

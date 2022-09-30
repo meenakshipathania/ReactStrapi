@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
 function DetailsIncity() {
@@ -50,7 +51,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                             <ul className="businesslist listt">
                                 <li>
-                                    <a href="/huawei">
+                                    <Link to="/huawei">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -69,10 +70,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.text7}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/mehan">
+                                    <Link to="/mehan">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -91,10 +92,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.text8}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/service-request">
+                                    <Link to="/service-request">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -113,10 +114,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.text1}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/theme-product">
+                                    <Link to="/theme-product">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -135,10 +136,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.text10}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/theme-product-2">
+                                    <Link to="/theme-product-2">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -157,10 +158,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.theme2}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/theme-product-3">
+                                    <Link Link="/theme-product-3">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -179,7 +180,7 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.theme3}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

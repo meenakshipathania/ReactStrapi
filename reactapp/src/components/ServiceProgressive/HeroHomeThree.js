@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import heroThumb from '../../assets/images/hero-thumb-4.png';
 import PopupVideo from '../PopupVideo';
 
@@ -74,9 +75,9 @@ function HeroHomeThree() {
                                         : 'hgfhgf'}
                                 </p>
                                 <div className="hero-btns">
-                                    <a className="main-btn" href="/contact">
+                                    <Link to="/contact" className="main-btn">
                                         Get a Quote
-                                    </a>
+                                    </Link>
                                     <a
                                         onClick={(e) => handleShowVideo(e)}
                                         className="appie-video-popup"

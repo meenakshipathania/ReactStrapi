@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import blog4 from '../../assets/images/blog-4.jpg';
 // import blog5 from '../../assets/images/blog-5.jpg';
 // import blog6 from '../../assets/images/blog-6.jpg';
@@ -56,9 +57,9 @@ function BlogHomeEight() {
                                           </div>
                                           <div className="content">
                                               <h5 className="title">
-                                                  <a href={`/${x.attributes.slug}`}>
+                                                  <Link to={`/${x.attributes.slug}`}>
                                                       {x.attributes.tag}
-                                                  </a>
+                                                  </Link>
                                               </h5>
                                               <div className="meta-item">
                                                   <ul>

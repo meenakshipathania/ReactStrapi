@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // import blogImg1 from '../../assets/images/blog/1.jpg';
 // import blogImg2 from '../../assets/images/blog/2.jpg';
@@ -68,14 +69,14 @@ function ServicesApp() {
                                       />
                                       <div className="b-post-details">
                                           <h3>
-                                              <a href={`/${x.attributes.slug}`}>
+                                              <Link to={`/${x.attributes.slug}`}>
                                                   {x.attributes.text}
-                                              </a>
+                                              </Link>
                                           </h3>
                                           <p>{x.attributes.description}</p>
-                                          <a className="read-more" href={`/${x.attributes.slug}`}>
+                                          <Link to={`/${x.attributes.slug}`} className="read-more">
                                               Read More<i className="fal fa-arrow-right"></i>
-                                          </a>
+                                          </Link>
                                       </div>
                                   </div>
                               </div>

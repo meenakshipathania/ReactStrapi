@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
 function DetailsIncity() {
@@ -35,7 +36,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                             <ul className="businesslist listt">
                                 <li>
-                                    <a href="/product/components/freedemo">
+                                    <Link to="/product/components/freedemo">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -54,10 +55,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.demo}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/components/greenpal">
+                                    <Link to="/product/components/greenpal">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -76,10 +77,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.text3}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/components/plugin-product">
+                                    <Link to="/product/components/plugin-product">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -98,10 +99,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.plugin}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/components/plugin-product-3">
+                                    <Link to="/product/components/plugin-product-3">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -120,10 +121,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.plugin3}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/components/plugin-product-4">
+                                    <Link to="/product/components/plugin-product-4">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -142,7 +143,7 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.plugin4}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import logo from '../../assets/images/logo-7.png';
 import StickyMenu from '../../lib/StickyMenu';
 import Navigation from '../Navigation';
@@ -79,11 +80,11 @@ function HeaderNews({ action }) {
                             </div>
                             <div className="col-lg-2  col-md-5 col-sm-5 col-5 order-2 order-sm-3">
                                 <div className="appie-btn-box text-right">
-                                    <a className="main-btn ml-30" href="/contact">
+                                    <Link to="/contact" className="main-btn ml-30">
                                         {logo
                                             ? logo.map((x) => <span>{x.attributes.getstart}</span>)
                                             : 'hgfhgf'}
-                                    </a>
+                                    </Link>
                                     <div
                                         onClick={(e) => action(e)}
                                         className="toggle-btn ml-30 canvas_open d-lg-none d-block"

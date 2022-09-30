@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Product() {
     const [heading, Setheading] = useState([]);
@@ -66,19 +67,19 @@ function Product() {
             </div>
             <div className="coloumn">
                 <div className="First">
-                    <a href="/product/components">
+                    <Link to="/product/components">
                         <h2 className="heading">COMPONENTS</h2>
-                    </a>
+                    </Link>
                 </div>
                 <div className="second">
-                    <a href="/product/script">
+                    <Link to="/product/script">
                         <h2 className="heading">SCRIPTS</h2>
-                    </a>
+                    </Link>
                 </div>
                 <div className="third">
-                    <a href="product/theme">
+                    <Link to="product/theme">
                         <h2 className="heading">THEMES</h2>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="iconheading">
@@ -91,7 +92,7 @@ function Product() {
                 <hr></hr>
                 <ul className="businesslist listt">
                     <li>
-                        <a href="/huawei">
+                        <Link to="/huawei">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -104,10 +105,10 @@ function Product() {
                             {heading
                                 ? heading.map((x) => <h6 className="padd">{x.attributes.text7}</h6>)
                                 : 'hgghtyu'}
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/mehan">
+                        <Link to="/mehan">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -120,10 +121,10 @@ function Product() {
                             {heading
                                 ? heading.map((x) => <h6 className="padd">{x.attributes.text8}</h6>)
                                 : 'hgghtyu'}
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/service-request">
+                        <Link to="/service-request">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -136,10 +137,10 @@ function Product() {
                             {heading
                                 ? heading.map((x) => <h6 className="padd">{x.attributes.text1}</h6>)
                                 : 'hgghtyu'}
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/theme-product">
+                        <Link to="/theme-product">
                             {heading
                                 ? heading.map((x) => (
                                       <img
@@ -154,7 +155,7 @@ function Product() {
                                       <h6 className="padd">{x.attributes.text10}</h6>
                                   ))
                                 : 'hgghtyu'}
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

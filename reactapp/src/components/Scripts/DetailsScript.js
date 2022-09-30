@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import thumb from '../../assets/images/service-details-thumb.jpg';
 
 function DetailsIncity() {
@@ -30,7 +31,7 @@ function DetailsIncity() {
                         <div className="col-lg-12">
                             <ul className="businesslist listt">
                                 <li>
-                                    <a href="/product/script/demopaid">
+                                    <Link to="/product/script/demopaid">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -49,10 +50,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.demopaid}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/script/script-product-2">
+                                    <Link to="/product/script/script-product-2">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -71,10 +72,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.script2}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/script/script-product-3">
+                                    <Link to="/product/script/script-product-3">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -93,10 +94,10 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.script3}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/product/script/script-product-4">
+                                    <Link to="/product/script/script-product-4">
                                         {data
                                             ? data.map((x) => (
                                                   <img
@@ -115,7 +116,7 @@ function DetailsIncity() {
                                                   <h6 className="padd">{x.attributes.script4}</h6>
                                               ))
                                             : 'hgghtyu'}
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
